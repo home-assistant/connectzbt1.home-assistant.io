@@ -1,0 +1,1 @@
+# skyconnect.home-assistant.io
