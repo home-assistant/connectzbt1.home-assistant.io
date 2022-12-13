@@ -1,0 +1,108 @@
+html {
+    --primary-text-color: #212121;
+    --secondary-text-color: #727272;
+    --primary-background-color: #fafafa;
+    --secondary-background-color: #ffffff;
+    --divider-color: rgba(0, 0, 0, 0.12);
+    --primary-color: #03a9f4;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    html {
+      --primary-text-color: #e1e1e1;
+      --secondary-text-color: #9b9b9b;
+      --primary-background-color: #111111;
+      --secondary-background-color: #202020;
+      --divider-color: rgba(225, 225, 225, 0.12);
+    }
+  }
+
+  h2 {
+    font-weight: 400;
+  }
+  
+  body {
+    font-family: "Segoe UI", Roboto, sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    line-height: 1.4;
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+  }
+  
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  .nav-title {
+    color: var(--primary-text-color) !important;
+  }
+  
+  .content {
+    display: flex;
+    margin: 32px 0;
+  }
+  
+  .container {
+    margin: 0 auto;
+    padding: 16px 8px;
+    max-width: 1000px;
+  }
+  
+  .footer {
+    margin-top: 24px;
+    border-top: 1px solid var(--divider-color);
+    padding-top: 24px;
+    text-align: center;
+  }
+  
+  .footer > * {
+    white-space: nowrap;
+  }
+  
+  .footer .initiative {
+    font-style: italic;
+    margin-top: 16px;
+  }
+  
+  .note {
+    color: var(--secondary-text-color);
+    font-style: italic;
+    margin-top: 8px;
+    margin-bottom: 32px;
+  }
+
+  .nav-bar a {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-bar img {
+    height: 64px;
+    margin-right: 16px;
+  }
+
+  @media screen and (max-width: 500px) {
+    body {
+      font-size: 0.8em;
+    }
+
+    .nav-bar {
+      margin-top: 4px;
+    }
+  
+    .container {
+      padding: 0 8px;
+    }
+  
+    .serperator {
+      display: none;
+    }
+
+    .content {
+      flex-direction: column;
+    }
+  }
