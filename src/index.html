@@ -1,0 +1,48 @@
+---
+layout: base
+description: Zigbee and Thread USB stick by the creators of Home Assistant
+---
+
+<div class="container">
+  <p>
+    The Home Assistant SkyConnect is the easiest way to add Zigbee support to
+    your Home Assistant instance and make it Matter-ready.
+  </p>
+  <p>
+    A future firmware update will bring Thread support; allowing SkyConnect to
+    power your Matter and Zigbee networks at the same time.
+  </p>
+  <h2>Adding it to Home Assistant</h2>
+  <ol>
+    <li>Plug the Home Assistant SkyConnect into the USB extension cable.</li>
+    <li>
+      Plug the extension cable into your Home Assistant instance. It is
+      important to use the USB extension cable. USB 3.0 ports can cause
+      interference with 2.4Ghz protocols, including the ones the Home Assistant
+      SkyConnect provides.
+    </li>
+    <li>
+      Open Home Assistant. Navigate to configuration -> devices & services and
+      set up the discovered Home Assistant SkyConnect.
+    </li>
+  </ol>
+  <h2>Home Assistant Container</h2>
+  <p>
+    If you are running Home Assistant in a container, you will need to pass the
+    USB device through to the container. See
+    <a href="https://www.home-assistant.io/installation/linux#exposing-devices"
+      >the Docker documentation</a
+    >
+    for details.
+  </p>
+  <p>
+    Once you have set up the pass-through, configure Zigbee in Home Assistant
+    and point it at the path of the device.
+  </p>
+  <h2>Zigbee & Thread</h2>
+  <p>
+    The Home Assistant SkyConnect is capable of running both Zigbee and Thread
+    networks at the same time. This is an experimental feature that we are
+    developing. It will be released for Home Assistant Operating System first.
+  </p>
+</div>

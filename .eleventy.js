@@ -1,17 +1,14 @@
 module.exports = function (eleventyConfig) {
-    eleventyConfig.addPassthroughCopy(
-        { 
-          "static": "static",
-        }
-      );
+  eleventyConfig.addPassthroughCopy({
+    static: "static",
+  });
 
-    return {
-        dir: {
-            input: ".",
-            output: "dist",
-            layouts: "layouts",
-        },
-        htmlTemplateEngine: "liquid",
-        markdownTemplateEngine: "liquid",
-    };
-}
+  return {
+    dir: {
+      input: "src",
+      output: "dist",
+    },
+    htmlTemplateEngine: "liquid",
+    markdownTemplateEngine: "liquid",
+  };
+};
