@@ -25,14 +25,12 @@ menu: []
 
 {% comment %}
 <!-- prettier-ignore -->
-{% endcomment %}
-
-{% capture full_title -%}
-{%- if title -%}
-{{ title }} – Home Assistant SkyConnect
-{%- else -%}
-Home Assistant SkyConnect
-{%- endif -%}
+{% endcomment %}{% capture full_title -%}
+  {%- if title -%}
+    {{ title }} – Home Assistant SkyConnect
+  {%- else -%}
+    Home Assistant SkyConnect
+  {%- endif -%}
 {%- endcapture %}
 {% comment %}
 <!-- prettier-unignore -->
@@ -46,35 +44,27 @@ Home Assistant SkyConnect
     <meta name="description" content="{{ description }}" />
     <meta name="viewport" content="width=device-width" />
     <meta property="og:title" content="{{ full_title }}" />
-    <script
-      src="https://kit.fontawesome.com/ee3aba475c.js"
-      crossorigin="anonymous"
-    ></script>
     <link rel="stylesheet" href="/static/styles.css" />
   </head>
   <body>
     <div class="container">
       <div class="nav-bar">
-        <a class="logo" href="/"
-          ><img src="/static/skyconnect_header.png" alt="Home Assistant SkyConnect"
-        /> Home Assistant<br>SkyConnect</a>
+
+        <picture>
+          <source srcset="/static/skyconnect-logo-white.png" media="(prefers-color-scheme: dark)">
+          <img src="/static/skyconnect-logo.png" alt="Home Assistant SkyConnect" />
+        </picture>
         <ul>
           {% for item in menu %}
-          <li>
-            <a
-              class="{% if item[0] contains page.url %}active{% endif %}"
-              href="{{ item[0][0] }}"
-              >{{ item[1] }}</a
-            >
-          </li>
+            <li>
+              <a class="{% if item[0] contains page.url %}active{% endif %}" href="{{ item[0][0] }}">{{ item[1] }}</a>
+            </li>
           {% endfor %}
           <li>
             <a
               class="buy-button"
               target="_blank"
-              href="https://www.home-assistant.io/skyconnect"
-              >Buy</a
-            >
+              href="https://www.home-assistant.io/skyconnect">Buy</a>
           </li>
         </ul>
       </div>
@@ -88,9 +78,7 @@ Home Assistant SkyConnect
           Home&nbsp;Assistant SkyConnect &nbsp; – &nbsp;
           <a href="mailto:hello@home-assistant.io">Contact</a>
           &nbsp; – &nbsp;
-          <a href="https://www.github.com/home-assistant" target="_blank"
-            >GitHub</a
-          >
+          <a href="https://www.github.com/home-assistant" target="_blank">GitHub</a>
         </div>
       </div>
     </div>
