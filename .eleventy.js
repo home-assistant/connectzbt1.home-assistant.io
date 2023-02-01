@@ -1,6 +1,7 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
-    static: "static",
+    "public/images": "images",
+    "public/css": "css",
   });
 
   return {
