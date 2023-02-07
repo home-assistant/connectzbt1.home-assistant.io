@@ -1,0 +1,140 @@
+---
+procedureNewZigbee:
+  title: Setting up a new Zigbee network using SkyConnect
+  steps:
+    - title: Plug in the extension cable
+      image: skyconnect-raspi-01.jpg
+      content: |
+        <ul>
+          <li>Plug the Home Assistant SkyConnect into the USB extension cable.</li>
+          <li class="warning">It is important to use the USB extension cable. USB 3.0 ports can cause interference with 2.4 GHz protocols, including the ones provided by Home Assistant SkyConnect.</li>
+        </ul>
+    - title: Plug SkyConnect into your board
+      image: skyconnect-raspi-01.jpg
+      content: |
+        <ul>
+          <li> Plug the extension cable into your Home Assistant instance.</li>
+        </ul>
+    - title: Locate the SkyConnect integration
+      image: skyconnect-discovered-01.png
+      content: |
+        <ol>
+          <li>In Home Assistant (<a href="http://homeassistant.local:8123" target="_blank">http://homeassistant.local:8123</a>), go to <b>Settings</b>><b>Devices & Services</b>.</li>
+          <li>SkyConnect should now have been discovered.</li>
+          <li>Select <b>Configure</b>.</li>
+        </ol>
+    - title: Set up the SkyConnect integration
+      image: skyconnect-discovered-02.png
+      content: |
+        <ul>
+          <li>Select <b>Submit</b> to start the setup process.</li>
+        </ul>
+    - title: Locate the SkyConnect integration
+      image: skyconnect-discovered-03.png
+      content: |
+        <ul>
+          <li>Select <b>Create a network</b>.</li>
+        </ul>
+    - title: Add devices to area
+      image: skyconnect-discovered-04.png
+      content: |
+        <ol>
+          <li>Once the network has been set up, add the Zigbee Coorinator to an area.</li>
+          <li>Select <b>Finish</b>.
+          <ul>
+          <li>Your Zigbee devices are now added to your Zigbee network.</li>
+        </ul></li>
+        </ol>
+    - title: Setup Zigbee devices
+      image: skyconnect-discovered-05.png
+      content: |
+        <ul>
+          <li>You can start configuring your devices and add them to a dashboard.</li>
+        </ul>
+procedureMigrateZigbee:
+  title: Migrating a Zigbee2MQTT network to SkyConnect
+  steps:
+    - title: Create a Zigbee2MQTT backup
+      image: z2m-backup-01.png
+      content: |
+        <ol>
+          <li>Under <b>Settings</b>><b>Add-ons</b>, open the <b>Zigbee2MQTT</b> add-on and select <b>Open Web UI</b>.</li>
+          <li>In the Zigbee2MQTT UI, go to <b>Settings</b>><b>Tools</b> and select <b>Request z2m backup</b>.
+            <ul>
+              <li>A zip file should now be downloaded into your <b>Downloads</b> folder.</li>
+            </ul>
+          </li>
+          
+        </ol>
+    - title: Unzip the backup folder
+      image: z2m-backup-restore-01.png
+      content: |
+        <ul>
+          <li>In your <b>Downloads</b> folder, unzip the <b>z2m-backup</b>.
+            <ul><li>It should contain a <b>coordinator_backup.json</b> file.</li></ul>
+          </li>
+        </ul>
+    - title: Uninstall the Zigbee2MQTT 
+      image: z2m-delete-add-on.png
+      content: |
+        <ul>
+          <li>Under <b>Settings</b>><b>Add-ons</b>, in the <b>Zigbee2MQTT</b> add-on, select <b>Uninstall</b>.</li>
+        </ul>
+    - title: Delete the Mosquitto broker 
+      image: z2m-mqq-integration-01.png
+      content: |
+        <ul>
+          <li>Under <b>Devices & Services</b>>, in the <b>Mosquitto broker</b> integration, select <b>Delete</b>.</li>
+        </ul>
+    - title: Plug the extension cable into SkyConnect
+      image: skyconnect-raspi-01.jpg
+      content: |
+        <ul>
+          <li>Plug the Home Assistant SkyConnect into the USB extension cable.</li>
+          <li class="warning">It is important to use the USB extension cable. USB 3.0 ports can cause interference with 2.4 GHz protocols, including the ones provided by Home Assistant SkyConnect.</li>
+        </ul>
+    - title: Plug SkyConnect into your board
+      image: skyconnect-raspi-01.jpg
+      content: |
+        <ul>
+          <li> Plug the extension cable into your Home Assistant instance.</li>
+        </ul>
+    - title: Locate the SkyConnect integration
+      image: skyconnect-discovered-01.png
+      content: |
+        <ol>
+          <li>Go to <b>Settings</b>><b>Devices & Services</b>.</li>
+          <li>SkyConnect should now have been discovered.</li>
+          <li>Select <b>Configure</b>.</li>
+        </ol>
+    - title: Upload a manual backup
+      image: z2m-backup-04.png
+      content: |
+        <ul>
+          <li>In the <b>Network Formation</b> dialog,  select <b>Upload a manual backup</b>.</li>
+        </ul>
+    - title: Select the backup file
+      image: z2m-backup-restore-02.png
+      content: |
+        <ul>
+          <li>In your <b>Downloads</b> folder, select the <b>coordinator_backup.json</b> file.</li>
+        </ul>
+    - title: Submit the backup json file
+      image: z2m-backup-restore-03.png
+      content: |
+        <ul>
+          <li>Make sure the <b>coordinator_backup.json</b> file is selected and select <b>submit</b>.</li>
+        </ul>
+    - title: Assign devices to area
+      image: z2m-backup-restore-04.png
+      content: |
+        <ul>
+          <li>Assign each of the devices to an area and select <b>Finish</b>.</li>
+        </ul>
+    - title: Setup your devices
+      image: z2m-backup-restore-05.png
+      content: |
+        <ul>
+          <li>You can now add your devices to the dashboard.</li>
+          <li class="info">The names that you manually assigned to your devices won't have been migrated. You will have to rename the devices again.</li>
+        </ul>
