@@ -7,7 +7,7 @@ procedureNewZigbee:
       content: |
         <ul>
           <li>Plug the Home Assistant SkyConnect into the USB extension cable.</li>
-          <li class="warning">It is important to use the USB extension cable. USB 3.0 ports can cause interference with 2.4 GHz protocols, including the ones provided by Home Assistant SkyConnect.</li>
+          <li class="warning">It is important to use the USB extension cable. USB 3.0 ports and USB drives can cause interference with 2.4 GHz protocols, including the ones provided by Home Assistant SkyConnect.</li>
         </ul>
     - title: Plug SkyConnect into your board
       image: skyconnect-raspi-01.jpg
@@ -49,7 +49,7 @@ procedureNewZigbee:
       image: skyconnect-discovered-05.png
       content: |
         <ul>
-          <li>You can start configuring your devices and add them to a dashboard.</li>
+          <li>You can start pairing the Zigbee devices to your new Zigbee network.</li>
         </ul>
 procedureMigrateZigbee:
   title: Migrating a Zigbee2MQTT network to SkyConnect
@@ -91,7 +91,7 @@ procedureMigrateZigbee:
       content: |
         <ul>
           <li>Plug the Home Assistant SkyConnect into the USB extension cable.</li>
-          <li class="warning">It is important to use the USB extension cable. USB 3.0 ports can cause interference with 2.4 GHz protocols, including the ones provided by Home Assistant SkyConnect.</li>
+          <li class="warning">It is important to use the USB extension cable. USB 3.0 ports and USB 3.0 drives can cause interference with 2.4 GHz protocols, including the ones provided by Home Assistant SkyConnect.</li>
         </ul>
     - title: Plug SkyConnect into your board
       image: skyconnect-raspi-01.jpg
