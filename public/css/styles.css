@@ -175,8 +175,7 @@ h3 {
 .nav-bar a.active {
   border-bottom-color: var(--primary-color);
 }
-nabucasa-zigbee-flasher,
-flashing-dialog {
+nabucasa-zigbee-flasher {
   --mdc-theme-primary: var(--accent-color);
   --mdc-theme-on-primary: #fff;
 }
