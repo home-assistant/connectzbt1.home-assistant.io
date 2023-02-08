@@ -1,0 +1,287 @@
+---
+procedureNewZigbee:
+  title: Setting up a new Zigbee network using SkyConnect
+  steps:
+    - title: Plug the extension cable into SkyConnect
+      image: skyconnect-raspi-01.jpg
+      content: |
+        <ol>
+          <li>Plug the Home Assistant SkyConnect into the USB extension cable.</li>
+          <li>Plug the extension cable into your Home Assistant instance.</li>
+          <li class="warning">USB 3.0 ports and USB 3.0 drives can cause interference with 2.4 GHz protocols, including the ones provided by Home Assistant SkyConnect. It is important to use the USB extension cable and to position the Home Assistant SkyConnect away from possible interference sources.</li>
+        </ol>
+    - title: Locate the SkyConnect integration
+      image: skyconnect-discovered-01.png
+      content: |
+        <ol>
+          <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b>><b>Devices & Services</b></a></li>
+          <li>SkyConnect should now have been discovered.</li>
+          <li>Select <b>Configure</b>.</li>
+        </ol>
+    - title: Set up the SkyConnect integration
+      image: skyconnect-discovered-02.png
+      content: |
+        <ul>
+          <li>Select <b>Submit</b> to start the setup process.</li>
+        </ul>
+    - title: Locate the SkyConnect integration
+      image: skyconnect-discovered-03.png
+      content: |
+        <ul>
+          <li>Select <b>Create a network</b>.</li>
+        </ul>
+    - title: Add devices to area
+      image: skyconnect-discovered-04.png
+      content: |
+        <ol>
+          <li>Once the network has been set up, add the Zigbee Coorinator to an area.</li>
+          <li>Select <b>Finish</b>.
+          <ul>
+          <li>Your Zigbee devices are now added to your Zigbee network.</li>
+        </ul></li>
+        </ol>
+    - title: Add Zigbee devices
+      image: skyconnect-discovered-05.png
+      content: |
+        <ul>
+          <li>Click on <b>Devices</b> link and select <b>Add device</b> on the lower right corner. ZHA will now search for Zigbee devices in pairing mode.
+          <li>Put your Zigbee device into pairing mode.</li>
+          <li class="warning">If ZHA can't find your Zigbee device make sure that SkyConnect does not suffer from interference. Use the extension cable and try placing the SkyConnect further away from potential devices which can cause interference.</li>
+        </ul>
+procedureMigrateZigbee:
+  title: Migrating a Zigbee2MQTT network to SkyConnect via z2m backup
+  steps:
+    - title: Create a Zigbee2MQTT backup
+      image: z2m-backup-01.png
+      content: |
+        <ol>
+          <li>Under <b>Settings</b>><b>Add-ons</b>, open the <b>Zigbee2MQTT</b> add-on and select <b>Open Web UI</b>.</li>
+          <li>In the Zigbee2MQTT UI, go to <b>Settings</b>><b>Tools</b> and select <b>Request z2m backup</b>.
+            <ul>
+              <li>A zip file should now be downloaded into your <b>Downloads</b> folder.</li>
+            </ul>
+          </li>
+          
+        </ol>
+    - title: Unzip the backup folder
+      image: z2m-backup-restore-01.png
+      content: |
+        <ul>
+          <li>In your <b>Downloads</b> folder, unzip the <b>z2m-backup</b>.
+            <ul><li>It should contain a <b>coordinator_backup.json</b> file.</li></ul>
+          </li>
+        </ul>
+    - title: Stop the Zigbee2MQTT add-on
+      image: z2m-delete-add-on.png
+      content: |
+        <ul>
+          <li>Under <b>Settings</b>><b>Add-ons</b>, in the <b>Zigbee2MQTT</b> add-on, select <b>Stop</b>.</li>
+          <li class="info">Zigbee2MQTT uses the MQTT discovery feature to make the Zigbee devices available in Home Assistant. After removing the Zigbee2MQTT add-on, the devices are still present in Home Assistant since the MQTT broker is still holding on to the MQTT discovery messages.</li>
+          <li class="info">It is recommended to remove these stale devices from the MQTT broker (see next steps).</li>
+        </ul>
+    - title: Remove Zigbee2MQTT devices (option 1)
+      image: z2m-mqq-integration-01.png
+      content: |
+        <ul>
+          <li>If you don't use MQTT outside z2m, you can delete the Mosquito Broker integration. Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b>><b>Devices & Services</b></a>, in the <b>Mosquitto broker</b> integration, select <b>Delete</b>.</li>
+        </ul>
+    - title: Remove Zigbee2MQTT devices (option 2)
+      image: z2m-mqtt-dereg-device-01.png
+      content: |
+        <ol>
+          <li class="info">If you don't want to delete the Mosquito Broker integration, you can remove the devices from the MQTT network.</li>
+          <li>In the integration card, select <b>Devices</b>, under <b>Device info</b>, select <b>Delete</b>.</li>
+          <li>Repeat this for every device.</li>
+        </ol>
+    - title: Plug the extension cable into SkyConnect
+      image: skyconnect-raspi-01.jpg
+      content: |
+        <ol>
+          <li>Plug the Home Assistant SkyConnect into the USB extension cable.</li>
+          <li>Plug the extension cable into your Home Assistant instance.</li>
+          <li class="warning">It is important to use the USB extension cable. USB 3.0 ports and USB 3.0 drives can cause interference with 2.4 GHz protocols, including the ones provided by Home Assistant SkyConnect.</li>
+        </ol>
+    - title: Locate the SkyConnect integration
+      image: skyconnect-discovered-01.png
+      content: |
+        <ol>
+          <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b>><b>Devices & Services</b></a>.</li>
+          <li>SkyConnect should now have been discovered.</li>
+          <li>Select <b>Configure</b>.</li>
+        </ol>
+    - title: Upload a manual backup
+      image: z2m-backup-04.png
+      content: |
+        <ul>
+          <li>In the <b>Network Formation</b> dialog,  select <b>Upload a manual backup</b>.</li>
+        </ul>
+    - title: Select the backup file
+      image: z2m-backup-restore-02.png
+      content: |
+        <ul>
+          <li>In your <b>Downloads</b> folder, select the <b>coordinator_backup.json</b> file.</li>
+        </ul>
+    - title: Submit the backup json file
+      image: z2m-backup-restore-03.png
+      content: |
+        <ul>
+          <li>Make sure the <b>coordinator_backup.json</b> file is selected and select <b>submit</b>.</li>
+        </ul>
+    - title: Assign coordinator to area
+      image: skyconnect-discovered-04.png
+      content: |
+        <ul>
+          <li>Assign the coordinator to an area and select <b>Finish</b>.</li>
+          <li class="info">However, you won't be able to control the devices until they rejoin the network. Normally, they join within one hour. You may be able to accelerate that process by power-cycling the device.</li>
+        </ul>
+    - title: Reconfigure automations and dashboards
+      image: z2m-backup-restore-05.png
+      content: |
+        <ul>
+        <li class="info">All migrated devices have a new entity ID. This means you will need to manually reconfigure automations and dashboard cards.</li>
+          <li class="info">The names that you manually assigned to your devices won't have been migrated. You will have to rename the devices again.</li>
+        </ul>
+procedureMigrateZigbeeZHA:
+  title: Migrating a Zigbee2MQTT network to SkyConnect via ZHA
+  steps:
+    - title: Stop the Zigbee2MQTT add-on
+      image: z2m-delete-add-on.png
+      content: |
+        <ul>
+          <li>Under <b>Settings</b>><b>Add-ons</b>, in the <b>Zigbee2MQTT</b> add-on, select <b>Stop</b>.</li>
+          <li class="info">Zigbee2MQTT uses the MQTT discovery feature to make the Zigbee devices available in Home Assistant. After removing the Zigbee2MQTT add-on, the devices are still present in Home Assistant since the MQTT broker is still holding on to the MQTT discovery messages.</li>
+          <li class="info">It is recommended to remove these stale devices from the MQTT broker (see next steps).</li>         
+        </ul>
+    - title: Remove Zigbee2MQTT devices (option 1)
+      image: z2m-mqq-integration-01.png
+      content: |
+        <ul>
+          <li>If you don't use MQTT outside z2m, you can delete the Mosquito Broker integration. Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b>><b>Devices & Services</b></a>, in the <b>Mosquitto broker</b> integration, select <b>Delete</b>.</li>
+        </ul>
+    - title: Remove Zigbee2MQTT devices (option 2)
+      image: z2m-mqtt-dereg-device-01.png
+      content: |
+        <ol>
+          <li class="info">If you don't want to delete the Mosquito Broker integration, you can remove the devices from the MQTT network.</li>
+          <li>In the integration card, select <b>Devices</b>, under <b>Device info</b>, select <b>Delete</b>.</li>
+          <li>Repeat this for every device.</li>
+        </ol>
+    - title: Add ZHA integration (1)
+      image: z2m-migrate-zha-15.png
+      content: |
+        <ol>
+          <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b>><b>Devices & Services</b></a>, if you do not see the ZHA integration, select the <b>Add integration</b> button.</li>          
+          <li>From the dropdown list, select <b>Add Zigbee device</b>.</li>
+        </ol>
+    - title: Add ZHA integration (2)
+      image: z2m-migrate-zha-13.png
+      content: |
+        <ol>
+          <li>Make sure your old radio stick is still plugged in.</li>          
+          <li>Select <b>Proceed</b>.</li>
+        </ol>
+    - title: Add ZHA integration (3)
+      image: z2m-migrate-zha-14.png
+      content: |
+        <ol>
+          <li>Choose the serial device path of your old radio stick.</li>          
+          <li>Select <b>Submit</b>.</li>
+        </ol>        
+    - title: Choose the network settings for your radio
+      image: z2m-migrate-zha-01.png
+      content: |
+        <ul>
+          <li>Select <b>Keep radio network settings</b>.</li>
+        </ul>
+    - title: Start radio migration
+      image: z2m-migrate-zha-02.png
+      content: |
+        <ol>
+          <li>In the ZHA integration, select <b>Configure</b>.</li>
+          <li>Under <b>Network settings</b> add-on, select <b>Migrate Radio</b>.</li>
+        </ol>
+    - title: Reconfigure ZHA
+      image: z2m-migrate-zha-03.png
+      content: |
+        <ul>
+          <li>Select <b>Submit</b>.</li>
+        </ul>
+    - title: Migrate to a new radio
+      image: z2m-migrate-zha-04.png
+      content: |
+        <ul>
+          <li>Select <b>Migrate to a new radio</b>.</li>
+        </ul>
+    - title: Start automatic backup
+      image: z2m-migrate-zha-05.png
+      content: |
+        <ul>
+          <li>Select <b>Submit</b>.</li>
+        </ul>
+    - title: Unplug your old radio
+      image: z2m-migrate-zha-06.png
+      content: |
+        <ol>
+          <li>If you no longer need the old radio stick, you can now remove it.</li>
+          <li>Before selecting <b>Submit</b>, connect SkyConnect, as described in the 2 following steps.</li>
+        </ol>
+    - title: Plug the extension cable into SkyConnect
+      image: skyconnect-raspi-01.jpg
+      content: |
+        <ol>
+          <li>Plug the Home Assistant SkyConnect into the USB extension cable.</li>
+          <li>Plug the extension cable into your Home Assistant instance.</li>
+          <li class="warning">It is important to use the USB extension cable. USB 3.0 ports and USB 3.0 drives can cause interference with 2.4 GHz protocols, including the ones provided by Home Assistant SkyConnect.</li>
+        </ol>
+    - title: Confirm that SkyConnect is plugged in.
+      image: z2m-migrate-zha-06.png
+      content: |
+        <ul>
+          <li>Now that SkyConnect is plugged in, select <b>Submit</b>.</li>
+        </ul>
+    - title: Locate the SkyConnect integration
+      image: skyconnect-discovered-01.png
+      content: |
+        <ol>
+          <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b>><b>Devices & Services</b></a>, SkyConnect should have been autodiscovered.</li>          
+          <li>Select <b>Configure</b>.</li>
+        </ol>
+    - title: Start the backup restore process
+      image: z2m-migrate-zha-08.png
+      content: |
+        <ul>
+          <li>Select <b>Restore an automatic backup</b>.</li>          
+        </ul>
+    - title: Select the backup
+      image: z2m-migrate-zha-09.png
+      content: |
+        <ul>
+          <li>Choose the latest backup and select <b>Submit</b>.</li>
+        </ul>
+    - title: Overwrite radio IEEE address
+      image: z2m-migrate-zha-10.png
+      content: |
+        <ul>
+          <li>Select the <b>Permanently replace the radio IEEE address</b> and select <b>Submit</b>.</li>
+          <li class="info">This means that your old stick and your new stick will have the same IEEE address. This is required for the migration process to complete successfully. From this point on-wards you should not operate the old stick in the same area. If you do not migrate the IEEE address from your old stick, you'll have to repair many of your devices in order to keep them working.</li>
+        </ul>
+    - title: Wait
+      image: z2m-migrate-zha-11.png
+      content: |
+        <ul>
+          <li>Overwriting the IEEE address may take a while. Wait.</li>
+        </ul>
+    - title: Migration complete!
+      image: z2m-migrate-zha-12.png
+      content: |
+        <ul>
+          <li>Select <b>Finish</b> to confirm. The migration process is now complete. </li>
+          <li class="info">You won't be able to control the devices until they rejoin the network. Normally, they rejoin within one hour. You may be able to accelerate that process by power-cycling devices.</li>
+        </ul>
+    - title: Reconfigure automations and dashboards
+      image: z2m-backup-restore-05.png
+      content: |
+        <ul>
+        <li class="info">All migrated devices have a new entity ID. This means you will need to manually reconfigure automations and dashboard cards.</li>
+          <li class="info">The names that you manually assigned to your devices won't have been migrated. You will have to rename the devices again.</li>
+        </ul>

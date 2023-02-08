@@ -45,15 +45,20 @@ menu: []
     <meta name="viewport" content="width=device-width" />
     <meta property="og:title" content="{{ full_title }}" />
     <link rel="stylesheet" href="/css/styles.css" />
-  </head>
+  </head>  
+  <script
+    src="https://kit.fontawesome.com/ee3aba475c.js"
+    crossorigin="anonymous"
+  ></script>
   <body>
     <div class="container">
       <div class="nav-bar">
-
+      <a class="logo" href="/">
         <picture>
           <source srcset="/images/skyconnect-logo-white.png" media="(prefers-color-scheme: dark)">
           <img src="/images/skyconnect-logo.png" alt="Home Assistant SkyConnect" />
         </picture>
+      </a>
         <ul>
           {% for item in menu %}
             <li>

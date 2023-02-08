@@ -1,0 +1,11 @@
+---
+layout: getting-started
+description: Home Assistant SkyConnect
+guideName: Migrate a Zigbee2MQTT network via z2m backup
+
+---
+<div class="container">
+    <p class="text-center note">If you have a Zigbee2MQTT network running, no longer have the stick and want to migrate to SkyConnect.</p>
+    <p class="text-center note">Note: this procedure helps migrating the network. This means you won't have to pair all your devices again with Home Assistant SkyConnect. However, some of the higher-level settings cannot be migrated. Elements such as device names may be lost. There is currently no migration path to migrate all the settings.</p>
+</div>
+{% render "proc.include.liquid", proc: procedureMigrateZigbee %}
