@@ -77,7 +77,6 @@ h3 {
   border-radius: 4px;
 }
 
-
 /* FOOTER STYLES */
 .footer {
   margin-top: 24px;
@@ -89,8 +88,6 @@ h3 {
   font-style: italic;
   margin-top: 16px;
 }
-
-
 
 /* FLEX STYLES */
 .layout.horizontal,
@@ -178,13 +175,17 @@ h3 {
 .nav-bar a.active {
   border-bottom-color: var(--primary-color);
 }
+nabucasa-zigbee-flasher,
+flashing-dialog {
+  --mdc-theme-primary: var(--accent-color);
+  --mdc-theme-on-primary: #fff;
+}
 .nav-bar a.buy-button {
-  color: #212121;
+  color: #fff;
   background-color: var(--accent-color);
   border-radius: 8px;
   padding: 4px 8px;
 }
-
 
 /* GUIDE STYLES */
 .guides a {
@@ -200,7 +201,7 @@ h3 {
 }
 
 .guides a:hover {
-  border-color: var(--primary-color)
+  border-color: var(--primary-color);
 }
 
 @media screen and (max-width: 650px) {
@@ -244,8 +245,6 @@ h3 {
   font-weight: 500;
 }
 
-
-
 /* STEP STYLES */
 .step {
   margin-bottom: 16px;
@@ -278,7 +277,8 @@ h3 {
   border-radius: 8px;
 }
 
-.step ul, .step p {
+.step ul,
+.step p {
   margin: 8px 0;
 }
 
@@ -306,11 +306,12 @@ hr {
     flex-direction: column;
   }
   .step .image-container {
-    max-width: 400px;;
+    max-width: 400px;
   }
 }
 
-.step li.info, .step li.warning {
+.step li.info,
+.step li.warning {
   list-style: none;
 }
 
@@ -331,7 +332,6 @@ hr {
   width: 1.1em;
   color: red;
 }
-
 
 /* VIDEOS STYLES */
 .videos {
@@ -354,10 +354,10 @@ hr {
 
 .hardware .bg-white[data-v-7863c359] {
   background-color: var(--primary-background-color);
-
 }
 
-.hardware .bg-button, .hardware .bg-button-light {
+.hardware .bg-button,
+.hardware .bg-button-light {
   color: var(--accent-text-color);
 }
 
@@ -366,7 +366,7 @@ hr {
 .accordion .accordion-item {
   border-bottom: 1px solid #e5e5e5;
 }
-.accordion .accordion-item button[aria-expanded='true'] {
+.accordion .accordion-item button[aria-expanded="true"] {
   border-bottom: 1px solid var(--primary-color);
 }
 .accordion button {
@@ -381,11 +381,13 @@ hr {
   background: none;
   outline: none;
 }
-.accordion button:hover, .accordion button:focus {
+.accordion button:hover,
+.accordion button:focus {
   cursor: pointer;
   color: var(--primary-color);
 }
-.accordion button:hover::after, .accordion button:focus::after {
+.accordion button:hover::after,
+.accordion button:focus::after {
   cursor: pointer;
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
@@ -407,7 +409,7 @@ hr {
 .accordion button .icon::before {
   display: block;
   position: absolute;
-  content: '';
+  content: "";
   top: 9px;
   left: 5px;
   width: 10px;
@@ -417,20 +419,20 @@ hr {
 .accordion button .icon::after {
   display: block;
   position: absolute;
-  content: '';
+  content: "";
   top: 5px;
   left: 9px;
   width: 2px;
   height: 10px;
   background: currentColor;
 }
-.accordion button[aria-expanded='true'] {
+.accordion button[aria-expanded="true"] {
   color: var(--primary-color);
 }
-.accordion button[aria-expanded='true'] .icon::after {
+.accordion button[aria-expanded="true"] .icon::after {
   width: 0;
 }
-.accordion button[aria-expanded='true'] + .accordion-content {
+.accordion button[aria-expanded="true"] + .accordion-content {
   opacity: 1;
   max-height: 60em;
   transition: all 200ms linear;
@@ -486,7 +488,7 @@ hr {
   margin: 24px auto 0;
   font-style: italic;
   max-width: 450px;
-} 
+}
 .note {
   color: var(--secondary-text-color);
   font-style: italic;
