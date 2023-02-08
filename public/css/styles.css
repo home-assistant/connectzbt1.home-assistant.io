@@ -267,6 +267,7 @@ h3 {
 
 .step .image-container {
   width: 100%;
+  flex-shrink: 0;
   max-width: 350px;
   margin: 8px 20px 8px 0;
 }
