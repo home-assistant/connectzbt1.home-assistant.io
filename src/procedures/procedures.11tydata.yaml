@@ -130,12 +130,13 @@ procedureMigrateZigbee:
       content: |
         <ul>
           <li>Assign each of the devices to an area and select <b>Finish</b>.</li>
+          <li class="info">However, you won't be able to control the devices until they rejoin the network. Normally, they join within one hour. You may be able to accelerate that process by powercycling the device.</li>
         </ul>
-    - title: Setup new devices
+    - title: Reconfigure automations and dashboards
       image: z2m-backup-restore-05.png
       content: |
         <ul>
-          <li>You can now add your devices to the dashboard.</li>
+        <li class="info">All migrated devices have a new entity ID. This means you will need to manually reconfigure automations and dashboard cards.</li>
           <li class="info">The names that you manually assigned to your devices won't have been migrated. You will have to rename the devices again.</li>
         </ul>
 procedureMigrateZigbeeZHA:
@@ -271,7 +272,7 @@ procedureMigrateZigbeeZHA:
       image: z2m-migrate-zha-12.png
       content: |
         <ul>
-          <li>The migration process is now complete. Select <b>Finish</b> to confirm.</li>
+          <li>Select <b>Finish</b> to confirm. The migration process is now complete. </li>
           <li class="info">However, you won't be able to control the devices until they rejoin the network. Normally, they join within one hour. You may be able to accelerate that process by powercycling the device.</li>
         </ul>
     - title: Reconfigure automations and dashboards
