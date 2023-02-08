@@ -4,26 +4,44 @@ description: Zigbee and Thread USB stick by the creators of Home Assistant
 ---
 
 <div class="container">
-  <div class="text-center">
+  <div>
     <p>
-      Home Assistant SkyConnect is the easiest way to add Zigbee support to
-      your Home Assistant instance and make it Matter-ready. It features a transmit power of up to 20 dBm and over-the-air updates. A future firmware update will bring Thread support; allowing SkyConnect to
-      power your Matter and Zigbee networks at the same time.
+      Home Assistant SkyConnect is the easiest way to add Zigbee support to your
+      Home Assistant instance and make it Matter-ready. It features a transmit
+      power of up to 20 dBm and over-the-air updates. A future firmware update
+      will bring Thread support; allowing SkyConnect to power your Matter and
+      Zigbee networks at the same time.
     </p>
   </div>
   <div><h3 class="text-center">Choose your Zigbee use case</h3></div>
   <div class="layout horizontal justified guides">
     <a href="/new-zigbee">
       <div class="layout vertical center">
-        <img src="/images/network-form.png" width="250"/>
+        <img src="/images/network-form.png" width="250" />
         <h3>Form a new Zigbee network</h3>
       </div>
     </a>
     <a href="/migrate-zigbee-zha">
       <div class="layout vertical center">
-        <img src="/images/network-migrate.png" width="250"/>
-        <h3>Migrate an existing <br>Zigbee network</h3>
+        <img src="/images/network-migrate.png" width="250" />
+        <h3>Migrate an existing <br />Zigbee network</h3>
       </div>
     </a>
   </div>
+  <div><h3 class="text-center">Firmware updates</h3></div>
+  <p>
+    We're working on making firmware updates available via Home Assistant.
+    However, this is still in progress.
+  </p>
+  <p>
+    If you want to make sure that you're running the latest update, you can use
+    the below firmware in the meanwhile.
+  </p>
+  <nabucasa-zigbee-flasher manifest="./flasher.json"
+    ><span slot="button">Update Firmware</span></nabucasa-zigbee-flasher
+  >
 </div>
+<script
+  type="module"
+  src="https://unpkg.com/@nabucasa/sl-web-tools@0.9.2/dist/web/nabucasa-zigbee-flasher.js?module"
+></script>
