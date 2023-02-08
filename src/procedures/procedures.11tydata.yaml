@@ -44,7 +44,7 @@ procedureNewZigbee:
       image: skyconnect-discovered-05.png
       content: |
         <ul>
-          <li>Click on <b>devices<b> link and select <b>add device</b> on the lower right corner. ZHA will now search for Zigbee devices in pairing mode.
+          <li>Click on <b>Devices</b> link and select <b>Add device</b> on the lower right corner. ZHA will now search for Zigbee devices in pairing mode.
           <li>Put your Zigbee device into pairing mode.</li>
           <li class="warning">If ZHA can't find your Zigbee device make sure that SkyConnect does not suffer from interference. Use the extension cable and try placing the SkyConnect further away from potential devices which can cause interference.</li>
         </ul>
