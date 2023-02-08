@@ -263,6 +263,7 @@ procedureMigrateZigbeeZHA:
       content: |
         <ul>
           <li>Select the <b>Permanently replace the radio IEEE address</b> and select <b>Submit</b>.</li>
+          <li class="info">This means that your old stick and your new stick will have the same IEEE address. This is required for the migration process to complete successfully. From this point on-wards you should not operate the old stick in the same area. If you do not migrate the IEEE address from your old stick, you'll have to repair many of your devices in order to keep them working.</li>
         </ul>
     - title: Wait
       image: z2m-migrate-zha-11.png
