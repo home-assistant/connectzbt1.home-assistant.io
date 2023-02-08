@@ -74,21 +74,23 @@ procedureMigrateZigbee:
       content: |
         <ul>
           <li>Under <b>Settings</b>><b>Add-ons</b>, in the <b>Zigbee2MQTT</b> add-on, select <b>Stop</b>.</li>
+          <li class="info">Zigbee2MQTT uses the MQTT discovery feature to make the Zigbee devices available in Home Assistant. After removing the Zigbee2MQTT add-on, the devices are still present in Home Assistant since the MQTT broker is still holding on to the MQTT discovery messages.</li>
+          <li class="info">It is recommended to remove these stale devices from the MQTT broker (see next steps).</li>
         </ul>
-    - title: Deregister devices from Mosquitto broker (option 1)
+    - title: Remove Zigbee2MQTT devices (option 1)
       image: z2m-mqq-integration-01.png
       content: |
         <ul>
-          <li class="info">The devices can talk to either MQTT or SkyConnect. To migrate, you need to deregister them from the MQTT network.</li>
           <li>If you don't use MQTT outside z2m, you can delete the Mosquito Broker integration. Under <b>Devices & Services</b>, in the <b>Mosquitto broker</b> integration, select <b>Delete</b>.</li>
         </ul>
-    - title: Deregister devices from Mosquitto broker (option 2)
+    - title: Remove Zigbee2MQTT devices (option 2)
       image: z2m-mqtt-dereg-device-01.png
       content: |
-        <ul>
+        <ol>
           <li class="info">If you don't want to delete the Mosquito Broker integration, you can remove the devices from the MQTT network.</li>
           <li>In the integration card, select <b>Devices</b>, under <b>Device info</b>, select <b>Delete</b>.</li>
-        </ul>
+          <li>Repeat this for every device.</li>
+        </ol>
     - title: Plug the extension cable into SkyConnect
       image: skyconnect-raspi-01.jpg
       content: |
