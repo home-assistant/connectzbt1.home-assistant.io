@@ -276,7 +276,7 @@ procedureMigrateZigbeeZHA:
       content: |
         <ul>
           <li>Select <b>Finish</b> to confirm. The migration process is now complete. </li>
-          <li class="info">However, you won't be able to control the devices until they rejoin the network. Normally, they join within one hour. You may be able to accelerate that process by powercycling the device.</li>
+          <li class="info">You won't be able to control the devices until they rejoin the network. Normally, they rejoin within one hour. You may be able to accelerate that process by power-cycling devices.</li>
         </ul>
     - title: Reconfigure automations and dashboards
       image: z2m-backup-restore-05.png
