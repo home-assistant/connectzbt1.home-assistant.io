@@ -196,6 +196,7 @@ h3 {
   padding: 8px;
   text-align: center;
   background-color: var(--secondary-background-color);
+  width: 440px;
 }
 
 .guides a:hover {
