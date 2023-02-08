@@ -127,12 +127,12 @@ procedureMigrateZigbee:
         <ul>
           <li>Make sure the <b>coordinator_backup.json</b> file is selected and select <b>submit</b>.</li>
         </ul>
-    - title: Assign devices to area
-      image: z2m-backup-restore-04.png
+    - title: Assign coordinator to area
+      image: skyconnect-discovered-04.png
       content: |
         <ul>
-          <li>Assign each of the devices to an area and select <b>Finish</b>.</li>
-          <li class="info">However, you won't be able to control the devices until they rejoin the network. Normally, they join within one hour. You may be able to accelerate that process by powercycling the device.</li>
+          <li>Assign the coordinator to an area and select <b>Finish</b>.</li>
+          <li class="info">However, you won't be able to control the devices until they rejoin the network. Normally, they join within one hour. You may be able to accelerate that process by power-cycling the device.</li>
         </ul>
     - title: Reconfigure automations and dashboards
       image: z2m-backup-restore-05.png
