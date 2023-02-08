@@ -40,7 +40,7 @@ procedureNewZigbee:
           <li>Your Zigbee devices are now added to your Zigbee network.</li>
         </ul></li>
         </ol>
-    - title: Setup Zigbee devices
+    - title: Add Zigbee devices
       image: skyconnect-discovered-05.png
       content: |
         <ul>
