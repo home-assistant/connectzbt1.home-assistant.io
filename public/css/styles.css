@@ -53,7 +53,7 @@ h3 {
 .container {
   margin: 0 auto;
   padding: 16px 8px;
-  max-width: 720px;
+  max-width: 960px;
 }
 .content {
   /*display: flex;*/

@@ -14,7 +14,7 @@ procedureNewZigbee:
       image: skyconnect-discovered-01.png
       content: |
         <ol>
-          <li>In Home Assistant (<a href="http://homeassistant.local:8123" target="_blank">http://homeassistant.local:8123</a>), go to <b>Settings</b>><b>Devices & Services</b>.</li>
+          <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b>><b>Devices & Services</b></a></li>
           <li>SkyConnect should now have been discovered.</li>
           <li>Select <b>Configure</b>.</li>
         </ol>
@@ -81,7 +81,7 @@ procedureMigrateZigbee:
       image: z2m-mqq-integration-01.png
       content: |
         <ul>
-          <li>If you don't use MQTT outside z2m, you can delete the Mosquito Broker integration. Under <b>Devices & Services</b>, in the <b>Mosquitto broker</b> integration, select <b>Delete</b>.</li>
+          <li>If you don't use MQTT outside z2m, you can delete the Mosquito Broker integration. Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b>><b>Devices & Services</b></a>, in the <b>Mosquitto broker</b> integration, select <b>Delete</b>.</li>
         </ul>
     - title: Remove Zigbee2MQTT devices (option 2)
       image: z2m-mqtt-dereg-device-01.png
@@ -103,7 +103,7 @@ procedureMigrateZigbee:
       image: skyconnect-discovered-01.png
       content: |
         <ol>
-          <li>Go to <b>Settings</b>><b>Devices & Services</b>.</li>
+          <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b>><b>Devices & Services</b></a>.</li>
           <li>SkyConnect should now have been discovered.</li>
           <li>Select <b>Configure</b>.</li>
         </ol>
@@ -154,7 +154,7 @@ procedureMigrateZigbeeZHA:
       image: z2m-mqq-integration-01.png
       content: |
         <ul>
-          <li>If you don't use MQTT outside z2m, you can delete the Mosquito Broker integration. Under <b>Devices & Services</b>, in the <b>Mosquitto broker</b> integration, select <b>Delete</b>.</li>
+          <li>If you don't use MQTT outside z2m, you can delete the Mosquito Broker integration. Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b>><b>Devices & Services</b></a>, in the <b>Mosquitto broker</b> integration, select <b>Delete</b>.</li>
         </ul>
     - title: Remove Zigbee2MQTT devices (option 2)
       image: z2m-mqtt-dereg-device-01.png
@@ -168,7 +168,7 @@ procedureMigrateZigbeeZHA:
       image: z2m-migrate-zha-15.png
       content: |
         <ol>
-          <li>Under <b>Settings</b>><b>Devices & Services</b>, if you do not see the ZHA integration, select the <b>Add integration</b> button.</li>          
+          <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b>><b>Devices & Services</b></a>, if you do not see the ZHA integration, select the <b>Add integration</b> button.</li>          
           <li>From the dropdown list, select <b>Add Zigbee device</b>.</li>
         </ol>
     - title: Add ZHA integration (2)
@@ -241,7 +241,7 @@ procedureMigrateZigbeeZHA:
       image: skyconnect-discovered-01.png
       content: |
         <ol>
-          <li>Under <b>Settings</b>><b>Devices & Services</b>, SkyConnect should have been autodiscovered.</li>          
+          <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b>><b>Devices & Services</b></a>, SkyConnect should have been autodiscovered.</li>          
           <li>Select <b>Configure</b>.</li>
         </ol>
     - title: Start the backup restore process
