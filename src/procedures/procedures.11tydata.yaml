@@ -192,12 +192,16 @@ procedureMigrateZigbeeZHA:
       content: |
         <ul>
           <li>Select <b>Keep radio network settings</b>.</li>
+          <li>You can now start migrating the ZHA network as described below.</li>
         </ul>
+procedureMigrateZigbeeZHAOnly:
+  title: Migrate ZHA network
+  steps:
     - title: Start radio migration
       image: z2m-migrate-zha-02.png
       content: |
         <ol>
-          <li>In the ZHA integration, select <b>Configure</b>.</li>
+          <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b>><b>Devices & Services</b></a>, in the ZHA integration, select <b>Configure</b>.</li>
           <li>Under <b>Network settings</b> add-on, select <b>Migrate Radio</b>.</li>
         </ol>
     - title: Reconfigure ZHA
