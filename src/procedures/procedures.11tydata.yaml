@@ -138,7 +138,7 @@ procedureMigrateZigbee:
       image: z2m-backup-restore-05.png
       content: |
         <ul>
-        <li class="info">All migrated devices have a new entity ID. This means you will need to manually reconfigure automations and dashboard cards.</li>
+        <li class="info">All migrated devices have new entity IDs. This means you will need to manually reconfigure automations and dashboard cards.</li>
           <li class="info">The names that you manually assigned to your devices won't have been migrated. You will have to rename the devices again.</li>
         </ul>
 procedureMigrateZigbeeZHA:
@@ -286,6 +286,157 @@ procedureMigrateZigbeeZHAOnly:
       image: z2m-backup-restore-05.png
       content: |
         <ul>
-        <li class="info">All migrated devices have a new entity ID. This means you will need to manually reconfigure automations and dashboard cards.</li>
+        <li class="info">All migrated devices have new entity IDs. This means you will need to manually reconfigure automations and dashboard cards.</li>
+          <li class="info">The names that you manually assigned to your devices won't have been migrated. You will have to rename the devices again.</li>
+        </ul>
+procedureMigrateConBee:
+  title: Migrate a deCONZ network from a ConBee stick
+  steps:
+    - title: Stop the deCONZ add-on
+      image: conbee-migrate-zha-02.png
+      content: |
+        <ol>
+          <li>Under <b>Settings</b>><b>Add-ons</b>, in the <b>Zigbee2MQTT</b> add-on, select <b>Stop</b>.</li>
+        </ol>
+    - title: Remove the deCONZ integration
+      image: conbee-migrate-zha-03.png
+      content: |
+        <ul>
+          <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b>><b>Devices & Services</b></a>, in the deCONZ integration, select <b>Delete</b>.</li>
+        </ul>
+    - title: Add a new ZHA integration
+      image: conbee-migrate-zha-04.png
+      content: |
+        <ul>
+          <li>Select <b>Add integration</b>, then select <b>ZHA</b> from the list.</li>
+          <li>Once ConBee II has been auto-detected, select <b>Configure</b>.</li>
+        </ul>
+    - title: Set up ConBee II as ZHA integration
+      image: conbee-migrate-zha-05.png
+      content: |
+        <ul>
+          <li>Select <b>Submit</b>.</li>
+        </ul>
+    - title: Choose the network settings for the radio.
+      image: conbee-migrate-zha-06.png
+      content: |
+        <ul>
+          <li>Select <b>Keep radio network settings</b>.</li>
+        </ul>
+    - title: Wait
+      image: conbee-migrate-zha-07.png
+      content: |
+        <ul>
+          <li>Wait for the settings to be loaded.</li>
+        </ul>
+    - title: Add Zigbee Coordinator to your area
+      image: conbee-migrate-zha-09.png
+      content: |
+        <ul>
+          <li>Once deCONZ has been recognized as your Zigbee coordinator, add it to your area.</li>
+          <li>Select <b>Finish</b>.</li>
+        </ul>
+    - title: Wait for the devices rejoin the network.
+      image: conbee-migrate-zha-10.png
+      content: |
+        <ul>
+          <li class="info">Wait for the devices to rejoin the network. Normally, they rejoin within one hour. You may be able to accelerate that process by power-cycling devices.</li>
+          <li>Once the devices show up in the integration, select <b>Configure</b>.</li>
+        </ul>
+    - title: Migrate the network settings
+      image: conbee-migrate-zha-11.png
+      content: |
+        <ul>
+          <li>Under <b>Network Settings</b>, select <b>Migrate radio</b>.</li>
+        </ul>
+    - title: Reconfigure ZHA
+      image: conbee-migrate-zha-12.png
+      content: |
+        <ul>
+          <li>Select <b>Submit</b>.</li>
+        </ul>
+    - title: Migrate to a new radio
+      image: conbee-migrate-zha-13.png
+      content: |
+        <ul>
+          <li>Select <b>Migrate to a new radio</b>.</li>
+        </ul>
+    - title: Start automatic backup
+      image: conbee-migrate-zha-14.png
+      content: |
+        <ul>
+          <li>Make sure the ConBee firmware is updated to the required version.</li>
+          <li>When it is up-to-date, select <b>Submit</b>.</li>
+        </ul>
+    - title: Unplug your old radio
+      image: z2m-migrate-zha-06.png
+      content: |
+        <ol>
+          <li>If you no longer need the old radio stick, you can now remove it.</li>
+          <li>Before selecting <b>Submit</b>, connect SkyConnect, as described in the following step.</li>
+        </ol>
+    - title: Plug the extension cable into SkyConnect
+      image: skyconnect-raspi-01.jpg
+      content: |
+        <ol>
+          <li>Plug the Home Assistant SkyConnect into the USB extension cable.</li>
+          <li>Plug the extension cable into your Home Assistant instance.</li>
+          <li class="warning">It is important to use the USB extension cable. USB 3.0 ports and USB 3.0 drives can cause interference with 2.4 GHz protocols, including the ones provided by Home Assistant SkyConnect.</li>
+        </ol>
+    - title: Confirm that SkyConnect is plugged in
+      image: z2m-migrate-zha-06.png
+      content: |
+        <ol>
+          <li>Now that SkyConnect is plugged in, select <b>Submit</b>.</li>
+        </ol>
+    - title: Select the serial port
+      image: conbee-migrate-zha-15.png
+      content: |
+        <ul>
+          <li>Select the serial port for SkyConnect, then select <b>Submit</b>.</li>
+        </ul>
+    - title: Start the backup restore process
+      image: z2m-migrate-zha-08.png
+      content: |
+        <ul>
+          <li>Select <b>Restore an automatic backup</b>.</li>          
+        </ul>
+    - title: Select the backup
+      image: z2m-migrate-zha-09.png
+      content: |
+        <ul>
+          <li>Choose the latest backup and select <b>Submit</b>.</li>
+        </ul>
+    - title: Check the SkyConnect ZHA integration
+      image: conbee-migrate-zha-18.png
+      content: |
+        <ul>
+          <li>SkyConnect is now setup in the ZHA integration, although the title is <b>ConBee II</b>.</li>
+          <li>To check whether the migration was successful, select <b>Configure</b>.</li>
+        </ul>
+    - title: Check radio type
+      image: conbee-migrate-zha-19.png
+      content: |
+        <ul>
+          <li>Under <b>Network Settings</b>, check the <b>Radio type</b>. It should say <b>ezsb</b>.</li>
+        </ul>
+    - title: Start renaming ZHA integration
+      image: conbee-migrate-zha-20.png
+      content: |
+        <ul>
+          <li>To avoid confusion, rename the ZHA integration.</li>
+          <li>Select <b>Rename</b>.</li>
+        </ul>
+    - title: Change the name to SkyConnect
+      image: conbee-migrate-zha-21.png
+      content: |
+        <ul>
+          <li>Change the ZHA integration name to <b>SkyConnect</b> and select <b>OK</b>.</li>
+        </ul>
+    - title: Reconfigure automations and dashboards
+      image: conbee-migrate-zha-22.png
+      content: |
+        <ul>
+        <li class="info">All migrated devices have new entity IDs. This means you will need to manually reconfigure automations and dashboard cards.</li>
           <li class="info">The names that you manually assigned to your devices won't have been migrated. You will have to rename the devices again.</li>
         </ul>
