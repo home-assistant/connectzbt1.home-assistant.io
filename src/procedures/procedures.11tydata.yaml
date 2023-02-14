@@ -298,7 +298,7 @@ procedureMigrateConBee:
         <ol>
           <li>In the deCONZ app, under <b>Settings</b>><b>Gateway</b>, check the firmware version. It should be version 26720700 or newer.
             <ul>
-              <li>If the version is recent enough, skip the next two steps and continue with Step 4 <a href="#step-stop-the-deconz-add-on">Stop the deCONZ add-on</a>.</li>              
+              <li>If the version is recent enough, skip the next two steps and continue with Step 4 <a href="#step-stop-the-deconz-add-on">Stop the deCONZ add-on</a>.</li> 
             </ul>
           </li>
           <li>If the version is not up-to-date, select <b>Update to 26720700</b>.</li>
@@ -318,9 +318,10 @@ procedureMigrateConBee:
     - title: Stop the deCONZ add-on
       image: conbee-migrate-zha-02.png
       content: |
-        <ul>
-          <li>Under <b>Settings</b>><b>Add-ons</b>, in the <b>deCONZ</b> add-on, select <b>Stop</b>.</li>
-        </ul>
+        <ol>
+          <li>In the <a class="my" href=" https://my.home-assistant.io/redirect/supervisor_addon/?addon=core_deconz)" target="_blank">deCONZ add-on</a>, make sure the <b>Start on boot</b> option is disabled.</li>
+          <li>Select <b>Stop</b>.</li>
+        </ol>
     - title: Remove the deCONZ integration
       image: conbee-migrate-zha-03.png
       content: |
