@@ -348,6 +348,12 @@ procedureMigrateConBee:
         <ul>
           <li>Select <b>Submit</b>.</li>
         </ul>
+    - title: Choose the serial port
+      image: conbee-migrate-zha-24.png
+      content: |
+        <ul>
+          <li>Choose the serial port and select <b>Submit</b>.</li>
+        </ul>
     - title: Choose the network settings for the radio
       image: conbee-migrate-zha-06.png
       content: |
