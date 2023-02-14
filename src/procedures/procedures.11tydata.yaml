@@ -448,7 +448,7 @@ procedureMigrateConBee:
       image: conbee-migrate-zha-19.png
       content: |
         <ul>
-          <li>Under <b>Network Settings</b>, check the <b>Radio type</b>. It should say <b>ezsb</b>.</li>
+          <li>Under <b>Network Settings</b>, check the <b>Radio type</b>. It should say <b>ezsp</b>.</li>
         </ul>
     - title: Start renaming ZHA integration
       image: conbee-migrate-zha-20.png
