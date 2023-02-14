@@ -290,7 +290,7 @@ procedureMigrateZigbeeZHAOnly:
           <li class="info">The names that you manually assigned to your devices won't have been migrated. You will have to rename the devices again.</li>
         </ul>
 procedureMigrateConBee:
-  title: Migrate a deCONZ network from a ConBee stick
+  title: Migrate a deCONZ network to SkyConnect using ZHA
   steps:
     - title: Stop the deCONZ add-on
       image: conbee-migrate-zha-02.png
