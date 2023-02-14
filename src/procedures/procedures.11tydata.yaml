@@ -297,7 +297,7 @@ procedureMigrateConBee:
       content: |
         <ul>
           <li>If you are using a ConBee stick, it is recommended to have it running firmware version 26720700.</li>
-          <li>If it is not running this version, follow the procedure <b>Update the ConBee stick</b> at <a href="#update-the-conbee-stick">the end of this page.</a></li>
+          <li>If it is not running this version, follow the procedure <b>Update the ConBee stick</b> at <a href="#procedure-update-the-conbee-stick">the end of this page.</a></li>
         </ul>
     - title: Stop the deCONZ add-on
       image: conbee-migrate-zha-02.png
