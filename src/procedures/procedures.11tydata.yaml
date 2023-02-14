@@ -319,7 +319,7 @@ procedureMigrateConBee:
       image: conbee-migrate-zha-02.png
       content: |
         <ul>
-          <li>Under <b>Settings</b>><b>Add-ons</b>, in the <b>Zigbee2MQTT</b> add-on, select <b>Stop</b>.</li>
+          <li>Under <b>Settings</b>><b>Add-ons</b>, in the <b>deCONZ</b> add-on, select <b>Stop</b>.</li>
         </ul>
     - title: Remove the deCONZ integration
       image: conbee-migrate-zha-03.png
