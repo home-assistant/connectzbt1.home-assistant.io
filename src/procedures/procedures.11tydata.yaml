@@ -292,12 +292,28 @@ procedureMigrateZigbeeZHAOnly:
 procedureMigrateConBee:
   title: Migrate a deCONZ network to SkyConnect using ZHA
   steps:
-    - title: Update the ConBee stick
-      image: 
+    - title: View the firmware version of the stick
+      image: conbee-update-05.png
+      content: |
+        <ol>
+          <li>In the deCONZ app, under <b>Settings</b>><b>Gateway</b>, check the firmware version. It should be version 26720700.
+            <ul>
+              <li>If the version is correct, skip the next two steps and continue with the step on stopping the deCONZ add-on.</li>              
+            </ul>
+          </li>
+          <li>If the version is not up-to-date, select <b>Update to 26720700</b>.</li>
+        </ol>
+    - title: Follow the wizard
+      image: conbee-update-06.png
       content: |
         <ul>
-          <li>If you are using a ConBee stick, it is recommended to have it running firmware version 26720700.</li>
-          <li>If it is not running this version, follow the procedure <b>Update the ConBee stick</b> at <a href="#procedure-update-the-conbee-stick">the end of this page.</a></li>
+          <li>Select <b>Create backup</b> and let the wizard guide you through the update process.</li>
+        </ul>
+    - title: Update complete
+      image: conbee-update-14.png
+      content: |
+        <ul>
+          <li>Once the update is complete, you will see the new firmware version.</li>
         </ul>
     - title: Stop the deCONZ add-on
       image: conbee-migrate-zha-02.png
@@ -452,30 +468,4 @@ procedureMigrateConBee:
         <ul>
         <li class="info">All migrated devices have new entity IDs. This means you will need to manually reconfigure automations and dashboard cards.</li>
           <li class="info">The names that you manually assigned to your devices won't have been migrated. You will have to rename the devices again.</li>
-        </ul>
-procedureUpdateConBee:
-  title: Update the ConBee stick
-  steps:
-    - title: View the Firmware version
-      image: conbee-update-05.png
-      content: |
-        <ol>
-          <li>In the deCONZ app, under <b>Settings</b>><b>Gateway</b>, check the firmware version. It should be 26720700.
-            <ul>
-              <li>If the version is correct, skip the next few steps and continue with the procedure on migrating a deCONZ network.</li>              
-            </ul>
-          </li>
-          <li>If the version is not up-to-date, select <b>Update to 26720700</b>.</li>
-        </ol>
-    - title: Follow the wizard
-      image: conbee-update-06.png
-      content: |
-        <ul>
-          <li>Select <b>Create backup</b> and let the wizard guide you through the update process.</li>
-        </ul>
-    - title: Update complete
-      image: conbee-update-14.png
-      content: |
-        <ul>
-          <li>Once the update is complete, you will see the firmware version <b>26720700</b>.</li>
         </ul>
