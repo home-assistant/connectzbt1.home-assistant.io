@@ -319,7 +319,7 @@ procedureMigrateConBee:
       image: conbee-migrate-zha-02.png
       content: |
         <ol>
-          <li>In the <a class="my" href=" https://my.home-assistant.io/redirect/supervisor_addon/?addon=core_deconz)" target="_blank">deCONZ add-on</a>, make sure the <b>Start on boot</b> option is disabled.</li>
+          <li>In the <a class="my" href=" https://my.home-assistant.io/redirect/supervisor_addon/?addon=core_deconz" target="_blank">deCONZ add-on</a>, make sure the <b>Start on boot</b> option is disabled.</li>
           <li>Select <b>Stop</b>.</li>
         </ol>
     - title: Remove the deCONZ integration
