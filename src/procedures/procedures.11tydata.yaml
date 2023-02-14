@@ -296,7 +296,7 @@ procedureMigrateConBee:
       image: conbee-update-05.png
       content: |
         <ol>
-          <li>In the deCONZ app, under <b>Settings</b>><b>Gateway</b>, check the firmware version. It should be version 26720700.
+          <li>In the deCONZ app, under <b>Settings</b>><b>Gateway</b>, check the firmware version. It should be version 26720700 or newer.
             <ul>
               <li>If the version is correct, skip the next two steps and continue with the step on stopping the deCONZ add-on.</li>              
             </ul>
