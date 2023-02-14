@@ -1,35 +1,34 @@
 <div class="container">
   <div>
     <a
-      href="#{{ proc.title | slugify }}"
-      id="{{ proc.title | slugify }}"
-      class="anchor"
-    >
+      href="#procedure-{{ proc.title | slugify }}"
+      id="procedure-{{ proc.title | slugify }}"
+      class="anchor">
       <h1>{{ proc.title }}</h1>
     </a>
     {% for item in proc.steps %}
-    <div class="step">
-      <a
-        href="#{{ item.title | slugify }}"
-        id="{{ item.title | slugify }}"
-        class="anchor"
-      >
-        <div class="layout horizontal center">
-          <h2>Step {{ forloop.index }}</h2>
-          <span class="title">{{item.title}}</span>
-        </div>
-      </a>
-      {% if item.image or item.content %}
-      <div class="step-image-instruction">
-        {% if item.image %}
-        <div class="image-container"><img src="/images/{{item.image}}" /></div>
-        {% endif %} {% if item.content %}
-        <div>{{item.content}}</div>
+      <div class="step">
+        <a
+          href="#step-{{ item.title | slugify }}"
+          id="step-{{ item.title | slugify }}"
+          class="anchor">
+          <div class="layout horizontal center">
+            <h2>Step {{ forloop.index }}</h2>
+            <span class="title">{{ item.title }}</span>
+          </div>
+        </a>
+        {% if item.image or item.content %}
+          <div class="step-image-instruction">
+            {% if item.image %}
+              <div class="image-container"><img src="/images/{{item.image}}" /></div>
+            {% endif %}
+            {% if item.content %}
+              <div>{{ item.content }}</div>
+            {% endif %}
+          </div>
         {% endif %}
       </div>
-      {% endif %}
-    </div>
-    <hr />
+      <hr/>
     {% endfor %}
   </div>
 </div>
