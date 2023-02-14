@@ -366,7 +366,7 @@ procedureMigrateConBee:
           <li>Once deCONZ has been recognized as your Zigbee coordinator, add it to your area.</li>
           <li>Select <b>Finish</b>.</li>
         </ol>
-    - title: Wait for the devices rejoin the network.
+    - title: Wait for the devices rejoin the network
       image: conbee-migrate-zha-10.png
       content: |
         <ul>
