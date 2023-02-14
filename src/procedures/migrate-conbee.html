@@ -5,7 +5,7 @@ guideName: Migrate a deCONZ/ConBee network
 
 ---
 <div class="container">
-    <p class="text-center note">Follow this guide if you have a deCONZ network running with a ConBee stick and want to migrate to SkyConnect and ZHA.</p>
+    <p class="text-center note">Follow this guide if you have a deCONZ network running with a ConBee II/RaspBee II and want to migrate to SkyConnect and ZHA.</p>
     <p class="text-center note">Note: this procedure only helps migrate basic network settings to your Home Assistant SkyConnect, customizations like device names will be lost and automations will need to be updated. Most powered devices like lightbulbs will be re-discovered over time (you can speed this up by rebooting the device) but your battery-powered devices may need to be re-joined to the network for the migration to complete. There is currently no migration path to migrate all settings and devices.</p>
 </div>
 {% render "proc.include.liquid", proc: procedureMigrateConBee %}
