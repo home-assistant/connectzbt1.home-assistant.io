@@ -312,12 +312,19 @@ procedureMigrateConBee:
           <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b>><b>Devices & Services</b></a>, in the deCONZ integration, select <b>Delete</b>.</li>
         </ul>
     - title: Add a new ZHA integration
-      image: conbee-migrate-zha-04.png
+      image: conbee-migrate-zha-23.png
       content: |
         <ol>
-          <li>Select <b>Add integration</b>, then select <b>ZHA</b> from the list.</li>
-          <li>Once ConBee II has been auto-detected, select <b>Configure</b>.</li>
+          <li>In the top right corner, make sure the checkboxes <b>Show ignored integrations</b> and <b>Show disabled integrations</b> are selected.</li>
+          <li>Check if the ZHA integration shows up.</li>
+          <li>If the ZHA integration does not show up, select <b>Add integration</b>, then select <b>ZHA</b> from the list.</li>
         </ol>
+    - title: Configure the new ZHA integration
+      image: conbee-migrate-zha-04.png
+      content: |
+        <ul>      
+          <li>Once the ZHA integration has detected ConBee II, select <b>Configure</b>.</li>
+        </ul>
     - title: Set up ConBee II as ZHA integration
       image: conbee-migrate-zha-05.png
       content: |
