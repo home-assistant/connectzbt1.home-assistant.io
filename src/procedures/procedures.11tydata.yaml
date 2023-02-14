@@ -329,7 +329,7 @@ procedureMigrateConBee:
         <ul>
           <li>Wait for the settings to be loaded.</li>
         </ul>
-    - title: Add Zigbee Coordinator to your area
+    - title: Add the Zigbee coordinator to your area
       image: conbee-migrate-zha-09.png
       content: |
         <ul>
@@ -340,7 +340,7 @@ procedureMigrateConBee:
       image: conbee-migrate-zha-10.png
       content: |
         <ul>
-          <li class="info">Wait for the devices to rejoin the network. Normally, they rejoin within one hour. You may be able to accelerate that process by power-cycling devices.</li>
+          <li class="info">Wait for the devices to rejoin the network. Normally, powered devices rejoin within one hour. You may be able to accelerate that process by power-cycling devices. Your battery-powered devices may need to be re-joined to the network manually.</li>
           <li>Once the devices show up in the integration, select <b>Configure</b>.</li>
         </ul>
     - title: Migrate the network settings
@@ -361,7 +361,7 @@ procedureMigrateConBee:
         <ul>
           <li>Select <b>Migrate to a new radio</b>.</li>
         </ul>
-    - title: Start automatic backup
+    - title: Start the automatic backup
       image: conbee-migrate-zha-14.png
       content: |
         <ul>
@@ -414,7 +414,7 @@ procedureMigrateConBee:
           <li>SkyConnect is now setup in the ZHA integration, although the title is <b>ConBee II</b>.</li>
           <li>To check whether the migration was successful, select <b>Configure</b>.</li>
         </ul>
-    - title: Check radio type
+    - title: Check the radio type
       image: conbee-migrate-zha-19.png
       content: |
         <ul>
