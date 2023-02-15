@@ -1,0 +1,76 @@
+---
+layout: base
+description: Support | SkyConnect
+faqs:
+  - title: >
+      Can I run 2 sticks with ZHA simultaneously?
+    content: >
+      <p>No. ZHA (Zigbee Home Assistant) is single instance only. It cannot control 2 radios at once.</p>
+  - title: >
+      Can I run 2 sticks with different Zigbee solutions simultaneously?
+    content: >
+      <p>
+        Yes. For example, you can run a stick with deCONZ or Zigbee2MQTT alongside SkyConnect with ZHA.
+      </p>
+  - title: >
+      Can I migrate from a deCONZ or Zigbee2MQTT stick to SkyConnect and keep using the old stick?
+    content: >
+      <p>No. During migration, the IEEE address of the SkyConnect is replaced by the IEEE address of the old stick. This means that your old stick and your new stick will have the same IEEE address. This is required for the migration process to complete successfully. From this point on-wards you should not operate the old stick in the same area. If you do not migrate the IEEE address from your old stick, you'll have to re-pair many of your devices in order to keep them working.</p>
+---
+
+  <div class="container">
+    <div class="accordion">
+      {% for faq in faqs %}
+      <div class="accordion-item">
+        <button
+          aria-expanded="false"
+          id="{{ faq.title | slugify }}"
+        >
+          <a
+            href="#{{ faq.title | slugify }}"
+            class="anchor"
+          >
+            <span class="accordion-title">{{faq.title}}</span
+            ><span class="icon" aria-hidden="true"></span>
+          </a>
+        </button>
+        <div class="accordion-content">
+          <p>{{faq.content}}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+  const items = document.querySelectorAll(".accordion button");
+
+  function toggleAccordion() {
+    const itemToggle = this.getAttribute("aria-expanded");
+
+    for (i = 0; i < items.length; i++) {
+      items[i].setAttribute("aria-expanded", "false");
+    }
+
+    if (itemToggle == "false") {
+      this.setAttribute("aria-expanded", "true");
+    }
+  }
+
+  items.forEach((item) => item.addEventListener("click", toggleAccordion));
+
+  const urlParts = document.URL.split('#');
+  const anchor = (urlParts.length > 1) ? urlParts[1] : null;
+  let openedItem = false;
+  for (i = 0; i < items.length; i++) {
+    const id = items[i].getAttribute("id");
+    if (id == anchor) {
+      items[i].setAttribute("aria-expanded", "true");
+      openedItem = true;
+    }
+  }
+  if (!openedItem) {
+    items[0].setAttribute("aria-expanded", "true");
+  }
+</script>
