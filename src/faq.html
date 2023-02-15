@@ -1,11 +1,11 @@
 ---
 layout: base
-description: Support | SkyConnect
+description: FAQ | SkyConnect
 faqs:
   - title: >
       Can I run 2 sticks with ZHA simultaneously?
     content: >
-      <p>No. ZHA (Zigbee Home Automation) is single instance only. It cannot control 2 radios at once.</p>
+      <p>No. ZHA (Zigbee Home Automation) is single instance only. ZHA cannot control 2 radios at once.</p>
   - title: >
       Can I run 2 sticks with different Zigbee solutions simultaneously?
     content: >
@@ -41,12 +41,14 @@ faqs:
         <pre>
           <code>serial:
             adapter: ezsp
-            port: /dev/ttyAMA1
+            port: /dev/serial/by-id/usb-Nabu_Casa_SkyConnect_v1.0_<usb-serial-number>-if00-port0
             baudrate: 115200
             rtscts: true
           </code>
         </pre>
       </p>
+      <p>You can find the port information under <a class="my" href="https://my.home-assistant.io/redirect/hardware/" target="_blank">Settings>System>Hardware</a>, then on the menu button, select <b>All Hardware</b> and search for SkyConnect.</p>
+      <p><img src="/images/skyconnect-id.png"/></p>
 ---
 
   <div class="container">
