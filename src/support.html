@@ -5,7 +5,7 @@ faqs:
   - title: >
       Can I run 2 sticks with ZHA simultaneously?
     content: >
-      <p>No. ZHA (Zigbee Home Assistant) is single instance only. It cannot control 2 radios at once.</p>
+      <p>No. ZHA (Zigbee Home Automation) is single instance only. It cannot control 2 radios at once.</p>
   - title: >
       Can I run 2 sticks with different Zigbee solutions simultaneously?
     content: >
@@ -16,6 +16,37 @@ faqs:
       Can I migrate from a deCONZ or Zigbee2MQTT stick to SkyConnect and keep using the old stick?
     content: >
       <p>No. During migration, the IEEE address of the SkyConnect is replaced by the IEEE address of the old stick. This means that your old stick and your new stick will have the same IEEE address. This is required for the migration process to complete successfully. From this point on-wards you should not operate the old stick in the same area. If you do not migrate the IEEE address from your old stick, you'll have to re-pair many of your devices in order to keep them working.</p>
+  - title: >
+      Is Zigbee2MQTT supported by SkyConnect?
+    content: >
+      <p>
+        The Home Assistant team officially supports ZHA (Zigbee Home
+        Automation), the Zigbee stack integrated into Home Assistant Core.
+      </p>
+      <p>
+        The Zigbee2MQTT project has <a href="https://www.zigbee2mqtt.io/guide/adapters/#experimental">
+        experimental support</a> (in beta stage) for the Silicon Labs radio on
+        Home Assistant SkyConnect. With this setting, Zigbee2MQTT is known to work
+        on Home Assistant SkyConnect.
+      </p>
+      <p>
+        Note: The Zigbee Home Automation integration is active by default! If
+        you are using Zigbee2MQTT, remember to delete and ignore the discovered
+        Zigbee Home Automation integration to avoid interference.
+      </p>
+      <p>
+        Note: When setting up Zigbee2MQTT with the Home Assistant SkyConnect, you will
+        need to configure the adapter type in Zigbee2MQTT. Make sure the following
+        is present in your Zigbee2MQTT configuration:
+        <pre>
+          <code>serial:
+            adapter: ezsp
+            port: /dev/ttyAMA1
+            baudrate: 115200
+            rtscts: true
+          </code>
+        </pre>
+      </p>
 ---
 
   <div class="container">
