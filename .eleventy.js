@@ -5,7 +5,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "public/images": "images",
     "public/css": "css",
-    "public/flasher.json": "flasher.json",
+    "public/flasher.json": "firmware-update/flasher.json",
   });
 
   return {
