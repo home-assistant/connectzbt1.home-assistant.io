@@ -1,0 +1,33 @@
+---
+layout: base
+title: Documentation
+description: Troubleshooting, resources, and videos
+guides:
+  - title: Firmware update
+    url: /firmware-update/
+  - title: Connectivity
+    url: /connectivity/
+---
+
+<div class="container">
+  <h1>Documentation</h1>
+  <div class="layout horizontal items">
+    {% for guide in guides %}
+    <a href="{{guide.url}}">
+      <div class="layout vertical center">{{guide.title}}</div>
+    </a>
+    {% endfor %}
+  </div>
+  <h1>Resources</h1>
+  <div class="layout horizontal items">
+    <a href="/videos">
+      <div class="layout vertical center">
+        <div style="padding: 45px 45px 16px 45px">
+          <img src="/images/icons/online-video.png" width="150" />
+        </div>
+        <h3>Videos</h3>
+      </div>
+    </a>
+    
+  </div>
+</div>
