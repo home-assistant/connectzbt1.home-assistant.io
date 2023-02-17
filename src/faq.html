@@ -60,10 +60,23 @@ faqs:
           <li>Make sure your user is added to dialout group: <code>sudo adduser [username] dialout</code></li>
           <li>Reboot your system.</li>
           <li>Try again.</li>
-        </ol> </p>    
+        </ol> </p>
+  - title: >
+      My SkyConnect can't pair or can't communicate with Zigbee devices. What can I do?
+    content: >
+      <p>SkyConnect can't communicate reliably if it is too close to other electronics which cause interference. Especially USB&nbsp;3.0 devices are known to interfere with the 2.4&nbsp;GHz based protocols such as Zigbee or Thread. The video below  demonstrates this effect: when the stick is moved closely to a source of interference, the light switch and the light cannot communicate.</p>      
+      <video width="960" height="540" controls>
+          <source src="/images/skyconnect-interference-03.webm" type="video/webm">
+      </video>
+      <p><b>On a more technical note</b>: SkyConnect's IEEE&nbsp;802.15.4 radio (like any Zigbee radio) uses a technique called CCA (Clear Channel Assessment). It essentially listens on the channel it wants to send before sending. If there is traffic on the channel, it prevents the sender from even becoming active. Traffic is not limited to the Zigbee protocol, also other traffic which uses the same 2.4&nbsp;GHz band or just electromagnetic interference from other devices. 
+      </p>
 ---
-
-  <div class="container">
+      
+  <div class="container">    
+  <div class="banner">
+    <span class="secondary"></span>
+    <span>Frequently asked questions</span>
+  </div>
     <div class="accordion">
       {% for faq in faqs %}
       <div class="accordion-item">
