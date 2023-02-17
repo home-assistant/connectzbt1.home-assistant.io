@@ -1,0 +1,27 @@
+---
+layout: base
+description: Zigbee and Thread USB stick by the creators of Home Assistant
+---
+<div class="banner">
+  <span class="secondary"></span>
+  <span>Connectivity</span>
+</div>
+<div class="container">
+  <div>
+    <h1>Interference</h1>
+    <p>SkyConnect can't communicate reliably if it is too close to other electronics which cause interference. Especially USB&nbsp;3.0 devices are known to interfere with the 2.4&nbsp;GHz based protocols such as Zigbee or Thread.</p>
+    <p> The video below  demonstrates this effect: when the stick is moved closely to a source of interference, the light switch and the light cannot communicate. <video width="960" height="540" controls>
+      <source src="/images/skyconnect-interference-03.webm" type="video/webm">
+  </video></p>
+    <p><b>Technical note</b>: SkyConnect's IEEE&nbsp;802.15.4 radio (like any Zigbee radio) uses a technique called CCA (Clear Channel Assessment). Bevor sending, the radio listens on the channel it wants to use. If there is traffic on the channel, it prevents the sender from even becoming active. Traffic is not limited to the Zigbee protocol. There is also traffic from other protocols which use the same 2.4&nbsp;GHz band, as well as electromagnetic interference from other devices.
+    </p>
+    <p>For an in-depth discription of the issue, refer to the white paper issued in 2012 by the Intel Corporation<br><a href="https://www.usb.org/sites/default/files/327216.pdf" target="_blank">USB 3.0* Radio Frequency
+      Interference Impact on 2.4 GHz
+      Wireless Devices</a></p>
+    <h1>How to counter interference</h1>
+    <p>In some cases, the extension cable delivered with SkyConnect is not enough to circumvent interference. In this case, try the following measures: 
+      <ol>
+        <li>Using a longer and/or a shielded extension cable.</li>
+        <li>Make sure harddrives and USB devices are no where near SkyConnect.</li>
+      </ol></p>
+</div>
