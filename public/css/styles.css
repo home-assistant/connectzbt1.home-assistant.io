@@ -77,6 +77,24 @@ h3 {
   border-radius: 4px;
 }
 
+
+@media screen and (max-width: 649px){
+  .image-container {
+    max-width: 200px;
+    display:flex;
+    padding-top: 16px;
+  }
+} 
+
+@media screen and (min-width: 650px){
+  .image-container {
+    height: 200px;
+    max-width: 200px;
+    display:table;
+    justify-content: center;
+  } 
+}
+
 /* FOOTER STYLES */
 .footer {
   margin-top: 24px;
