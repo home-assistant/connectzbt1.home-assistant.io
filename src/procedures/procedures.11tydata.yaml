@@ -34,7 +34,7 @@ procedureNewZigbee:
       image: skyconnect-discovered-04.png
       content: |
         <ol>
-          <li>Once the network has been set up, add the Zigbee Coorinator to an area.</li>
+          <li>Once the network has been set up, add the Zigbee Coordinator to an area.</li>
           <li>Select <b>Finish</b>.
           <ul>
           <li>Your Zigbee devices are now added to your Zigbee network.</li>
