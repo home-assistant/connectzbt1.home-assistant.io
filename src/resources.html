@@ -1,0 +1,25 @@
+---
+layout: base
+description: Resources | Yellow
+alias: /ce
+resources:
+- title: Declaration of Conformity for EU
+  url: /resources/SkyConnect_DoC_EU_CE.pdf
+  icon: /images/icons/good-quality.png
+---
+
+<div class="container">
+  <div class="layout horizontal items">
+    {% for resource in resources %}
+    <a href="{{resource.url}}" target="_blank">
+      <div class="layout vertical center">
+
+        <div style="padding: 45px 45px 16px 45px">
+          <img src="{{resource.icon}}" width="150" />
+        </div>
+        {{resource.title}}
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
