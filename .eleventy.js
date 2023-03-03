@@ -6,6 +6,8 @@ module.exports = function (eleventyConfig) {
     "public/images": "images",
     "public/css": "css",
     "public/flasher.json": "firmware-update/flasher.json",
+    "public/resources": "resources",
+    "public/_redirects": "_redirects",
   });
 
   return {
