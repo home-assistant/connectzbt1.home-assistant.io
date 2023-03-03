@@ -16,6 +16,9 @@ html {
     --primary-background-color: #202020;
     --secondary-background-color: #303030;
     --divider-color: rgba(225, 225, 225, 0.12);
+    }
+  .items a img {
+      filter: invert(1);
   }
 }
 
