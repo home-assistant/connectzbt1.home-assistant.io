@@ -505,7 +505,7 @@ procedureEnableMultiProtocol:
           <li class="info">When multiprotocol support is enabled, the Home&nbsp;Assistant SkyConnect's IEEE&nbsp;802.15.4 radio can be used for both Zigbee and Thread (used by Matter) at the same time.</li>
           <li>If the radio is already used by the ZHA Zigbee integration, ZHA will be reconfigured to use the multiprotocol firmware.</li>
         </ul>
-    - title: Install the Silicon Labs Multiprotocol add-on
+    - title: Enable Multiprotocol support
       image: skyconnect-multiprotocol-01.png
       content: |
         <ul>
