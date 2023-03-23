@@ -541,7 +541,7 @@ procedureEnableMultiProtocol:
         <ul>
           <li class="info">Thread support is still under development. For information on Thread, refer to the <a href="https://www.home-assistant.io/integrations/thread" target="_blank">documentation</a> of the <b>Thread</b> integration.</li>
           <li>In the <b>Thread</b> integration, select <b>Configure</b>.</li><ul>
-          <li>You should now see your border routers.</li></ul>
+          <li>You should now see your Home Assistant border router.</li></ul>
         </ul>
     - title: Disable SkyConnect Multi-PAN
       image: skyconnect-multiprotocol-15.png
