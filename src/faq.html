@@ -64,7 +64,7 @@ faqs:
           <li>Make sure your user is added to dialout group: <code>sudo adduser [username] dialout</code></li>
           <li>Reboot your system.</li>
           <li>Try again.</li>
-        </ol> </p>
+        </ol></p>
   - title: >
       I'm trying to add a Zigbee device using ZHA, but Home Assistant doesn't find it. What can I do?
     content: >
@@ -74,7 +74,28 @@ faqs:
           <li>Make sure the device is in pairing mode. To find out how to get your device into pairing mode, check the device documentation. For some devices, pairing mode instructions are also documented on <a href="https://zigbee.blakadder.com">zigbee.blakadder.com</a.</li>
           <li>Check the <a href="https://www.home-assistant.io/integrations/zha/#best-practices-to-avoid-pairingconnection-difficulties">Best practices to avoid pairing issues with Zigbee devices</a>.</li>
         </ol>
-      </p>        
+      </p>
+  - title: >
+      Some of my ZHA devices are now shown as unavailable or suddenly stop working.
+    content: >
+      <p>You can try the following steps:
+        <ol>
+          <li>Refresh your browser page (Ctrl+Shift+R).</li>
+          <li>Power cycle the device.</li>
+          <li>Ensure you added the device to your network in its final position in your home and not just near the coordinator. Many devices will maintain a weak connection to the router they first joined through instead of picking a new one nearby.</li>
+          <li>When adding new devices, add router devices before adding end devices. Battery-powered devices  are end devices. Mains-powered devices are more likely to be router devices.</li>
+          <li>Make sure you have a few router devices distributed over the different areas of your home (depending on the size of your home).</li>          
+          <li>End devices select a router when joining the network. This connection is not static. Sometimes the end device selects a router device that is far away or has a bad connection for other reasons. To force a device to connect to a router device nearby, perform the following steps: 
+              <ol>
+                <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b>><b>Devices & Services</b></a>, in the ZHA integration, select <b>Devices</b>. </li>
+                <li>Select the router device closest to your end device.</li>
+                <li>Select <b>Add devices via this device</b>.<br><img src="/images/zha-add-device-via-this.png" width="250"/></li>
+                <li>Set your end device into pairing mode. <ul><li class="info">The end device should now be connected to the selected router device.</li></ul></li>                
+              </ol>
+          </li>
+          <li>Check the <a href="https://www.home-assistant.io/integrations/zha/#best-practices-to-avoid-pairingconnection-difficulties">Best practices to avoid pairing issues with Zigbee devices</a>.</li>
+        </ol>
+      </p>
   - title: >
       I plugged in SkyConnect but the ZHA SkyConnect integration does not show up on the integration page. 
     content: >
@@ -84,7 +105,7 @@ faqs:
           <li>Try a different USB port.</li>
           <li>Refresh your browser page.</li>
           <li>Make sure the ZHA integration is not hidden. Select <b>Show ignored integrations</b>.</br>
-          <img src="/images/conbee-migrate-zha-23.png" /></li>
+          <img src="/images/conbee-migrate-zha-23.png"/></li>
         </ol>
       </p>
 ---
