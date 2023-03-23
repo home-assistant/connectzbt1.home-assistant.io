@@ -15,7 +15,7 @@ procedureNewZigbee:
       image: skyconnect-discovered-01.png
       content: |
         <ol>
-          <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b>><b>Devices & Services</b></a>.</li>
+          <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a></li>
           <li>SkyConnect should now have been discovered.</li>
           <li>Select <b>Configure</b>.</li>
         </ol>
@@ -56,8 +56,8 @@ procedureMigrateZigbee:
       image: z2m-backup-01.png
       content: |
         <ol>
-          <li>Under <b>Settings</b>><b>Add-ons</b>, open the <b>Zigbee2MQTT</b> add-on and select <b>Open Web UI</b>.</li>
-          <li>In the Zigbee2MQTT UI, go to <b>Settings</b>><b>Tools</b> and select <b>Request z2m backup</b>.
+          <li>Under <b>Settings</b> > <b>Add-ons</b>, open the <b>Zigbee2MQTT</b> add-on and select <b>Open Web UI</b>.</li>
+          <li>In the Zigbee2MQTT UI, go to <b>Settings</b> > <b>Tools</b> and select <b>Request z2m backup</b>.
             <ul>
               <li>A zip file should now be downloaded into your <b>Downloads</b> folder.</li>
             </ul>
@@ -76,7 +76,7 @@ procedureMigrateZigbee:
       image: z2m-delete-add-on.png
       content: |
         <ul>
-          <li>Under <b>Settings</b>><b>Add-ons</b>, in the <b>Zigbee2MQTT</b> add-on, select <b>Stop</b>.</li>
+          <li>Under <b>Settings</b> > <b>Add-ons</b>, in the <b>Zigbee2MQTT</b> add-on, select <b>Stop</b>.</li>
           <li class="info">Zigbee2MQTT uses the MQTT discovery feature to make the Zigbee devices available in Home Assistant. After removing the Zigbee2MQTT add-on, the devices are still present in Home Assistant since the MQTT broker is still holding on to the MQTT discovery messages.</li>
           <li class="info">It is recommended to remove these stale devices from the MQTT broker (see next steps).</li>
         </ul>
@@ -84,7 +84,7 @@ procedureMigrateZigbee:
       image: z2m-mqq-integration-01.png
       content: |
         <ul>
-          <li>If you don't use MQTT outside z2m, you can delete the Mosquito Broker integration. Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b>><b>Devices & Services</b></a>, in the <b>Mosquitto broker</b> integration, select <b>Delete</b>.</li>
+          <li>If you don't use MQTT outside z2m, you can delete the Mosquito Broker integration. Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>, in the <b>Mosquitto broker</b> integration, select <b>Delete</b>.</li>
         </ul>
     - title: Remove Zigbee2MQTT devices (option 2)
       image: z2m-mqtt-dereg-device-01.png
@@ -107,7 +107,7 @@ procedureMigrateZigbee:
       image: skyconnect-discovered-01.png
       content: |
         <ol>
-          <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b>><b>Devices & Services</b></a>.</li>
+          <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>.</li>
           <li>SkyConnect should now have been discovered.</li>
           <li>Select <b>Configure</b>.</li>
         </ol>
@@ -150,7 +150,7 @@ procedureMigrateZigbeeZHA:
       image: z2m-delete-add-on.png
       content: |
         <ul>
-          <li>Under <b>Settings</b>><b>Add-ons</b>, in the <b>Zigbee2MQTT</b> add-on, select <b>Stop</b>.</li>
+          <li>Under <b>Settings</b> > <b>Add-ons</b>, in the <b>Zigbee2MQTT</b> add-on, select <b>Stop</b>.</li>
           <li class="info">Zigbee2MQTT uses the MQTT discovery feature to make the Zigbee devices available in Home Assistant. After removing the Zigbee2MQTT add-on, the devices are still present in Home Assistant since the MQTT broker is still holding on to the MQTT discovery messages.</li>
           <li class="info">It is recommended to remove these stale devices from the MQTT broker (see next steps).</li>         
         </ul>
@@ -158,7 +158,7 @@ procedureMigrateZigbeeZHA:
       image: z2m-mqq-integration-01.png
       content: |
         <ul>
-          <li>If you don't use MQTT outside z2m, you can delete the Mosquito Broker integration. Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b>><b>Devices & Services</b></a>, in the <b>Mosquitto broker</b> integration, select <b>Delete</b>.</li>
+          <li>If you don't use MQTT outside z2m, you can delete the Mosquito Broker integration. Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>, in the <b>Mosquitto broker</b> integration, select <b>Delete</b>.</li>
         </ul>
     - title: Remove Zigbee2MQTT devices (option 2)
       image: z2m-mqtt-dereg-device-01.png
@@ -172,7 +172,7 @@ procedureMigrateZigbeeZHA:
       image: z2m-migrate-zha-15.png
       content: |
         <ol>
-          <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b>><b>Devices & Services</b></a>, if you do not see the ZHA integration, select the <b>Add integration</b> button.</li>          
+          <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>, if you do not see the ZHA integration, select the <b>Add integration</b> button.</li>          
           <li>From the dropdown list, select <b>Add Zigbee device</b>.</li>
         </ol>
     - title: Add ZHA integration (2)
@@ -203,7 +203,7 @@ procedureMigrateZigbeeZHAOnly:
       image: z2m-migrate-zha-02.png
       content: |
         <ol>
-          <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b>><b>Devices & Services</b></a>, in the ZHA integration, select <b>Configure</b>.</li>
+          <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>, in the ZHA integration, select <b>Configure</b>.</li>
           <li>Under <b>Network settings</b> add-on, select <b>Migrate Radio</b>.</li>
         </ol>
     - title: Reconfigure ZHA
@@ -250,7 +250,7 @@ procedureMigrateZigbeeZHAOnly:
       image: skyconnect-discovered-01.png
       content: |
         <ol>
-          <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b>><b>Devices & Services</b></a>, SkyConnect should have been autodiscovered.</li>          
+          <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>, SkyConnect should have been autodiscovered.</li>          
           <li>Select <b>Configure</b>.</li>
         </ol>
     - title: Start the backup restore process
@@ -299,7 +299,7 @@ procedureMigrateConBee:
       image: conbee-update-05.png
       content: |
         <ol>
-          <li>In the deCONZ app, under <b>Settings</b>><b>Gateway</b>, check the firmware version. It should be version 26720700 or newer.
+          <li>In the deCONZ app, under <b>Settings</b> > <b>Gateway</b>, check the firmware version. It should be version 26720700 or newer.
             <ul>
               <li>If the version is recent enough, skip the next two steps and continue with Step 4 <a href="#step-stop-the-deconz-add-on">Stop the deCONZ add-on</a>.</li> 
             </ul>
@@ -329,7 +329,7 @@ procedureMigrateConBee:
       image: conbee-migrate-zha-03.png
       content: |
         <ul>
-          <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b>><b>Devices & Services</b></a>, in the deCONZ integration, select <b>Delete</b>.</li>
+          <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>, in the deCONZ integration, select <b>Delete</b>.</li>
         </ul>
     - title: Add a new ZHA integration
       image: conbee-migrate-zha-23.png
