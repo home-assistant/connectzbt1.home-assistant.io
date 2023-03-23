@@ -535,7 +535,7 @@ procedureEnableMultiProtocol:
           <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>.</li><ul>
           <li>You should now see a <b>SkyConnect Multi-PAN</b> integration as well as the <b>Open Thread Border Router</b> integration.</li></ul>
         </ul>
-    - title: Locate the border routers
+    - title: Locate the Home Assistant border router
       image: skyconnect-multiprotocol-11.png
       content: |
         <ul>
