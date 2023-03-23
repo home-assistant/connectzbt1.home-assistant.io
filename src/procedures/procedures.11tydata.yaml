@@ -502,7 +502,7 @@ procedureEnableMultiProtocol:
         <ul>
           <li class="warning">Multiprotocol is an experimental feature. It may not work for you.</li>
           <li class="info">When multiprotocol support is enabled, the Home&nbsp;Assistant SkyConnect's IEEE&nbsp;802.15.4 radio can be used for both Zigbee and Thread (used by Matter) at the same time. The two networks will be running on the same IEEE&nbsp;802.15.4 channel.</li>
-          <li>If the radio is already used by the ZHA Zigbee integration, ZHA will be reconfigured to use the multiprotocol firmware.</li>
+          <li>If the radio is already used by the ZHA Zigbee integration, ZHA will be automatically reconfigured to use the multiprotocol firmware. Your Zigbee network will continue to work.</li>
         </ul>
         <ol>
           <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/hardware/" target="_blank"><b>Settings</b> > <b>System</b> > <b>Hardware</b></a>.</li>
