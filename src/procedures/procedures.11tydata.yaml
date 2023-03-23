@@ -496,31 +496,24 @@ procedureMigrateConBee:
 procedureEnableMultiProtocol:
   title: Enable Multiprotocol support
   steps:
-
-    - title: What is multiprotocol support?
-      image: skyconnect-multiprotocol-01.png
-      content: |
-        <ul>
-          <li class="warning">Multiprotocol is an experimental feature. It is not recommended that you use it just yet.</li>        
-          <li class="info">When multiprotocol support is enabled, the Home&nbsp;Assistant SkyConnect's IEEE&nbsp;802.15.4 radio can be used for both Zigbee and Thread (used by Matter) at the same time.</li>
-          <li>If the radio is already used by the ZHA Zigbee integration, ZHA will be reconfigured to use the multiprotocol firmware.</li>
-        </ul>
     - title: Enable Multiprotocol support
       image: skyconnect-multiprotocol-01.png
       content: |
         <ul>
           <li class="warning">Multiprotocol is an experimental feature. It may not work for you.</li>
+          <li class="info">When multiprotocol support is enabled, the Home&nbsp;Assistant SkyConnect's IEEE&nbsp;802.15.4 radio can be used for both Zigbee and Thread (used by Matter) at the same time.</li>
+          <li>If the radio is already used by the ZHA Zigbee integration, ZHA will be reconfigured to use the multiprotocol firmware.</li>
         </ul>
         <ol>
           <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/hardware/" target="_blank"><b>Settings</b> > <b>System</b> > <b>Hardware</b></a>.</li>
-          <li>In the <b>Home Assistant SkyConnect</b> integration, select <b>Configure</b>.</li>
+          <li>Under <b>Home Assistant SkyConnect</b>, select <b>Configure</b>.</li>
           <li>Select the <b>Enable multiprotocol support</b> checkbox and select <b>Submit</b>.</li>
         </ol>
     - title: Wait
       image: skyconnect-multiprotocol-02.png
       content: |
         <ul>
-          <li>Wait for the installation of the Silicon Labs Multiprotocol add-on to complete.</li>
+          <li>Wait for the installation of the <b>Silicon Labs Multiprotocol</b> add-on to complete.</li>
         </ul>
     - title: Installation complete
       image: skyconnect-multiprotocol-03.png
@@ -529,7 +522,7 @@ procedureEnableMultiProtocol:
           <li>Once the installation is complete, select <b>Finish</b>.</li>
         </ul>
     - title: Locate the Silicon Labs Multiprotocol add-on
-      image: skyconnect-multiprotocol-06.png
+      image: yellow-multiprotocol-04.png
       content: |
         <ul>
           <li>Go to <a class="my" href=" https://my.home-assistant.io/redirect/supervisor_addon/?addon=core_silabs_multiprotocol" target="_blank"><b>Settings</b> > <b>Add-ons</b></a>.<ul>
@@ -549,3 +542,19 @@ procedureEnableMultiProtocol:
           <li>In the <b>Thread</b> integration, select <b>Configure</b>.</li><ul>
           <li>You should now see your border routers.</li></ul>
         </ul>
+    - title: Disable SkyConnect Multi-PAN
+      image: skyconnect-multiprotocol-15.png
+      content: |
+        <ul>
+          <li class=info>In case you want to disable the multiprotocol feature: Deinstalling the add-on is not sufficient. Perform the following steps:</li>
+        </ul>
+        <ol>
+          <li>Go to <a class="my" href=" https://my.home-assistant.io/redirect/supervisor_addon/?addon=core_silabs_multiprotocol" target="_blank"><b>Settings</b> > <b>Add-ons</b></a>, and in the <b>Silicon Labs Multiprotocol</b> add-on, select <b>Uninstall</b>.
+          <li>Flash the SkyConnect Firmware: 
+            <ul>
+              <li>Go to the <a href="/firmware-update" target="_blank">Firmware Updates for SkyConnect</a> page.</li>
+              <li>Follow the instructions on flashing the SkyConnect firmware.</li>
+            </ul>
+              <li>Reconfigure the <b>Zigbee Home Automation (ZHA</b> integration.</li>       
+          </li>
+        </ol>
