@@ -556,6 +556,6 @@ procedureEnableMultiProtocol:
               <li>Go to the <a href="/firmware-update" target="_blank">Firmware Updates for SkyConnect</a> page.</li>
               <li>Follow the instructions on flashing the SkyConnect firmware.</li>
             </ul>
-              <li>Reconfigure the <b>Zigbee Home Automation (ZHA</b> integration.</li>       
+              <li>Reconfigure the <b>Zigbee Home Automation (ZHA)</b> integration.</li>       
           </li>
         </ol>
