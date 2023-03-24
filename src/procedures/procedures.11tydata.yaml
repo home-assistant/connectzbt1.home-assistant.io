@@ -582,7 +582,8 @@ procedureDisableMultiProtocol:
           
         </ul>
         <ol>
-        <li>Remove <b>Multi-PAN</b> from the name of the <b>Zigbee Home Automation (ZHA)</b> integration.</li>
+        <li>Click the three-dot dropdown menu on the <b>Zigbee Home Automation (ZHA)</b> integration and select <b>Rename</b>.</li>
+        <li>Remove <b>Multi-PAN</b> from the name of the integration.</li>
         <li>Select <b>Configure</b>.</li>
         </ol>
     - title: Start the radio migration process
