@@ -546,7 +546,7 @@ procedureEnableMultiProtocol:
 procedureDisableMultiProtocol:
   title: Disable multiprotocol support
   steps:
-    - title: Disable SkyConnect Multi-PAN
+    - title: Uninstall the Silicon Labs Multiprotocol add-on
       image: skyconnect-multiprotocol-17.png
       content: |
         <ul>
@@ -584,12 +584,12 @@ procedureDisableMultiProtocol:
         <ol>
         <li>Click the three-dot dropdown menu on the <b>Zigbee Home Automation (ZHA)</b> integration and select <b>Rename</b>.</li>
         <li>Remove <b>Multi-PAN</b> from the name of the integration.</li>
-        <li>Select <b>OK</b>.</li>
         </ol>
     - title: Start the radio migration process
       image: z2m-migrate-zha-02.png
       content: |
         <ul>
+          <li>On the <b>Zigbee Home Automation (ZHA)</b> integration, select <b>Configure</b>.</li>
           <li>Under <b>Network Settings</b>, select <b>Migrate radio</b>.</li>
         </ul>
     - title: Reconfigure ZHA
