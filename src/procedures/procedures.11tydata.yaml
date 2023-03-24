@@ -543,19 +543,32 @@ procedureEnableMultiProtocol:
           <li>In the <b>Thread</b> integration, select <b>Configure</b>.</li><ul>
           <li>You should now see your Home Assistant border router.</li></ul>
         </ul>
+procedureDisableMultiProtocol:
+  title: Disable Multiprotocol support
+  steps:
     - title: Disable SkyConnect Multi-PAN
-      image: skyconnect-multiprotocol-15.png
+      image: skyconnect-multiprotocol-17.png
       content: |
         <ul>
-          <li class=info>To disable the multiprotocol feature and use SkyConnect for Zigbee only, you must do the following steps:</li>
+          <li class=info>To disable the multiprotocol feature and use SkyConnect for Zigbee only, make sure to follow all the steps in this procedure.</li>
         </ul>
         <ol>
           <li>Go to <a class="my" href=" https://my.home-assistant.io/redirect/supervisor_addon/?addon=core_silabs_multiprotocol" target="_blank"><b>Settings</b> > <b>Add-ons</b></a>, and in the <b>Silicon Labs Multiprotocol</b> add-on, select <b>Uninstall</b>.
-          <li>Flash the SkyConnect Firmware: 
+        </ol>
+    - title: Flash the SkyConnect Firmware
+      image: skyconnect-multiprotocol-15.png
+      content: |
+        <ol>
+          <li>To flash the SkyConnect Firmware, do the following: 
             <ul>
               <li>Go to the <a href="/firmware-update" target="_blank">Firmware Updates for SkyConnect</a> page.</li>
               <li>Follow the instructions on flashing the SkyConnect firmware.</li>
-            </ul>
-              <li>Reconfigure the <b>Zigbee Home Automation (ZHA)</b> integration.</li>       
+            </ul>      
           </li>
         </ol>
+    - title: Reconfigure the <b>Zigbee Home Automation (ZHA)</b> integration
+      image: z2m-migrate-zha-02.png
+      content: |
+        <ul>
+          <li><a href="/migrate-zigbee-zha-only" target="_blank">Reconfigure</a> the <b>Zigbee Home Automation (ZHA)</b> integration.</li>
+        </ul>
