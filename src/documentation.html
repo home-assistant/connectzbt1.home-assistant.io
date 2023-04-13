@@ -7,6 +7,9 @@ guides:
     url: /firmware-update/
   - title: Connectivity issues
     url: /connectivity/
+multiprotocol:
+  - title: About multiprotocol issues
+    url: /about-multiprotocol/
   - title: Enable multiprotocol support
     url: /procedures/enable-multiprotocol/
   - title: Disable multiprotocol support
@@ -17,6 +20,14 @@ guides:
   <h1>Documentation</h1>
   <div class="layout horizontal items">
     {% for guide in guides %}
+    <a href="{{guide.url}}">
+      <div class="layout vertical center">{{guide.title}}</div>
+    </a>
+    {% endfor %}
+  </div>
+  <h2>Multiprotocol</h2>
+  <div class="layout horizontal items">
+    {% for guide in multiprotocol %}
     <a href="{{guide.url}}">
       <div class="layout vertical center">{{guide.title}}</div>
     </a>
