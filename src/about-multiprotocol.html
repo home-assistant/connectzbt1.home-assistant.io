@@ -57,11 +57,12 @@ guideName: About multiprotocol issues
             </ol>
         </li>
         <li><b>Option 2</b>: Use two separate wireless chips, one for each network. This works if you have both a Home Assistant
-            Yellow and a SkyConnect, for example.
+            Yellow and a SkyConnect, or two SkyConnects, for example.
             <ol>
-                <li>On your Home Assistant Yellow, <a href="/procedures/disable-multiprotocol/" target="_blank">disable
+                <li>On your Home Assistant instance, <a href="/procedures/disable-multiprotocol/" target="_blank">disable
                         multiprotocol support</a> and restore the Zigbee network.</li>
-                <li>Plug in a SkyConnect.</li>
+                <li>If you have a Home Assistant Yellow, plug in a SkyConnect.</li>
+                <li>If you have another Home Assistant device, plug in a second SkyConnect.</li>
                 <li>Go to <a class="my"
                         href="https://my.home-assistant.io/redirect/supervisor_addon/?addon=core_openthread_border_router"
                         target="_blank"><b>Add-ons</b></a> and install the experimental <b>OpenThread Border Router</b>
