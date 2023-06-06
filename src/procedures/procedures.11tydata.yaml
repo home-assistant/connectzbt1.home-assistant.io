@@ -370,12 +370,17 @@ procedureMigrateConBee:
           <li>Select <b>Finish</b>.</li>
         </ol>
     - title: Wait for the devices rejoin the network
-      image: conbee-migrate-zha-41.png
+      image: conbee-migrate-zha-42.png
       content: |
         <ul>
           <li class="info">Wait for the devices to rejoin the network. Normally, powered devices rejoin within one hour. You may be able to accelerate that process by power-cycling devices. Your battery-powered devices may need to be re-joined to the network manually.</li>
           <li>Once the devices show up in the integration, select the cogwheel.</li>
-          <li>Under <b>Integration entires</b>, select <b>Configure</b></li>
+        </ul>
+    - title: Open the network settings
+      image: conbee-migrate-zha-41.png
+      content: |
+        <ul>
+          <li>Under <b>Integration entries</b>, select <b>Configure</b>.</li>
         </ul>
     - title: Migrate the network settings
       image: conbee-migrate-zha-11.png
