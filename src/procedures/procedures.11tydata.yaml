@@ -318,10 +318,11 @@ procedureMigrateConBee:
           <li>Select <b>Stop</b>.</li>
         </ol>
     - title: Remove the deCONZ integration
-      image: conbee-migrate-zha-03.png
+      image: conbee-migrate-zha-33.png
       content: |
         <ul>
-          <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>, in the deCONZ integration, select <b>Delete</b>.</li>
+          <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>, in the deCONZ integration, select the cogwheel.</li>
+          <li>Select the three dots menu and select <b>Delete</b>.</li>
         </ul>
     - title: Add a new ZHA integration
       image: conbee-migrate-zha-23.png
@@ -369,11 +370,17 @@ procedureMigrateConBee:
           <li>Select <b>Finish</b>.</li>
         </ol>
     - title: Wait for the devices rejoin the network
-      image: conbee-migrate-zha-10.png
+      image: conbee-migrate-zha-42.png
       content: |
         <ul>
           <li class="info">Wait for the devices to rejoin the network. Normally, powered devices rejoin within one hour. You may be able to accelerate that process by power-cycling devices. Your battery-powered devices may need to be re-joined to the network manually.</li>
-          <li>Once the devices show up in the integration, select <b>Configure</b>.</li>
+          <li>Once the devices show up in the integration, select the cogwheel.</li>
+        </ul>
+    - title: Open the network settings
+      image: conbee-migrate-zha-41.png
+      content: |
+        <ul>
+          <li>Under <b>Integration entries</b>, select <b>Configure</b>.</li>
         </ul>
     - title: Migrate the network settings
       image: conbee-migrate-zha-11.png
@@ -454,11 +461,11 @@ procedureMigrateConBee:
           <li>Overwriting the IEEE address may take a while. Wait.</li>
         </ul>
     - title: Check the SkyConnect ZHA integration
-      image: conbee-migrate-zha-18.png
+      image: conbee-migrate-zha-new-18.png
       content: |
         <ol>
-          <li>SkyConnect is now setup in the ZHA integration, although the title is <b>ConBee II</b>.</li>
-          <li>To check whether the migration was successful, select <b>Configure</b>.</li>
+          <li>SkyConnect is now setup in the ZHA integration.</li>
+          <li>To check whether the migration was successful, select the cogwheel.</li>
         </ol>
     - title: Check the radio type
       image: conbee-migrate-zha-19.png
@@ -467,7 +474,7 @@ procedureMigrateConBee:
           <li>Under <b>Network Settings</b>, check the <b>Radio type</b>. It should say <b>ezsp</b>.</li>
         </ul>
     - title: Start renaming ZHA integration
-      image: conbee-migrate-zha-20.png
+      image: conbee-migrate-zha-new-21.png
       content: |
         <ul>
           <li>To avoid confusion, rename the ZHA integration.</li>
@@ -479,7 +486,7 @@ procedureMigrateConBee:
           <li>Change the ZHA integration name to <b>SkyConnect</b> and select <b>OK</b>.</li>
         </ul>
     - title: Reconfigure automations and dashboards
-      image: conbee-migrate-zha-22.png
+      image: conbee-migrate-zha-new-22.png
       content: |
         <ul>
         <li class="info">All migrated devices have new entity IDs. This means you will need to manually reconfigure automations and dashboard cards.</li>
