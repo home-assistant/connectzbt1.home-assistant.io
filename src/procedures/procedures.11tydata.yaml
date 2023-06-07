@@ -81,10 +81,12 @@ procedureMigrateZigbee:
           <li class="info">It is recommended to remove these stale devices from the MQTT broker (see next steps).</li>
         </ul>
     - title: Remove Zigbee2MQTT devices (option 1)
-      image: z2m-mqq-integration-01.png
+      image: z2m-mqq-integration-new-01.png
       content: |
         <ul>
-          <li>If you don't use MQTT outside z2m, you can delete the Mosquito Broker integration. Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>, in the <b>Mosquitto broker</b> integration, select <b>Delete</b>.</li>
+          <li>If you don't use MQTT outside of z2m, you can delete the Mosquito Broker integration.</li>
+          <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>, in the <b>Mosquitto broker</b> integration, select the cogwheel.</li>
+          <li>Select the three dots and in the dropdown menu, select <b>Delete</b>.</li>
         </ul>
     - title: Remove Zigbee2MQTT devices (option 2)
       image: z2m-mqtt-dereg-device-01.png
@@ -155,11 +157,13 @@ procedureMigrateZigbeeZHA:
           <li class="info">It is recommended to remove these stale devices from the MQTT broker (see next steps).</li>         
         </ul>
     - title: Remove Zigbee2MQTT devices (option 1)
-      image: z2m-mqq-integration-01.png
+      image: z2m-mqq-integration-new-01.png
       content: |
-        <ul>
-          <li>If you don't use MQTT outside z2m, you can delete the Mosquito Broker integration. Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>, in the <b>Mosquitto broker</b> integration, select <b>Delete</b>.</li>
-        </ul>
+        <ol>
+          <li>If you don't use MQTT outside of z2m, you can delete the Mosquito Broker integration.</li>
+          <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>, in the <b>Mosquitto broker</b> integration, select the cogwheel.</li>
+          <li>Select the three dots and in the dropdown menu, select <b>Delete</b>.</li>
+        </ol>
     - title: Remove Zigbee2MQTT devices (option 2)
       image: z2m-mqtt-dereg-device-01.png
       content: |
@@ -203,7 +207,7 @@ procedureMigrateZigbeeZHAOnly:
       image: z2m-migrate-zha-02.png
       content: |
         <ol>
-          <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>, in the ZHA integration, select <b>Configure</b>.</li>
+          <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>, in the ZHA integration, select the cogwheel, then select <b>Configure</b>.</li>
           <li>Under <b>Network settings</b> add-on, select <b>Migrate Radio</b>.</li>
         </ol>
     - title: Reconfigure ZHA
