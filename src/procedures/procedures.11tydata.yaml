@@ -469,7 +469,7 @@ procedureMigrateConBee:
       content: |
         <ol>
           <li>SkyConnect is now setup in the ZHA integration.</li>
-          <li>To check whether the migration was successful.</li>
+          <li>To check whether the migration was successful, select the integration.</li>
         </ol>
     - title: Check the radio type
       image: conbee-migrate-zha-19.png
