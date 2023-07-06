@@ -85,7 +85,7 @@ procedureMigrateZigbee:
       content: |
         <ul>
           <li>If you don't use MQTT outside of z2m, you can delete the Mosquito Broker integration.</li>
-          <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>, in the <b>Mosquitto broker</b> integration, select the cogwheel.</li>
+          <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>, select the <b>Mosquitto broker</b> integration.</li>
           <li>Select the three dots and in the dropdown menu, select <b>Delete</b>.</li>
         </ul>
     - title: Remove Zigbee2MQTT devices (option 2)
@@ -161,7 +161,7 @@ procedureMigrateZigbeeZHA:
       content: |
         <ol>
           <li>If you don't use MQTT outside of z2m, you can delete the Mosquito Broker integration.</li>
-          <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>, in the <b>Mosquitto broker</b> integration, select the cogwheel.</li>
+          <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>, select the <b>Mosquitto broker</b> integration.</li>
           <li>Select the three dots and in the dropdown menu, select <b>Delete</b>.</li>
         </ol>
     - title: Remove Zigbee2MQTT devices (option 2)
@@ -207,7 +207,7 @@ procedureMigrateZigbeeZHAOnly:
       image: z2m-migrate-zha-02.png
       content: |
         <ol>
-          <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>, in the ZHA integration, select the cogwheel, then select <b>Configure</b>.</li>
+          <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>, select the ZHA integration, then select <b>Configure</b>.</li>
           <li>Under <b>Network settings</b> add-on, select <b>Migrate Radio</b>.</li>
         </ol>
     - title: Reconfigure ZHA
@@ -325,7 +325,7 @@ procedureMigrateConBee:
       image: conbee-migrate-zha-33.png
       content: |
         <ul>
-          <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>, in the deCONZ integration, select the cogwheel.</li>
+          <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>, select the deCONZ integration.</li>
           <li>Select the three dots menu and select <b>Delete</b>.</li>
         </ul>
     - title: Add a new ZHA integration
@@ -378,7 +378,7 @@ procedureMigrateConBee:
       content: |
         <ul>
           <li class="info">Wait for the devices to rejoin the network. Normally, powered devices rejoin within one hour. You may be able to accelerate that process by power-cycling devices. Your battery-powered devices may need to be re-joined to the network manually.</li>
-          <li>Once the devices show up in the integration, select the cogwheel.</li>
+          <li>Once the devices show up in the integration, select the integration.</li>
         </ul>
     - title: Open the network settings
       image: conbee-migrate-zha-41.png
@@ -469,7 +469,7 @@ procedureMigrateConBee:
       content: |
         <ol>
           <li>SkyConnect is now setup in the ZHA integration.</li>
-          <li>To check whether the migration was successful, select the cogwheel.</li>
+          <li>To check whether the migration was successful, select the integration.</li>
         </ol>
     - title: Check the radio type
       image: conbee-migrate-zha-19.png
@@ -543,7 +543,7 @@ procedureEnableMultiProtocol:
       content: |
         <ul>
           <li class="info">Thread support is still under development. For information on Thread, refer to the <a href="https://www.home-assistant.io/integrations/thread" target="_blank">documentation</a> of the <b>Thread</b> integration.</li>
-          <li>In the <b>Thread</b> integration, select the cogwheel.</li>
+          <li>Select the <b>Thread</b> integration.</li>
           <li>Then, select <b>Configure</b>.</li><ul>
           <li>You should now see your Home Assistant border router.</li></ul>
         </ul>
@@ -581,7 +581,7 @@ procedureDisableMultiProtocol:
           
         </ul>
         <ol>
-        <li>On the <b>Zigbee Home Automation (ZHA)</b> integration, select the cogwheel.</li>
+        <li>Select the <b>Zigbee Home Automation (ZHA)</b> integration.</li>
         <li>Select the three-dot menu and select <b>Rename</b>.</li>
         <li>Remove <b>Multi-PAN</b> from the name of the integration.</li>
         </ol>
