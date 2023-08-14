@@ -1,0 +1,66 @@
+---
+layout: guide
+guideName: About firmware options
+---
+
+<div class="container">
+
+    <p>This section has two goals: 
+        <ol>
+            <li>List the currently available firmware options for Home Assistant SkyConnect.</li>
+            <li>List the different add-ons and integrations related to these options and show their relationships.</li>
+        </ol></p>
+    <h1>Currently available firmware for SkyConnect</h1>
+    
+    <p>
+        <span>
+            There are currently 3 different firmware options available for Home Assistant SkyConnect:
+            <ol>
+                <li><b>Zigbee firmware</b>
+                    <ul>
+                        <li>This is the firmware that runs a Zigbee network. It is preinstalled on SkyConnect.</li>
+                        <li>Bundled in the **Silicon Labs Flasher** add-on. In case you have opted for a multiprotocol firmware at some point, this add-on allows you to re-install the Zigbee firmware.</li>
+                        <li>Other terms you may have seen to designate this firmware: EmberZNet firmware, ESZP firmware (EmberZnet serial protocol), Zigbee ESZP</li>
+                    </ul>
+                </li>
+                <li><b>Multiprotocol firmware</b>
+                    <ul>
+                        <li>This is the firmware that enables SkyConnect to run both a Thread and a Zigbee network. Both networks run on the same channel.</li>
+                        <li>Bundled in the **Silicon Labs Multiprotocol** add-on.</li>
+                        <li>This firmware is considered experimental. For more information, refer to the documentation <a href="/about-multiprotocol/" target="_blank">About
+                            multiprotocol support</a></li>
+                        <li>Other terms you may have seen to designate this firmware: multi-PAN (PAN: personal area network), RCP multi-PAN</li>
+                    </ul>
+                </li>
+                <li><b>Thread firmware</b>
+                    <ul>
+                        <li>This is the firmware that runs a Thread.</li>
+                        <li>Bundled in the **Open Thread Border Router** add-on. Enables SkyConnect to run a Thread network.</li>
+                        <li>Other terms you may have seen to designate this firmware: OpenThread RCP, RCP OT</li>
+                    </ul>
+                </li>
+            </ol>
+            <p class="img">
+                <picture>
+                  <img src="/images/zigbee-thread-firmware-add-ons-integrations_01.png">
+                </picture>
+                <br>
+                <small>Overview of Zigbee and Thread firmware options, add-ons, and integrations in Home Assistant.</small>
+              </p></p>
+
+            <h1>Why are there multiple firmware options?</h1>
+            <p>You might wonder why there are different firmware options. After all, you could just run Zigbee and Thread on one device and be done with it. Zigbee and Thread devices run on the same channel. If you have a large network, this can lead to channel conflicts. For more information, refer to the documenetation <a href="/about-multiprotocol/" target="_blank">about
+                multiprotocol support</a>. For large networks, it can help to run the Zigbee and the Thread network on separate devices, for example on two SkyConnects or on a SkyConnect and a Yellow.</p>
+            
+                <h1>Related topics</h1>
+                <p><ul>
+                    <li><a href="/about-multiprotocol/" target="_blank">About
+                        multiprotocol support</a>
+                    </li>
+                    <li><a href="/firmware-update/" target="_blank">Firmware updates for SkyConnect</a>
+                    </li>
+                    <li><a href="https://www.home-assistant.io/integrations/zha/" target="_blank">Zigbee Home Austomation</a>
+                    <li><a href="https://www.home-assistant.io/integrations/thread/" target="_blank">Thread integration documentation</a>
+                    </li>
+                </ul></p>
+</div>
