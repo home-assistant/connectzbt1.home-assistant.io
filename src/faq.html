@@ -1,178 +1,155 @@
 ---
 layout: base
 description: FAQ | SkyConnect
-faqs:
-  - title: >
-      Can I run 2 sticks with ZHA simultaneously?
-    content: >
-      <p>No. ZHA (Zigbee Home Automation) is single instance only. ZHA cannot control 2 radios at once.</p>
-  - title: >
-      Can I run 2 sticks with different Zigbee solutions simultaneously?
-    content: >
-      <p>
-        Yes. For example, you can run a stick with deCONZ or Zigbee2MQTT alongside SkyConnect with ZHA.
-      </p>
-  - title: >
-      Can I migrate from a deCONZ or Zigbee2MQTT stick to SkyConnect and keep using the old stick?
-    content: >
-      <p>No, you can't continue to use both. During migration, the IEEE address of the SkyConnect is replaced by the IEEE address of the old stick. This means that your old stick and your new stick will have the same IEEE address. This is required for the migration process to complete successfully. From this point on-wards you should not operate the old stick in the same area. If you do not migrate the IEEE address from your old stick, you'll have to re-pair many of your devices in order to keep them working.</p>
-  - title: >
-      Is Zigbee2MQTT supported by SkyConnect?
-    content: >
-      <p>
-        The Home Assistant team officially supports ZHA (Zigbee Home
-        Automation), the Zigbee stack integrated into Home Assistant Core.
-      </p>
-      <p>
-        The Zigbee2MQTT project has <a href="https://www.zigbee2mqtt.io/guide/adapters/#experimental">
-        experimental support</a> (in beta stage) for the Silicon Labs radio on
-        Home Assistant SkyConnect. With this setting, Zigbee2MQTT is known to work
-        on Home Assistant SkyConnect.
-      </p>
-      <p>
-        Note: The Zigbee Home Automation integration is active by default! If
-        you are using Zigbee2MQTT, remember to delete and ignore the discovered
-        Zigbee Home Automation integration to avoid interference.
-      </p>
-      <p>
-        Note: When setting up Zigbee2MQTT with the Home Assistant SkyConnect, you will
-        need to configure the adapter type in Zigbee2MQTT. Make sure the following
-        is present in your Zigbee2MQTT configuration:
-        <pre>
-          <code>serial:
-            adapter: ezsp
-            port: /dev/serial/by-id/usb-Nabu_Casa_SkyConnect_v1.0_<usb-serial-number>-if00-port0
-            baudrate: 115200
-            rtscts: true
-          </code>
-        </pre>
-      </p>
-      <p>You can find the port information under <a class="my" href="https://my.home-assistant.io/redirect/hardware/" target="_blank">Settings>System>Hardware</a>, then on the menu button, select <b>All Hardware</b> and search for SkyConnect.</p>
-      <p><img src="/images/skyconnect-id.png"/></p>
-  - title: >
-      Is Zigbee Green Power (ZGP) supported?
-    content: >
-      <p>No. Zigbee Green Power is not supported.</p> 
-faqs_trouble: 
-  - title: >
-      I'm trying to update the SkyConnect firmware using Ubuntu and Chromium. I get a message that the connection failed. What can I do?
-    content: >
-      <p>You can try the following steps:
-        <ol>
-          <li>Make sure hot plug support is enabled.</br>
-            <a href="https://forum.snapcraft.io/t/chromium-cant-open-serial-port-on-ubuntu-22-04/31139/6">
-              as described here</a></li>
-          <li>Make sure your user is added to dialout group: <code>sudo adduser [username] dialout</code></li>
-          <li>Reboot your system.</li>
-          <li>Try again.</li>
-        </ol></p>
-  - title: >
-      I'm trying to add a Zigbee device using ZHA, but Home Assistant doesn't find it. What can I do?
-    content: >
-      <p>
-        <ol>
-          <li>Check the <a href="/connectivity/">connectivity issue</a> page to trouble shoot interference related isssues.</li>
-          <li>Make sure the device is in pairing mode. To find out how to get your device into pairing mode, check the device documentation. For some devices, pairing mode instructions are also documented on <a href="https://zigbee.blakadder.com">zigbee.blakadder.com</a.</li>
-          <li>Check the <a href="https://www.home-assistant.io/integrations/zha/#best-practices-to-avoid-pairingconnection-difficulties">Best practices to avoid pairing issues with Zigbee devices</a>.</li>
-        </ol>
-      </p>
-  - title: >
-      Some of my ZHA devices are now shown as unavailable or suddenly stop working.
-    content: >
-      <p>You can try the following steps:
-        <ol>
-          <li>Refresh your browser page (Ctrl+Shift+R).</li>
-          <li>Power cycle the device.</li>
-          <li>Ensure you added the device to your network in its final position in your home and not just near the coordinator. Many devices will maintain a weak connection to the router they first joined through instead of picking a new one nearby.</li>
-          <li>When adding new devices, add router devices before adding end devices. Battery-powered devices  are end devices. Mains-powered devices are more likely to be router devices.</li>
-          <li>Make sure you have a few router devices distributed over the different areas of your home (depending on the size of your home).</li>          
-          <li>End devices select a router when joining the network. This connection is not static. Sometimes the end device selects a router device that is far away or has a bad connection for other reasons. To force a device to connect to a router device nearby, perform the following steps: 
-              <ol>
-                <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b>><b>Devices & Services</b></a>, in the ZHA integration, select <b>X devices</b>. </li>
-                <li>Select the router device closest to your end device.</li>
-                <li>Select <b>Add devices via this device</b>.<br><img src="/images/zha-add-device-via-this.png" width="250"/></li>
-                <li>Set your end device into pairing mode. <ul><li class="info">The end device should now be connected to the selected router device.</li></ul></li>                
-              </ol>
-          </li>
-          <li>Check the <a href="https://www.home-assistant.io/integrations/zha/#best-practices-to-avoid-pairingconnection-difficulties">Best practices to avoid pairing issues with Zigbee devices</a>.</li>
-        </ol>
-      </p>
-  - title: >
-      I plugged in SkyConnect but the ZHA SkyConnect integration does not show up on the integration page. 
-    content: >
-      <p>You can try the following steps:
-        <ol>
-          <li>Wait a bit longer. It can take a while for SkyConnect to show up.</li>
-          <li>Try a different USB port.</li>
-          <li>Refresh your browser page.</li>
-          <li>Make sure the ZHA integration is not hidden. Select <b>Show ignored integrations</b>.</br>
-          <img src="/images/conbee-migrate-zha-23.png"/></li>
-        </ol>
-      </p>
-  - title: >
-        Multiprotocol: I get a notification stating that the OTBR and ZHA share the same radio, but use different channels. What can I do?
-    content: >
-      <p>
-        Note: The multiprotocol feature is still experimental.
-      </p>
-      <p>OTBR and ZHA on separate channels can cause an unreliable network connection. To resolve this issue, you can try resetting the Thread network or use two separate wireless chips, one for ZHA and one for Thread. See <a href="/about-multiprotocol/#resolve-channel-conflict" target="_blank">About
-        multiprotocol support - resolve channel conflict</a>.</p>
-      <p>Note: The OpenThread Border Router add-on used to setup a Thread-only network on a wireless chip is still experimental.</p>
+sections:
+  - name: 
+    faqs:
+      - title: >
+          Can I run 2 sticks with ZHA simultaneously?
+        content: >
+          <p>No. ZHA (Zigbee Home Automation) is single instance only. ZHA cannot control 2 radios at once.</p>
+      - title: >
+          Can I run 2 sticks with different Zigbee solutions simultaneously?
+        content: >
+          <p>
+            Yes. For example, you can run a stick with deCONZ or Zigbee2MQTT alongside SkyConnect with ZHA.
+          </p>
+      - title: >
+          Can I migrate from a deCONZ or Zigbee2MQTT stick to SkyConnect and keep using the old stick?
+        content: >
+          <p>No, you can't continue to use both. During migration, the IEEE address of the SkyConnect is replaced by the IEEE address of the old stick. This means that your old stick and your new stick will have the same IEEE address. This is required for the migration process to complete successfully. From this point on-wards you should not operate the old stick in the same area. If you do not migrate the IEEE address from your old stick, you'll have to re-pair many of your devices in order to keep them working.</p>
+      - title: >
+          Is Zigbee2MQTT supported by SkyConnect?
+        content: >
+          <p>
+            The Home Assistant team officially supports ZHA (Zigbee Home
+            Automation), the Zigbee stack integrated into Home Assistant Core.
+          </p>
+          <p>
+            The Zigbee2MQTT project has <a href="https://www.zigbee2mqtt.io/guide/adapters/#experimental">
+            experimental support</a> (in beta stage) for the Silicon Labs radio on
+            Home Assistant SkyConnect. With this setting, Zigbee2MQTT is known to work
+            on Home Assistant SkyConnect.
+          </p>
+          <p>
+            Note: The Zigbee Home Automation integration is active by default! If
+            you are using Zigbee2MQTT, remember to delete and ignore the discovered
+            Zigbee Home Automation integration to avoid interference.
+          </p>
+          <p>
+            Note: When setting up Zigbee2MQTT with the Home Assistant SkyConnect, you will
+            need to configure the adapter type in Zigbee2MQTT. Make sure the following
+            is present in your Zigbee2MQTT configuration:
+            <pre>
+              <code>serial:
+                adapter: ezsp
+                port: /dev/serial/by-id/usb-Nabu_Casa_SkyConnect_v1.0_<usb-serial-number>-if00-port0
+                baudrate: 115200
+                rtscts: true
+              </code>
+            </pre>
+          </p>
+          <p>You can find the port information under <a class="my" href="https://my.home-assistant.io/redirect/hardware/" target="_blank">Settings>System>Hardware</a>, then on the menu button, select <b>All Hardware</b> and search for SkyConnect.</p>
+          <p><img src="/images/skyconnect-id.png"/></p>
+      - title: >
+          Is Zigbee Green Power (ZGP) supported?
+        content: >
+          <p>No. Zigbee Green Power is not supported.</p> 
+  - name: Troubleshooting
+    faqs: 
+      - title: >
+          I'm trying to update the SkyConnect firmware using Ubuntu and Chromium. I get a message that the connection failed. What can I do?
+        content: >
+          <p>You can try the following steps:
+            <ol>
+              <li>Make sure hot plug support is enabled.</br>
+                <a href="https://forum.snapcraft.io/t/chromium-cant-open-serial-port-on-ubuntu-22-04/31139/6">
+                  as described here</a></li>
+              <li>Make sure your user is added to dialout group: <code>sudo adduser [username] dialout</code></li>
+              <li>Reboot your system.</li>
+              <li>Try again.</li>
+            </ol></p>
+      - title: >
+          I'm trying to add a Zigbee device using ZHA, but Home Assistant doesn't find it. What can I do?
+        content: >
+          <p>
+            <ol>
+              <li>Check the <a href="/connectivity/">connectivity issue</a> page to trouble shoot interference related isssues.</li>
+              <li>Make sure the device is in pairing mode. To find out how to get your device into pairing mode, check the device documentation. For some devices, pairing mode instructions are also documented on <a href="https://zigbee.blakadder.com">zigbee.blakadder.com</a.</li>
+              <li>Check the <a href="https://www.home-assistant.io/integrations/zha/#best-practices-to-avoid-pairingconnection-difficulties">Best practices to avoid pairing issues with Zigbee devices</a>.</li>
+            </ol>
+          </p>
+      - title: >
+          Some of my ZHA devices are now shown as unavailable or suddenly stop working.
+        content: >
+          <p>You can try the following steps:
+            <ol>
+              <li>Refresh your browser page (Ctrl+Shift+R).</li>
+              <li>Power cycle the device.</li>
+              <li>Ensure you added the device to your network in its final position in your home and not just near the coordinator. Many devices will maintain a weak connection to the router they first joined through instead of picking a new one nearby.</li>
+              <li>When adding new devices, add router devices before adding end devices. Battery-powered devices  are end devices. Mains-powered devices are more likely to be router devices.</li>
+              <li>Make sure you have a few router devices distributed over the different areas of your home (depending on the size of your home).</li>          
+              <li>End devices select a router when joining the network. This connection is not static. Sometimes the end device selects a router device that is far away or has a bad connection for other reasons. To force a device to connect to a router device nearby, perform the following steps: 
+                  <ol>
+                    <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b>><b>Devices & Services</b></a>, in the ZHA integration, select <b>X devices</b>. </li>
+                    <li>Select the router device closest to your end device.</li>
+                    <li>Select <b>Add devices via this device</b>.<br><img src="/images/zha-add-device-via-this.png" width="250"/></li>
+                    <li>Set your end device into pairing mode. <ul><li class="info">The end device should now be connected to the selected router device.</li></ul></li>                
+                  </ol>
+              </li>
+              <li>Check the <a href="https://www.home-assistant.io/integrations/zha/#best-practices-to-avoid-pairingconnection-difficulties">Best practices to avoid pairing issues with Zigbee devices</a>.</li>
+            </ol>
+          </p>
+      - title: >
+          I plugged in SkyConnect but the ZHA SkyConnect integration does not show up on the integration page. 
+        content: >
+          <p>You can try the following steps:
+            <ol>
+              <li>Wait a bit longer. It can take a while for SkyConnect to show up.</li>
+              <li>Try a different USB port.</li>
+              <li>Refresh your browser page.</li>
+              <li>Make sure the ZHA integration is not hidden. Select <b>Show ignored integrations</b>.</br>
+              <img src="/images/conbee-migrate-zha-23.png"/></li>
+            </ol>
+          </p>
+      - title: >
+            Multiprotocol: I get a notification stating that the OTBR and ZHA share the same radio, but use different channels. What can I do?
+        content: >
+          <p>
+            Note: The multiprotocol feature is still experimental.
+          </p>
+          <p>OTBR and ZHA on separate channels can cause an unreliable network connection. To resolve this issue, you can try resetting the Thread network or use two separate wireless chips, one for ZHA and one for Thread. See <a href="/about-multiprotocol/#resolve-channel-conflict" target="_blank">About
+            multiprotocol support - resolve channel conflict</a>.</p>
+          <p>Note: The OpenThread Border Router add-on used to setup a Thread-only network on a wireless chip is still experimental.</p>
 ---
-  <div class="banner">
-    <span class="secondary"></span>
-    <span>Frequently asked questions</span>
-  </div>  
-  <div class="container">    
- 
-    <div class="accordion">
-      {% for faq in faqs %}
-      <div class="accordion-item">
-        <button
-          aria-expanded="false"
-          id="{{ faq.title | slugify }}"
-        >
-          <a
-            href="#{{ faq.title | slugify }}"
-            class="anchor"
+<div class="container">
+  {% for section in sections %}
+    <div class="section">
+      <h2>{{section.name}}</h2>      
+      <div class="accordion">
+        {% for faq in section.faqs %}
+        <div class="accordion-item">
+          <button
+            aria-expanded="false"
+            id="{{ faq.title | slugify }}"
           >
-            <span class="accordion-title">{{faq.title}}</span
-            ><span class="icon" aria-hidden="true"></span>
-          </a>
-        </button>
-        <div class="accordion-content">
-          <p>{{faq.content}}</p>
+            <a
+              href="#{{ faq.title | slugify }}"
+              class="anchor"
+            >
+              <span class="accordion-title">{{faq.title}}</span
+              ><span class="icon" aria-hidden="true"></span>
+            </a>
+          </button>
+          <div class="accordion-content">
+            <p>{{faq.content}}</p>
+          </div>
         </div>
+        {% endfor %}
       </div>
-      {% endfor %}
     </div>
-  </div>
-  <div class="container">    
-    <h1>Troubleshooting</h1>
-    <div class="accordion">
-      {% for faq in faqs_trouble %}
-      <div class="accordion-item">
-        <button
-          aria-expanded="false"
-          id="{{ faq.title | slugify }}"
-        >
-          <a
-            href="#{{ faq.title | slugify }}"
-            class="anchor"
-          >
-            <span class="accordion-title">{{faq.title}}</span
-            ><span class="icon" aria-hidden="true"></span>
-          </a>
-        </button>
-        <div class="accordion-content">
-          <p>{{faq.content}}</p>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
+    {% endfor %}
 </div>
-
 <script>
   const items = document.querySelectorAll(".accordion button");
 
