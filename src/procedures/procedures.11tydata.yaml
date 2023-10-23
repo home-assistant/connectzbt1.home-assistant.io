@@ -8,6 +8,7 @@ procedureNewZigbee:
         <ol>
           <li>Plug the Home Assistant SkyConnect into the USB extension cable.</li>
           <li>Plug the extension cable into your Home Assistant instance.</li>
+          <li>If you are using the standalone Home Assistant Container installation method, make sure SkyConnect is <a href="https://www.home-assistant.io/installation/linux#exposing-devices" target="_blank">mapped to the container</a>.</li>
           <li class="warning">USB 3.0 ports and USB 3.0 drives can cause interference with 2.4 GHz protocols, including the ones provided by Home Assistant SkyConnect. It is important to use the USB extension cable and to position the Home Assistant SkyConnect away from possible interference sources. </br>
           This <a href="/connectivity" target="_blank">video</a> shows the effect of interference. </li>
         </ol>
@@ -102,6 +103,7 @@ procedureMigrateZigbee:
         <ol>
           <li>Plug the Home Assistant SkyConnect into the USB extension cable.</li>
           <li>Plug the extension cable into your Home Assistant instance.</li>
+          <li>If you are using the standalone Home Assistant Container installation method, make sure SkyConnect is <a href="https://www.home-assistant.io/installation/linux#exposing-devices" target="_blank">mapped to the container</a>.</li>
           <li class="warning">USB 3.0 ports and USB 3.0 drives can cause interference with 2.4 GHz protocols, including the ones provided by Home Assistant SkyConnect. It is important to use the USB extension cable and to position the Home Assistant SkyConnect away from possible interference sources. </br>
           This <a href="/connectivity" target="_blank">video</a> shows the effect of interference. </li>
         </ol>
@@ -241,6 +243,7 @@ procedureMigrateZigbeeZHAOnly:
         <ol>
           <li>Plug the Home Assistant SkyConnect into the USB extension cable.</li>
           <li>Plug the extension cable into your Home Assistant instance.</li>
+          <li>If you are using the standalone Home Assistant Container installation method, make sure SkyConnect is <a href="https://www.home-assistant.io/installation/linux#exposing-devices" target="_blank">mapped to the container</a>.</li>
           <li class="warning">USB 3.0 ports and USB 3.0 drives can cause interference with 2.4 GHz protocols, including the ones provided by Home Assistant SkyConnect. It is important to use the USB extension cable and to position the Home Assistant SkyConnect away from possible interference sources. </br>
           This <a href="/connectivity" target="_blank">video</a> shows the effect of interference. </li>
         </ol>
@@ -424,6 +427,7 @@ procedureMigrateConBee:
         <ol>
           <li>Plug the Home Assistant SkyConnect into the USB extension cable.</li>
           <li>Plug the extension cable into your Home Assistant instance.</li>
+          <li>If you are using the standalone Home Assistant Container installation method, make sure SkyConnect is <a href="https://www.home-assistant.io/installation/linux#exposing-devices" target="_blank">mapped to the container</a>.</li>
           <li class="warning">USB 3.0 ports and USB 3.0 drives can cause interference with 2.4 GHz protocols, including the ones provided by Home Assistant SkyConnect. It is important to use the USB extension cable and to position the Home Assistant SkyConnect away from possible interference sources. </br>
           This <a href="/connectivity" target="_blank">video</a> shows the effect of interference. </li>
         </ol>
