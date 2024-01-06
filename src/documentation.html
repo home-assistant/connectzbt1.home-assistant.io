@@ -3,13 +3,19 @@ layout: base
 title: Documentation
 description: Troubleshooting, resources, and videos
 guides:
-  - title: About firmware options
-    url: /about-firmware-options/
-  - title: Firmware update
-    url: /firmware-update/
-  - title: Connectivity issues
-    url: /connectivity/
-multiprotocol:
+- title: About firmware options
+  url: /about-firmware-options/
+- title: Firmware update
+  url: /firmware-update/
+- title: Connectivity issues
+  url: /connectivity/
+sections:
+- title: Thread
+  guides:
+  - title: Install Thread firmware
+    url: /procedures/enable-thread/
+- title: Multiprotocol
+  guides:
   - title: About multiprotocol issues
     url: /about-multiprotocol/
   - title: Enable multiprotocol support
@@ -27,14 +33,16 @@ multiprotocol:
     </a>
     {% endfor %}
   </div>
-  <h2>Multiprotocol</h2>
+  {% for section in sections %}
+  <h2>{{section.title}}</h2>
   <div class="layout horizontal items">
-    {% for guide in multiprotocol %}
+    {% for guide in section.guides %}
     <a href="{{guide.url}}">
       <div class="layout vertical center">{{guide.title}}</div>
     </a>
     {% endfor %}
   </div>
+  {% endfor %}
   <h1>Resources</h1>
   <div class="layout horizontal items">
     <a href="/resources">
