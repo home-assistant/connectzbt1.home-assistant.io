@@ -575,7 +575,7 @@ procedureDisableMultiProtocol:
           <li class=info>Your Zigbee devices will continue to work. Your Thread devices will continue working only if you have another Thread border router set up.</li>
         </ul>
 procedureEnableThreadSupport:
-  title: Install pure Thread support
+  title: Install dedicated Thread support
   steps:
     - title: Delete Zigbee Home Automation (ZHA) integration
       image: skyconnect-zha-delete.png
@@ -632,4 +632,8 @@ procedureEnableThreadSupport:
         <ul>
           <li>Select the <b>Info</b> tab.</li>
           <li>Select <b>Start</b> to start the OpenThread Border Router add-on.</li>
+        </ul>
+        <ul>
+          <li class="info">The OpenThread Border Router add-on will automatically install the OpenThread RCP (Radio
+          Co-Processor) firmware for dedicated Thread support.</li>
         </ul>

@@ -13,21 +13,20 @@ tools:
       <li>Multiprotocol support disabled: Refer to the <a href="/procedures/disable-multiprotocol/">Disable multiprotocol support</a> procedure.</li>
       <li class="info">This guide installs a firmware which supports only Thread! If you use your SkyConnect
         to control Zigbee devices, you will no longer be able to control them after installing the Thread
-        firmware. Use a second SkyConnect or the Multiprotocol support (experimental).
+        firmware. If you'd like to continue use Zigbee, use a second SkyConnect or different radio, or try the
+        Multiprotocol support (experimental).
       </li>
       <li class="warning">Home Assistant Supervised: The Thread border router has some specific requirements
-        on IPv6 configuration (e.g. IPv6 routing and prefix delegation support). This should be mostly met on a
-        regular Debian installation, but this is not well tested by the developers. If you experience connectivity
-        issue, try using a Home Assistant OS installation.
+        on IPv6 configuration (e.g. IPv6 routing needs to be enabled). The add-on is being tested on Home Assistant OS.
+        If you experience connectivity issue, try using a Home Assistant OS installation.
       </li>
     </ul>
 ---
 
 <div class="container">
   <p>
-    This guide outlines the step to install the OpenThread RCP (Radio Co-Processor) firmware for
-    Thread only support. Following this guide will turn our Home Assistant installation into a
-    a Thread border router which can be used to connect Matter over Thread devices to your network.
+    This guide outlines the steps for configuring the Home Assistant SkyConnect for dedicated Thread support.
+    This setup facilitates the connection of Matter over Thread devices to your network.
   </p>
 </div>
 
@@ -47,7 +46,6 @@ tools:
       <li><a href="/procedures/disable-multiprotocol/" target="_blank">Disable
           multiprotocol support</a>
       </li>
-      <li><a href="https://www.home-assistant.io/integrations/zha/" target="_blank">Zigbee Home Automation integration documentation</a>
       <li><a href="https://www.home-assistant.io/integrations/thread/" target="_blank">Thread integration documentation</a>
       </li>
   </ul></p>
