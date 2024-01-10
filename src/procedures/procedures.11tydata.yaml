@@ -581,12 +581,12 @@ procedureEnableThreadSupport:
       image: skyconnect-zha-delete.png
       content: |
         <ul>
-          <li>If you have a new SkyConnect or did not setup Zigbee Home Automation (ZHA) yet please skip to Step 3.</li>
+          <li>If you have a new SkyConnect or did not setup Zigbee Home Automation (ZHA) yet, skip to Step 3.</li>
           <li>If you are using the SkyConnect with Zigbee Home Automation (ZHA), this step removes ZHA from the integration list.</li>
         </ul>
         <ol>
           <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a></li>
-          <li>Click on the <b>Zigbee Home Automation</b> integration card.</li>
+          <li>Select the <b>Zigbee Home Automation</b> integration card.</li>
           <li>Select the menu behind the <b>SkyConnect v1.0</b> integration and choose <b>Delete</b>.</li>
           <li>On the pop-up menu, select <b>Delete</b> again to confirm deletion.</li>
         </ol>
@@ -623,8 +623,8 @@ procedureEnableThreadSupport:
       content: |
         <ul>
           <li>Select the <b>Configuration</b> tab.</li>
-          <li>Choose the device which contains <b>...SkyConnect_v1.0...</b> in the name as device in the Options section.</li>
-          <li>Select <b>Save</b> on the bottom right of the Options card.</li>
+          <li>Choose the device which contains <b>...SkyConnect_v1.0...</b> in the name as the device in the <b>Options</b>section.</li>
+          <li>Select <b>Save</b> on the bottom right of the <b>Options</b> card.</li>
         </ul>
     - title: Start the OpenThread Border Router add-on
       image: otbr-add-on-start.png
