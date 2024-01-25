@@ -5,6 +5,12 @@ sections:
   - name: 
     faqs:
       - title: >
+          Why is Home Assistant Operating System needed to run SkyConnect?
+        content: >
+          <p>A standalone Zigbee or standalone Thread stick works by turning radio signals into radio packets and then processing those radio packets and making that available over a serial port.</p>
+          <p>But because SkyConnect also has experimental multi-protocol support, the processing of the radio packets was moved into Linux daemons. This means one daemon is run to split the radio packets into Zigbee and Thread streams, one daemon to process the Zigbee radio packets and one daemon to process the Thread radio packets.</p>
+          <p>To make this all work together, we need to strictly manage the version of the firmware on the stick and the three different Linux daemons. The easiest way for us to do this is using Home Assistant add-ons in a known host environment. This known host environment is Home Assistant OS.</p>
+      - title: >
           Can I run 2 sticks with ZHA simultaneously?
         content: >
           <p>No. ZHA (Zigbee Home Automation) is single instance only. ZHA cannot control 2 radios at once.</p>
