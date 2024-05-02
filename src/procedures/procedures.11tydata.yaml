@@ -577,12 +577,18 @@ procedureDisableMultiProtocol:
 procedureEnableThreadSupport:
   title: Install dedicated Thread support
   steps:
-    - title: Delete Zigbee Home Automation (ZHA) integration
+    - title: Migrate your Zigbee network or delete the ZHA integration
       image: skyconnect-zha-delete.png
       content: |
         <ul>
           <li>If you have a new SkyConnect or did not setup Zigbee Home Automation (ZHA) yet, skip to Step 2.</li>
-          <li>If you are using the SkyConnect with Zigbee Home Automation (ZHA), this step removes ZHA from the integration list.</li>
+          <li>If you use your existing SkyConnect to run a Zigbee network, <a href="/migrate-zigbee-zha-only/" target="_blank"><b>Migrate your Zigbee network</b></a> to another controller.
+            <ul>
+              <li>Otherwise, if you delete the Zigbee network, even if you set it up again, all of your entity customizations will be gone.
+              </li>
+            </ul>
+          </li>
+          <li>If you are using the SkyConnect with Zigbee Home Automation (ZHA), and you no longer need a Zigbee network, follow these steps to remove ZHA from the integration list.</li>
         </ul>
         <ol>
           <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>.</li>
