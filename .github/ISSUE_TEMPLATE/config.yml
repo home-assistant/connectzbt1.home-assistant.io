@@ -1,6 +1,6 @@
 blank_issues_enabled: true
 contact_links:
-  - name: I have an issue setting up my Home Assistant SkyConnect
+  - name: I have an issue setting up my Home Assistant Connect&nbsp;ZBT-1
     url: https://skyconnect.home-assistant.io/
     about: Read the documentation
   - name: I have a question or need support with Home Assistant in general

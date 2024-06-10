@@ -1,4 +1,4 @@
-name: Report an issue with the documentation of Home Assistant SkyConnect
+name: Report an issue with the documentation of Home Assistant Connect&nbsp;ZBT-1
 description: Report a documentation issue
 body:
   - type: markdown
