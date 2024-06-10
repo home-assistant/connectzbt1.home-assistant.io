@@ -1,6 +1,6 @@
 ---
 layout: base
-description: FAQ | SkyConnect
+description: FAQ | Connect&nbsp;ZBT-1
 sections:
   - name: 
     faqs:
@@ -17,14 +17,14 @@ sections:
           Can I run 2 sticks with different Zigbee solutions simultaneously?
         content: >
           <p>
-            Yes. For example, you can run a stick with deCONZ or Zigbee2MQTT alongside SkyConnect with ZHA.
+            Yes. For example, you can run a stick with deCONZ or Zigbee2MQTT alongside Connect&nbsp;ZBT-1 with ZHA.
           </p>
       - title: >
-          Can I migrate from a deCONZ or Zigbee2MQTT stick to SkyConnect and keep using the old stick?
+          Can I migrate from a deCONZ or Zigbee2MQTT stick to Connect&nbsp;ZBT-1 and keep using the old stick?
         content: >
-          <p>No, you can't continue to use both. During migration, the IEEE address of the SkyConnect is replaced by the IEEE address of the old stick. This means that your old stick and your new stick will have the same IEEE address. This is required for the migration process to complete successfully. From this point on-wards you should not operate the old stick in the same area. If you do not migrate the IEEE address from your old stick, you'll have to re-pair many of your devices in order to keep them working.</p>
+          <p>No, you can't continue to use both. During migration, the IEEE address of the Connect&nbsp;ZBT-1 is replaced by the IEEE address of the old stick. This means that your old stick and your new stick will have the same IEEE address. This is required for the migration process to complete successfully. From this point on-wards you should not operate the old stick in the same area. If you do not migrate the IEEE address from your old stick, you'll have to re-pair many of your devices in order to keep them working.</p>
       - title: >
-          Is Zigbee2MQTT supported by SkyConnect?
+          Is Zigbee2MQTT supported by Connect&nbsp;ZBT-1?
         content: >
           <p>
             The Home Assistant team officially supports ZHA (Zigbee Home
@@ -33,8 +33,8 @@ sections:
           <p>
             The Zigbee2MQTT project has <a href="https://www.zigbee2mqtt.io/guide/adapters/#experimental">
             experimental support</a> (in beta stage) for the Silicon Labs radio on
-            Home Assistant SkyConnect. With this setting, Zigbee2MQTT is known to work
-            on Home Assistant SkyConnect.
+            Home Assistant Connect&nbsp;ZBT-1, (or Home Assistant SkyConnect, if you have that variant). With this setting, Zigbee2MQTT is known to work
+            on Home Assistant Connect&nbsp;ZBT-1.
           </p>
           <p>
             Note: The Zigbee Home Automation integration is active by default! If
@@ -42,7 +42,7 @@ sections:
             Zigbee Home Automation integration to avoid interference.
           </p>
           <p>
-            Note: When setting up Zigbee2MQTT with the Home Assistant SkyConnect, you will
+            Note: When setting up Zigbee2MQTT with the Home Assistant Connect&nbsp;ZBT-1, you will
             need to configure the adapter type in Zigbee2MQTT. Make sure the following
             is present in your Zigbee2MQTT configuration:
             <pre>
@@ -52,9 +52,16 @@ sections:
                 baudrate: 115200
                 rtscts: true
               </code>
+            </pre><pre>
+              <code>serial:
+                adapter: ezsp
+                port: /dev/serial/by-id/usb-Nabu_Casa_Connect_ZBT-1_v1.0_<usb-serial-number>-if00-port0
+                baudrate: 115200
+                rtscts: true
+              </code>
             </pre>
           </p>
-          <p>You can find the port information under <a class="my" href="https://my.home-assistant.io/redirect/hardware/" target="_blank">Settings>System>Hardware</a>, then on the menu button, select <b>All Hardware</b> and search for SkyConnect.</p>
+          <p>You can find the port information under <a class="my" href="https://my.home-assistant.io/redirect/hardware/" target="_blank">Settings>System>Hardware</a>, then on the menu button, select <b>All Hardware</b> and search for Connect&nbsp;ZBT-1.</p>
           <p><img src="/images/skyconnect-id.png"/></p>
       - title: >
           Is Zigbee Green Power (ZGP) supported?
@@ -63,7 +70,7 @@ sections:
   - name: Troubleshooting
     faqs: 
       - title: >
-          I'm trying to update the SkyConnect firmware using Ubuntu and Chromium. I get a message that the connection failed. What can I do?
+          I'm trying to update the Connect&nbsp;ZBT-1 firmware using Ubuntu and Chromium. I get a message that the connection failed. What can I do?
         content: >
           <p>You can try the following steps:
             <ol>
@@ -106,11 +113,11 @@ sections:
             </ol>
           </p>
       - title: >
-          I plugged in SkyConnect but the ZHA SkyConnect integration does not show up on the integration page. 
+          I plugged in Connect&nbsp;ZBT-1 but the ZHA Connect&nbsp;ZBT-1 integration does not show up on the integration page. 
         content: >
           <p>You can try the following steps:
             <ol>
-              <li>Wait a bit longer. It can take a while for SkyConnect to show up.</li>
+              <li>Wait a bit longer. It can take a while for Connect&nbsp;ZBT-1 to show up.</li>
               <li>Try a different USB port.</li>
               <li>Refresh your browser page.</li>
               <li>Make sure the ZHA integration is not hidden. Select <b>Show ignored integrations</b>.</br>

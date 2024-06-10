@@ -1,32 +1,32 @@
 ---
 procedureNewZigbee:
-  title: Setting up a new Zigbee network using SkyConnect
+  title: Setting up a new Zigbee network using Connect&nbsp;ZBT-1
   steps:
-    - title: Plug the extension cable into SkyConnect
+    - title: Plug the extension cable into Connect&nbsp;ZBT-1
       image: skyconnect-raspi-01.jpg
       content: |
         <ol>
-          <li>Plug the Home Assistant SkyConnect into the USB extension cable.</li>
+          <li>Plug the Home Assistant Connect&nbsp;ZBT-1 into the USB extension cable.</li>
           <li>Plug the extension cable into your Home Assistant instance.</li>
-          <li>If you are using the standalone Home Assistant Container installation method, make sure SkyConnect is <a href="https://www.home-assistant.io/installation/linux#exposing-devices" target="_blank">mapped to the container</a>.</li>
-          <li class="warning">USB 3.0 ports and USB 3.0 drives can cause interference with 2.4 GHz protocols, including the ones provided by Home Assistant SkyConnect. It is important to use the USB extension cable and to position the Home Assistant SkyConnect away from possible interference sources. </br>
+          <li>If you are using the standalone Home Assistant Container installation method, make sure Connect&nbsp;ZBT-1 is <a href="https://www.home-assistant.io/installation/linux#exposing-devices" target="_blank">mapped to the container</a>.</li>
+          <li class="warning">USB 3.0 ports and USB 3.0 drives can cause interference with 2.4 GHz protocols, including the ones provided by Home Assistant Connect&nbsp;ZBT-1. It is important to use the USB extension cable and to position the Home Assistant Connect&nbsp;ZBT-1 away from possible interference sources. </br>
           This <a href="/connectivity" target="_blank">video</a> shows the effect of interference. </li>
         </ol>
-    - title: Locate the SkyConnect integration
+    - title: Locate the Connect&nbsp;ZBT-1 integration
       image: skyconnect-discovered-01.png
       content: |
         <ol>
           <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a></li>
-          <li>SkyConnect should now have been discovered.</li>
+          <li>Connect&nbsp;ZBT-1 should now have been discovered.</li>
           <li>Select <b>Configure</b>.</li>
         </ol>
-    - title: Set up the SkyConnect integration
+    - title: Set up the Connect&nbsp;ZBT-1 integration
       image: skyconnect-discovered-02.png
       content: |
         <ul>
           <li>Select <b>Submit</b> to start the setup process.</li>
         </ul>
-    - title: Locate the SkyConnect integration
+    - title: Locate the Connect&nbsp;ZBT-1 integration
       image: skyconnect-discovered-03.png
       content: |
         <ul>
@@ -48,10 +48,10 @@ procedureNewZigbee:
         <ul>
           <li>Click on <b>1 device</b> and select <b>Add devices via this device</b>. ZHA will now search for Zigbee devices in pairing mode.
           <li>Put your Zigbee device into pairing mode.</li>
-          <li class="warning">If ZHA can't find your Zigbee device make sure that SkyConnect does not suffer from interference. Use the extension cable and try placing the SkyConnect further away from potential devices which can cause interference.</li>
+          <li class="warning">If ZHA can't find your Zigbee device make sure that Connect&nbsp;ZBT-1 does not suffer from interference. Use the extension cable and try placing the Connect&nbsp;ZBT-1 further away from potential devices which can cause interference.</li>
         </ul>
 procedureMigrateZigbee:
-  title: Migrating a Zigbee2MQTT network to SkyConnect via z2m backup
+  title: Migrating a Zigbee2MQTT network to Connect&nbsp;ZBT-1 via z2m backup
   steps:
     - title: Create a Zigbee2MQTT backup
       image: z2m-backup-01.png
@@ -97,22 +97,22 @@ procedureMigrateZigbee:
           <li>In the integration card, select <b>Devices</b>, under <b>Device info</b>, select <b>Delete</b>.</li>
           <li>Repeat this for every device.</li>
         </ol>
-    - title: Plug the extension cable into SkyConnect
+    - title: Plug the extension cable into Connect&nbsp;ZBT-1
       image: skyconnect-raspi-01.jpg
       content: |
         <ol>
-          <li>Plug the Home Assistant SkyConnect into the USB extension cable.</li>
+          <li>Plug the Home Assistant Connect&nbsp;ZBT-1 into the USB extension cable.</li>
           <li>Plug the extension cable into your Home Assistant instance.</li>
-          <li>If you are using the standalone Home Assistant Container installation method, make sure SkyConnect is <a href="https://www.home-assistant.io/installation/linux#exposing-devices" target="_blank">mapped to the container</a>.</li>
-          <li class="warning">USB 3.0 ports and USB 3.0 drives can cause interference with 2.4 GHz protocols, including the ones provided by Home Assistant SkyConnect. It is important to use the USB extension cable and to position the Home Assistant SkyConnect away from possible interference sources. </br>
+          <li>If you are using the standalone Home Assistant Container installation method, make sure Connect&nbsp;ZBT-1 is <a href="https://www.home-assistant.io/installation/linux#exposing-devices" target="_blank">mapped to the container</a>.</li>
+          <li class="warning">USB 3.0 ports and USB 3.0 drives can cause interference with 2.4 GHz protocols, including the ones provided by Home Assistant Connect&nbsp;ZBT-1. It is important to use the USB extension cable and to position the Home Assistant Connect&nbsp;ZBT-1 away from possible interference sources. </br>
           This <a href="/connectivity" target="_blank">video</a> shows the effect of interference. </li>
         </ol>
-    - title: Locate the SkyConnect integration
+    - title: Locate the Connect&nbsp;ZBT-1 integration
       image: skyconnect-discovered-01.png
       content: |
         <ol>
           <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>.</li>
-          <li>SkyConnect should now have been discovered.</li>
+          <li>Connect&nbsp;ZBT-1 should now have been discovered.</li>
           <li>Select <b>Configure</b>.</li>
         </ol>
     - title: Upload a manual backup
@@ -148,7 +148,7 @@ procedureMigrateZigbee:
           <li class="info">The names that you manually assigned to your devices won't have been migrated. You will have to rename the devices again.</li>
         </ul>
 procedureMigrateZigbeeZHA:
-  title: Migrating a Zigbee2MQTT network to SkyConnect via ZHA
+  title: Migrating a Zigbee2MQTT network to Connect&nbsp;ZBT-1 via ZHA
   steps:
     - title: Stop the Zigbee2MQTT add-on
       image: z2m-delete-add-on.png
@@ -235,29 +235,29 @@ procedureMigrateZigbeeZHAOnly:
       content: |
         <ol>
           <li>If you no longer need the old radio stick, you can now remove it.</li>
-          <li>Before selecting <b>Submit</b>, connect SkyConnect, as described in the 2 following steps.</li>
+          <li>Before selecting <b>Submit</b>, connect Connect&nbsp;ZBT-1, as described in the 2 following steps.</li>
         </ol>
-    - title: Plug the extension cable into SkyConnect
+    - title: Plug the extension cable into Connect&nbsp;ZBT-1
       image: skyconnect-raspi-01.jpg
       content: |
         <ol>
-          <li>Plug the Home Assistant SkyConnect into the USB extension cable.</li>
+          <li>Plug the Home Assistant Connect&nbsp;ZBT-1 into the USB extension cable.</li>
           <li>Plug the extension cable into your Home Assistant instance.</li>
-          <li>If you are using the standalone Home Assistant Container installation method, make sure SkyConnect is <a href="https://www.home-assistant.io/installation/linux#exposing-devices" target="_blank">mapped to the container</a>.</li>
-          <li class="warning">USB 3.0 ports and USB 3.0 drives can cause interference with 2.4 GHz protocols, including the ones provided by Home Assistant SkyConnect. It is important to use the USB extension cable and to position the Home Assistant SkyConnect away from possible interference sources. </br>
+          <li>If you are using the standalone Home Assistant Container installation method, make sure Connect&nbsp;ZBT-1 is <a href="https://www.home-assistant.io/installation/linux#exposing-devices" target="_blank">mapped to the container</a>.</li>
+          <li class="warning">USB 3.0 ports and USB 3.0 drives can cause interference with 2.4 GHz protocols, including the ones provided by Home Assistant Connect&nbsp;ZBT-1. It is important to use the USB extension cable and to position the Home Assistant Connect&nbsp;ZBT-1 away from possible interference sources. </br>
           This <a href="/connectivity" target="_blank">video</a> shows the effect of interference. </li>
         </ol>
-    - title: Confirm that SkyConnect is plugged in
+    - title: Confirm that Connect&nbsp;ZBT-1 is plugged in
       image: z2m-migrate-zha-06.png
       content: |
         <ul>
-          <li>Now that SkyConnect is plugged in, select <b>Submit</b>.</li>
+          <li>Now that Connect&nbsp;ZBT-1 is plugged in, select <b>Submit</b>.</li>
         </ul>
     - title: Choose the serial port 
       image: migrate-zha-select-port.png
       content: |
         <ul>      
-          <li>Choose the serial port with <b>SkyConnect</b> and select <b>Submit</b>.</li>
+          <li>Choose the serial port with <b>Connect&nbsp;ZBT-1</b> and select <b>Submit</b>.</li>
         </ul>
     - title: Start the backup restore process
       image: z2m-migrate-zha-08.png
@@ -292,7 +292,7 @@ procedureMigrateZigbeeZHAOnly:
           <li class="info">You won't be able to control the devices until they rejoin the network. Normally, they rejoin within one hour. You may be able to accelerate that process by power-cycling devices.</li>
         </ul>
 procedureMigrateConBee:
-  title: Migrate a deCONZ network to SkyConnect using ZHA
+  title: Migrate a deCONZ network to Connect&nbsp;ZBT-1 using ZHA
   steps:
     - title: View the firmware version of the stick
       image: conbee-update-05.png
@@ -419,29 +419,29 @@ procedureMigrateConBee:
       content: |
         <ol>
           <li>If you no longer need the old radio stick, you can now remove it.</li>
-          <li>Before selecting <b>Submit</b>, connect SkyConnect, as described in the following step.</li>
+          <li>Before selecting <b>Submit</b>, connect Connect&nbsp;ZBT-1, as described in the following step.</li>
         </ol>
-    - title: Plug the extension cable into SkyConnect
+    - title: Plug the extension cable into Connect&nbsp;ZBT-1
       image: skyconnect-raspi-01.jpg
       content: |
         <ol>
-          <li>Plug the Home Assistant SkyConnect into the USB extension cable.</li>
+          <li>Plug the Home Assistant Connect&nbsp;ZBT-1 into the USB extension cable.</li>
           <li>Plug the extension cable into your Home Assistant instance.</li>
-          <li>If you are using the standalone Home Assistant Container installation method, make sure SkyConnect is <a href="https://www.home-assistant.io/installation/linux#exposing-devices" target="_blank">mapped to the container</a>.</li>
-          <li class="warning">USB 3.0 ports and USB 3.0 drives can cause interference with 2.4 GHz protocols, including the ones provided by Home Assistant SkyConnect. It is important to use the USB extension cable and to position the Home Assistant SkyConnect away from possible interference sources. </br>
+          <li>If you are using the standalone Home Assistant Container installation method, make sure Connect&nbsp;ZBT-1 is <a href="https://www.home-assistant.io/installation/linux#exposing-devices" target="_blank">mapped to the container</a>.</li>
+          <li class="warning">USB 3.0 ports and USB 3.0 drives can cause interference with 2.4 GHz protocols, including the ones provided by Home Assistant Connect&nbsp;ZBT-1. It is important to use the USB extension cable and to position the Home Assistant Connect&nbsp;ZBT-1 away from possible interference sources. </br>
           This <a href="/connectivity" target="_blank">video</a> shows the effect of interference. </li>
         </ol>
-    - title: Confirm that SkyConnect is plugged in
+    - title: Confirm that Connect&nbsp;ZBT-1 is plugged in
       image: z2m-migrate-zha-06.png
       content: |
         <ul>
-          <li>Now that SkyConnect is plugged in, select <b>Submit</b>.</li>
+          <li>Now that Connect&nbsp;ZBT-1 is plugged in, select <b>Submit</b>.</li>
         </ul>
     - title: Select the serial port
       image: conbee-migrate-zha-15.png
       content: |
         <ul>
-          <li>Select the serial port for SkyConnect, then select <b>Submit</b>.</li>
+          <li>Select the serial port for Connect&nbsp;ZBT-1, then select <b>Submit</b>.</li>
         </ul>
     - title: Start the backup restore process
       image: z2m-migrate-zha-08.png
@@ -468,11 +468,11 @@ procedureMigrateConBee:
         <ul>
           <li>Overwriting the IEEE address may take a while. Wait.</li>
         </ul>
-    - title: Check the SkyConnect ZHA integration
+    - title: Check the Connect&nbsp;ZBT-1 ZHA integration
       image: conbee-migrate-zha-new-18.png
       content: |
         <ol>
-          <li>SkyConnect is now setup in the ZHA integration.</li>
+          <li>Connect&nbsp;ZBT-1 is now setup in the ZHA integration.</li>
           <li>To check whether the migration was successful, select the integration.</li>
         </ol>
     - title: Check the radio type
@@ -487,11 +487,11 @@ procedureMigrateConBee:
         <ul>
           <li>To avoid confusion, rename the ZHA integration.</li>
         </ul>
-    - title: Change the name to SkyConnect
+    - title: Change the name to Connect&nbsp;ZBT-1
       image: conbee-migrate-zha-21.png
       content: |
         <ul>
-          <li>Change the ZHA integration name to <b>SkyConnect</b> and select <b>OK</b>.</li>
+          <li>Change the ZHA integration name to <b>Connect&nbsp;ZBT-1</b> and select <b>OK</b>.</li>
         </ul>
     - title: Reconfigure automations and dashboards
       image: conbee-migrate-zha-new-22.png
@@ -508,7 +508,7 @@ procedureDisableMultiProtocol:
       content: |
         <ol>
           <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/hardware/" target="_blank"><b>Settings</b> > <b>System</b> > <b>Hardware</b></a>.</li>
-          <li>Under <b>Home Assistant SkyConnect</b>, select <b>Configure</b>.</li>
+          <li>Under <b>Home Assistant Connect&nbsp;ZBT-1</b>, select <b>Configure</b>.</li>
           <li>Select the <b>Configure IEEE 802.15.4 radio multiprotocol support</b> option.</li>
           
         </ol>
@@ -530,27 +530,27 @@ procedureEnableThreadSupport:
       image: skyconnect-zha-delete.png
       content: |
         <ul>
-          <li>If you have a new SkyConnect or did not setup Zigbee Home Automation (ZHA) yet, skip to Step 2.</li>
-          <li>If you use your existing SkyConnect to run a Zigbee network, <a href="/migrate-zigbee-zha-only/" target="_blank"><b>Migrate your Zigbee network</b></a> to another controller.
+          <li>If you have a new Connect&nbsp;ZBT-1 or did not setup Zigbee Home Automation (ZHA) yet, skip to Step 2.</li>
+          <li>If you use your existing Connect&nbsp;ZBT-1 to run a Zigbee network, <a href="/migrate-zigbee-zha-only/" target="_blank"><b>Migrate your Zigbee network</b></a> to another controller.
             <ul>
               <li>Otherwise, if you delete the Zigbee network, even if you set it up again, all of your entity customizations will be gone.
               </li>
             </ul>
           </li>
-          <li>If you are using the SkyConnect with Zigbee Home Automation (ZHA), and you no longer need a Zigbee network, follow these steps to remove ZHA from the integration list.</li>
+          <li>If you are using the Connect&nbsp;ZBT-1 with Zigbee Home Automation (ZHA), and you no longer need a Zigbee network, follow these steps to remove ZHA from the integration list.</li>
         </ul>
         <ol>
           <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>.</li>
           <li>Select the <b>Zigbee Home Automation</b> integration card.</li>
-          <li>Select the menu behind the <b>SkyConnect v1.0</b> integration and choose <b>Delete</b>.</li>
+          <li>Select the menu behind the <b>Connect&nbsp;ZBT-1 v1.0</b> integration and choose <b>Delete</b>.</li>
           <li>On the pop-up menu, select <b>Delete</b> again to confirm deletion.</li>
         </ol>
-    - title: Configure the SkyConnect
+    - title: Configure the Connect&nbsp;ZBT-1
       image: skyconnect_configure.png
       content: |
         <ol>
           <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/hardware/" target="_blank"><b>Settings</b> > <b>System</b> > <b>Hardware</b></a>.</li>
-          <li>Under <b>Home Assistant SkyConnect</b>, select <b>Configure</b></li>
+          <li>Under <b>Home Assistant Connect&nbsp;ZBT-1</b>, select <b>Configure</b></li>
         </ol>
     - title: Select the Thread firmware
       image: skyconnect_pick_firmware.png
@@ -558,7 +558,7 @@ procedureEnableThreadSupport:
         <ol>
           <li>Select <b>Use as a Thread border router</b>.</li>
           <ul><li><b>Result</b>: This will install the OpenThread Border Router add-on.</li></ul>
-          <li>The dialog informs you that SkyConnect now acts as an OpenThread border bouter. Select <b>Submit</b>.</li>
+          <li>The dialog informs you that Connect&nbsp;ZBT-1 now acts as an OpenThread border bouter. Select <b>Submit</b>.</li>
           <li>Then, select <b>Finish</b>.</li>
         </ol>
     - title: Locate the Thread integrations
