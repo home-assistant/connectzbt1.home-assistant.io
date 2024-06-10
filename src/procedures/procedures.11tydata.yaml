@@ -3,7 +3,7 @@ procedureNewZigbee:
   title: Setting up a new Zigbee network using Connect&nbsp;ZBT-1
   steps:
     - title: Plug the extension cable into Connect&nbsp;ZBT-1
-      image: skyconnect-raspi-01.jpg
+      image: connect-zbt-1-raspi-01.jpg
       content: |
         <ol>
           <li>Plug the Home Assistant Connect&nbsp;ZBT-1 into the USB extension cable.</li>
@@ -98,7 +98,7 @@ procedureMigrateZigbee:
           <li>Repeat this for every device.</li>
         </ol>
     - title: Plug the extension cable into Connect&nbsp;ZBT-1
-      image: skyconnect-raspi-01.jpg
+      image: connect-zbt-1-raspi-01.jpg
       content: |
         <ol>
           <li>Plug the Home Assistant Connect&nbsp;ZBT-1 into the USB extension cable.</li>
@@ -238,7 +238,7 @@ procedureMigrateZigbeeZHAOnly:
           <li>Before selecting <b>Submit</b>, connect Connect&nbsp;ZBT-1, as described in the 2 following steps.</li>
         </ol>
     - title: Plug the extension cable into Connect&nbsp;ZBT-1
-      image: skyconnect-raspi-01.jpg
+      image: connect-zbt-1-raspi-01.jpg
       content: |
         <ol>
           <li>Plug the Home Assistant Connect&nbsp;ZBT-1 into the USB extension cable.</li>
@@ -422,7 +422,7 @@ procedureMigrateConBee:
           <li>Before selecting <b>Submit</b>, connect Connect&nbsp;ZBT-1, as described in the following step.</li>
         </ol>
     - title: Plug the extension cable into Connect&nbsp;ZBT-1
-      image: skyconnect-raspi-01.jpg
+      image: connect-zbt-1-raspi-01.jpg
       content: |
         <ol>
           <li>Plug the Home Assistant Connect&nbsp;ZBT-1 into the USB extension cable.</li>
