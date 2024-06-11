@@ -20,11 +20,19 @@ procedureNewZigbee:
           <li>Connect&nbsp;ZBT-1 should now have been discovered.</li>
           <li>Select <b>Configure</b>.</li>
         </ol>
-    - title: Set up the Connect&nbsp;ZBT-1 integration
-      image: skyconnect-discovered-02.png
+    - title: Pick your firmware
+      image: connect-zbt-1_pick_firmware.png
       content: |
         <ul>
-          <li>Select <b>Submit</b> to start the setup process.</li>
+          <li>In the dialog, select <b>Zigbee</b>.</li>
+        </ul>
+    - title: Complete the Zigbee setup
+      image: connect-zbt-1_complete-zigbee-setup.png
+      content: |
+        <ul>
+          <li>Select <b>Submit</b> to complete the setup of the Connect&nbsp;ZBT-1 integration.</li>
+          <li>Your Connect&nbsp;ZBT-1 is now a Zigbee coordinator.</li>
+          <li>It will be shown in your <b>Zigbee Home Automation integration</b>.</li>
         </ul>
     - title: Locate the Connect&nbsp;ZBT-1 integration
       image: skyconnect-discovered-03.png
