@@ -561,14 +561,14 @@ procedureEnableThreadSupport:
           <li>On the pop-up menu, select <b>Delete</b> again to confirm deletion.</li>
         </ol>
     - title: Configure the Connect&nbsp;ZBT-1
-      image: skyconnect_configure.png
+      image: connect-zbt-1_configure.png
       content: |
         <ol>
           <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/hardware/" target="_blank"><b>Settings</b> > <b>System</b> > <b>Hardware</b></a>.</li>
-          <li>Under <b>Home Assistant Connect&nbsp;ZBT-1</b>, select <b>Configure</b></li>
+          <li>Under <b>Home Assistant Connect&nbsp;ZBT-1</b>, select <b>Configure</b>.</li>
         </ol>
     - title: Select the Thread firmware
-      image: skyconnect_pick_firmware.png
+      image: connect-zbt-1_pick_firmware.png
       content: |
         <ol>
           <li>Select <b>Use as a Thread border router</b>.</li>
