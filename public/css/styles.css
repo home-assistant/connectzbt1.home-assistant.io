@@ -16,9 +16,10 @@ html {
     --primary-background-color: #202020;
     --secondary-background-color: #303030;
     --divider-color: rgba(225, 225, 225, 0.12);
-    }
+  }
+
   .items a img {
-      filter: invert(1);
+    filter: invert(1);
   }
 }
 
@@ -58,20 +59,25 @@ h3 {
   padding: 16px 8px;
   max-width: 960px;
 }
+
 .content {
   /*display: flex;*/
   margin: 32px 0;
 }
+
 .content li {
   padding: 4px 0;
 }
+
 .content img {
   max-width: 100%;
 }
+
 .content pre {
   margin: 4px;
   padding-left: 8px;
 }
+
 .content kbd {
   padding-left: 4px;
   padding-right: 4px;
@@ -81,21 +87,21 @@ h3 {
 }
 
 
-@media screen and (max-width: 649px){
+@media screen and (max-width: 649px) {
   .image-container {
     max-width: 200px;
-    display:flex;
+    display: flex;
     padding-top: 16px;
   }
-} 
+}
 
-@media screen and (min-width: 650px){
+@media screen and (min-width: 650px) {
   .image-container {
     height: 200px;
     max-width: 200px;
-    display:table;
+    display: table;
     justify-content: center;
-  } 
+  }
 }
 
 /* FOOTER STYLES */
@@ -105,6 +111,7 @@ h3 {
   padding-top: 24px;
   text-align: center;
 }
+
 .footer .initiative {
   font-style: italic;
   margin-top: 16px;
@@ -115,42 +122,54 @@ h3 {
 .layout.vertical {
   display: flex;
 }
+
 .layout.inline {
   display: inline-flex;
 }
+
 .layout.horizontal {
   flex-direction: row;
 }
+
 .layout.vertical {
   flex-direction: column;
 }
+
 .layout.wrap {
   flex-wrap: wrap;
 }
+
 .layout.no-wrap {
   flex-wrap: nowrap;
 }
+
 .layout.center,
 .layout.center-center {
   align-items: center;
 }
+
 .layout.bottom {
   align-items: flex-end;
 }
+
 .layout.center-justified,
 .layout.center-center {
   justify-content: center;
 }
+
 .flex {
   flex: 1;
   flex-basis: 0.000000001px;
 }
+
 .flex-auto {
   flex: 1 1 auto;
 }
+
 .flex-none {
   flex: none;
 }
+
 .layout.justified {
   justify-content: space-between;
 }
@@ -161,9 +180,11 @@ h3 {
   justify-content: space-between;
   align-items: center;
 }
+
 .nav-bar .logo {
   width: 60%;
 }
+
 .nav-bar img {
   max-height: 48px;
   max-width: 100%;
@@ -173,18 +194,22 @@ h3 {
   .nav-bar {
     flex-direction: column;
   }
+
   .nav-bar .logo {
     width: 100%;
   }
 }
+
 .nav-bar ul {
   display: flex;
   justify-content: space-between;
   padding: 0;
 }
+
 .nav-bar ul li {
   list-style: none;
 }
+
 .nav-bar li a {
   display: inline-block;
   padding: 4px;
@@ -193,13 +218,16 @@ h3 {
   text-decoration: none;
   border-bottom: 2px solid transparent;
 }
+
 .nav-bar a.active {
   border-bottom-color: var(--primary-color);
 }
+
 nabucasa-zigbee-flasher {
   --mdc-theme-primary: var(--accent-color);
   --mdc-theme-on-primary: #fff;
 }
+
 .nav-bar a.buy-button {
   color: #fff;
   background-color: var(--accent-color);
@@ -229,6 +257,7 @@ nabucasa-zigbee-flasher {
     flex-direction: column !important;
     align-items: center;
   }
+
   .guides a {
     max-width: 300px;
     margin: 8px 0;
@@ -256,7 +285,7 @@ nabucasa-zigbee-flasher {
   margin: 16px 0;
 }
 
-.banner > * {
+.banner>* {
   padding: 8px 0;
 }
 
@@ -325,6 +354,7 @@ hr {
   .step-image-instruction {
     flex-direction: column;
   }
+
   .step .image-container {
     max-width: 400px;
   }
@@ -386,9 +416,11 @@ hr {
 .accordion .accordion-item {
   border-bottom: 1px solid #e5e5e5;
 }
+
 .accordion .accordion-item button[aria-expanded="true"] {
   border-bottom: 1px solid var(--primary-color);
 }
+
 .accordion button {
   position: relative;
   display: block;
@@ -401,20 +433,24 @@ hr {
   background: none;
   outline: none;
 }
+
 .accordion button:hover,
 .accordion button:focus {
   cursor: pointer;
   color: var(--primary-color);
 }
+
 .accordion button:hover::after,
 .accordion button:focus::after {
   cursor: pointer;
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
 }
+
 .accordion button .accordion-title {
   padding: 1em 1.5em 1em 0;
 }
+
 .accordion button .icon {
   display: inline-block;
   position: absolute;
@@ -426,6 +462,7 @@ hr {
   border-radius: 22px;
   box-sizing: border-box;
 }
+
 .accordion button .icon::before {
   display: block;
   position: absolute;
@@ -436,6 +473,7 @@ hr {
   height: 2px;
   background: currentColor;
 }
+
 .accordion button .icon::after {
   display: block;
   position: absolute;
@@ -446,18 +484,22 @@ hr {
   height: 10px;
   background: currentColor;
 }
+
 .accordion button[aria-expanded="true"] {
   color: var(--primary-color);
 }
+
 .accordion button[aria-expanded="true"] .icon::after {
   width: 0;
 }
-.accordion button[aria-expanded="true"] + .accordion-content {
+
+.accordion button[aria-expanded="true"]+.accordion-content {
   opacity: 1;
-  max-height: 60em;
+  max-height: 160em;
   transition: all 200ms linear;
   will-change: opacity, max-height;
 }
+
 .accordion .accordion-content {
   opacity: 0;
   max-height: 0;
@@ -467,6 +509,7 @@ hr {
   font-size: 1rem;
   font-weight: 300;
 }
+
 .accordion .accordion-content p {
   margin: 2em 0;
 }
@@ -476,6 +519,7 @@ hr {
   display: flex;
   flex-wrap: wrap;
 }
+
 .items a {
   color: inherit;
   background-color: var(--secondary-background-color);
@@ -495,6 +539,7 @@ hr {
     flex-direction: column !important;
     align-items: center;
   }
+
   .items a {
     max-width: 300px;
     margin: 8px 0;
@@ -504,11 +549,13 @@ hr {
 .items a:hover {
   border-color: var(--primary-color);
 }
+
 .hint {
   margin: 24px auto 0;
   font-style: italic;
   max-width: 450px;
 }
+
 .note {
   color: var(--secondary-text-color);
   font-style: italic;
