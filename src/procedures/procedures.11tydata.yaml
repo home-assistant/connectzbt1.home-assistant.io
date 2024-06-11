@@ -523,7 +523,7 @@ procedureDisableMultiProtocol:
       content: |
         <ol>
           <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/hardware/" target="_blank"><b>Settings</b> > <b>System</b> > <b>Hardware</b></a>.</li>
-          <li>Under <b>Home Assistant Connect&nbsp;ZBT-1</b>, select <b>Configure</b>.</li>
+          <li>Under <b>Home Assistant SkyConnect</b>, select <b>Configure</b>.</li>
           <li>Select the <b>Configure IEEE 802.15.4 radio multiprotocol support</b> option.</li>
           
         </ol>
