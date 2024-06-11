@@ -9,12 +9,12 @@ guideName: About multiprotocol issues
     </p>
     <p>
         <span>
-            When we launched Home Assistant Connect&nbsp;ZBT-1, we announced our intent to release firmware supporting multiprotocol, which allows the device's Silicon Labs chip to connect to both Zigbee and Thread networks with one radio.
+            When we launched Home Assistant SkyConnect, we announced our intent to release firmware supporting multiprotocol, which allows the device's Silicon Labs chip to connect to both Zigbee and Thread networks with one radio.
         </span>
     </p>
     <p>
         <span>
-            This experimental firmware has been available since December 2022. Through extensive testing, we have found that although it works in some circumstances, it has technical limitations that lead to a worse user experience. We now do not recommend using this firmware, and it will be experimental for the foreseeable future. Instead, we will focus on making sure the dedicated Zigbee and Thread firmwares for Home Assistant Connect&nbsp;ZBT-1 deliver the best experience to users.
+            This experimental firmware has been available since December 2022. Through extensive testing, we have found that although it works in some circumstances, it has technical limitations that lead to a worse user experience. We now do not recommend using this firmware, and it will be experimental for the foreseeable future. Instead, we will focus on making sure the dedicated Zigbee and Thread firmwares for Home Assistant SkyConnect deliver the best experience to users.
         </span>
     </p>
     <p>
@@ -25,7 +25,7 @@ guideName: About multiprotocol issues
     <h2>Introduction</h2>
     <p>
         <span>
-            Home Assistant Connect&nbsp;ZBT-1's integrated wireless chip supports Zigbee by default.
+            Home Assistant SkyConnect's integrated wireless chip supports Zigbee by default.
             By using the experimental (and not recommended) firmware, the wireless chip can be used in a multiprotocol
             setup supporting Zigbee and Thread at the same time. There are two major
             limitations: The two networks have to be on the same channel and share the
@@ -39,7 +39,7 @@ guideName: About multiprotocol issues
             identifier).
         </span></p>
     <p><span>
-            The wireless chip in Home Assistant Connect&nbsp;ZBT-1 supports all 16 channels. However,
+            The wireless chip in Home Assistant SkyConnect supports all 16 channels. However,
             it can only communicate on one single channel at a time. Due to this limitation
             it is crucial that Zigbee and Thread run on the same channel for reliable
             operation!
@@ -96,20 +96,20 @@ guideName: About multiprotocol issues
             </ol>
         </li>
         <li><b>Option 3</b>: Use two separate wireless chips, one for each network. This works if you have both a Home Assistant
-            Yellow and a Connect&nbsp;ZBT-1, or two Connect&nbsp;ZBT-1s, for example.
+            Yellow and a SkyConnect, or two SkyConnects, for example.
             <ol>
                 <li>On your Home Assistant instance, <a href="/procedures/disable-multiprotocol/" target="_blank">disable
                         multiprotocol support</a> and restore the Zigbee network.</li>
-                <li>If you have a Home Assistant Yellow, plug in a Connect&nbsp;ZBT-1.</li>
-                <li>If you have another Home Assistant device, plug in a second Connect&nbsp;ZBT-1.</li>
+                <li>If you have a Home Assistant Yellow, plug in a SkyConnect.</li>
+                <li>If you have another Home Assistant device, plug in a second SkyConnect.</li>
                 <li>Go to <a class="my"
                         href="https://my.home-assistant.io/redirect/supervisor_addon/?addon=core_openthread_border_router"
                         target="_blank"><b>Add-ons</b></a> and install the experimental <b>OpenThread Border Router</b>
                     add-on.
                     <ul>
-                        <li>Select the <b>Configuration</b> tab and pick the serial port with Connect&nbsp;ZBT-1.</li>
+                        <li>Select the <b>Configuration</b> tab and pick the serial port with SkyConnect.</li>
                 <li>Select <b>Save</b>.</li>
-                        <li>Start the add-on. Your Home Assistant Connect&nbsp;ZBT-1 is now set up to work exclusively with Thread. You can now
+                        <li>Start the add-on. Your Home Assistant SkyConnect is now set up to work exclusively with Thread. You can now
                             start adding your Thread devices.</li>
                     </ul>
             </ol>
