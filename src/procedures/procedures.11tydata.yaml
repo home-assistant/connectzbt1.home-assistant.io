@@ -542,7 +542,7 @@ procedureEnableThreadSupport:
   title: Install dedicated Thread support
   steps:
     - title: Migrate your Zigbee network or delete the ZHA integration
-      image: skyconnect-zha-delete.png
+      image: connect-zbt-1-zha-delete.png
       content: |
         <ul>
           <li>If you have a new Connect&nbsp;ZBT-1 or did not setup Zigbee Home Automation (ZHA) yet, skip to Step 2.</li>
