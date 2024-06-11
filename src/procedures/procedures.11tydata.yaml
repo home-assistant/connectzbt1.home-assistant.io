@@ -221,7 +221,7 @@ procedureMigrateZigbeeZHAOnly:
   title: Migrate ZHA network
   steps:
     - title: Start radio migration
-      image: z2m-migrate-zha-02.png
+      image: connect-zbt-1-z2m-migrate-zha-02.png
       content: |
         <ol>
           <li>Under <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>, select the ZHA integration, then select <b>Configure</b>.</li>
@@ -269,7 +269,7 @@ procedureMigrateZigbeeZHAOnly:
           <li>Now that Connect&nbsp;ZBT-1 is plugged in, select <b>Submit</b>.</li>
         </ul>
     - title: Choose the serial port 
-      image: migrate-zha-select-port.png
+      image: connect-zbt-1-migrate-zha-select-port.png
       content: |
         <ul>      
           <li>Choose the serial port with <b>Connect&nbsp;ZBT-1</b> and select <b>Submit</b>.</li>
