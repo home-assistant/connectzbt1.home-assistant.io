@@ -17,14 +17,14 @@ sections:
           Can I run 2 sticks with different Zigbee solutions simultaneously?
         content: >
           <p>
-            Yes. For example, you can run a stick with deCONZ or Zigbee2MQTT alongside Connect&nbsp;ZBT-1 with ZHA.
+            Yes. For example, you can run a stick with deCONZ or Zigbee2MQTT alongside Home Assistant Connect&nbsp;ZBT-1 with ZHA.
           </p>
       - title: >
-          Can I migrate from a deCONZ or Zigbee2MQTT stick to Connect&nbsp;ZBT-1 and keep using the old stick?
+          Can I migrate from a deCONZ or Zigbee2MQTT stick to Home Assistant Connect&nbsp;ZBT-1 and keep using the old stick?
         content: >
           <p>No, you can't continue to use both. During migration, the IEEE address of the Connect&nbsp;ZBT-1 is replaced by the IEEE address of the old stick. This means that your old stick and your new stick will have the same IEEE address. This is required for the migration process to complete successfully. From this point on-wards you should not operate the old stick in the same area. If you do not migrate the IEEE address from your old stick, you'll have to re-pair many of your devices in order to keep them working.</p>
       - title: >
-          Is Zigbee2MQTT supported by Connect&nbsp;ZBT-1?
+          Is Zigbee2MQTT supported by Home Assistant Connect&nbsp;ZBT-1?
         content: >
           <p>
             The Home Assistant team officially supports ZHA (Zigbee Home
@@ -61,8 +61,8 @@ sections:
               </code>
             </pre>
           </p>
-          <p>You can find the port information under <a class="my" href="https://my.home-assistant.io/redirect/hardware/" target="_blank">Settings>System>Hardware</a>, then on the menu button, select <b>All Hardware</b> and search for Connect&nbsp;ZBT-1.</p>
-          <p><img src="/images/skyconnect-id.png"/></p>
+          <p>You can find the port information under <a class="my" href="https://my.home-assistant.io/redirect/hardware/" target="_blank">Settings>System>Hardware</a>, then on the menu button, select <b>All Hardware</b> and search for Connect.</p>
+          <p><img src="/images/connect-zbt-1-id.png"/></p>
       - title: >
           Is Zigbee Green Power (ZGP) supported?
         content: >
@@ -117,7 +117,7 @@ sections:
         content: >
           <p>You can try the following steps:
             <ol>
-              <li>Wait a bit longer. It can take a while for Connect&nbsp;ZBT-1 to show up.</li>
+              <li>Wait a bit longer. It can take a while for Home Assistant Connect&nbsp;ZBT-1 to show up.</li>
               <li>Try a different USB port.</li>
               <li>Refresh your browser page.</li>
               <li>Make sure the ZHA integration is not hidden. Select <b>Show ignored integrations</b>.</br>
