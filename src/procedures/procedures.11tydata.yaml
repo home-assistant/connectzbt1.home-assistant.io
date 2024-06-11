@@ -32,16 +32,23 @@ procedureNewZigbee:
         <ul>
           <li>Select <b>Submit</b> to complete the setup of the Connect&nbsp;ZBT-1 integration.</li>
           <li>Your Connect&nbsp;ZBT-1 is now a Zigbee coordinator.</li>
-          <li>It will be shown in your <b>Zigbee Home Automation integration</b>.</li>
         </ul>
-    - title: Locate the Connect&nbsp;ZBT-1 integration
-      image: skyconnect-discovered-03.png
+    - title: Configure the Zigbee Home Automation integration
+      image: connect-zbt-1_zha-discovered.png
       content: |
         <ul>
-          <li>Select <b>Create a network</b>.</li>
+          <li>Connect&nbsp;ZBT-1 will be shown in your <b>Zigbee Home Automation integration</b>.</li>
+          <li>Select <b>Configure</b>.</li>
+          <li>To confirm, select <b>Submit</b>.</li>
+        </ul>
+    - title: Create a network
+      image: connect-zbt-1_create-network.png
+      content: |
+        <ul>
+          <li>Select <b>Create network</b>.</li>
         </ul>
     - title: Add devices to area
-      image: skyconnect-discovered-04.png
+      image: connect-zbt-1-discovered-04.png
       content: |
         <ol>
           <li>Once the network has been set up, add the Zigbee Coordinator to an area.</li>
@@ -51,12 +58,12 @@ procedureNewZigbee:
         </ul></li>
         </ol>
     - title: Add Zigbee devices
-      image: skyconnect-discovered-new-05.png
+      image: connect-zbt-1-discovered-05.png
       content: |
         <ul>
-          <li>Click on <b>1 device</b> and select <b>Add devices via this device</b>. ZHA will now search for Zigbee devices in pairing mode.
+          <li>Select <b>1 device</b> and select <b>Add devices via this device</b>. ZHA will now search for Zigbee devices in pairing mode.
           <li>Put your Zigbee device into pairing mode.</li>
-          <li class="warning">If ZHA can't find your Zigbee device make sure that Connect&nbsp;ZBT-1 does not suffer from interference. Use the extension cable and try placing the Connect&nbsp;ZBT-1 further away from potential devices which can cause interference.</li>
+          <li class="warning">If ZHA can't find your Zigbee device make sure that Connect&nbsp;ZBT-1 does not suffer from interference. Use the extension cable and move the Connect&nbsp;ZBT-1 further away from potential devices which can cause interference.</li>
         </ul>
 procedureMigrateZigbee:
   title: Migrating a Zigbee2MQTT network to Connect&nbsp;ZBT-1 via z2m backup
@@ -142,7 +149,7 @@ procedureMigrateZigbee:
           <li>Make sure the <b>coordinator_backup.json</b> file is selected and select <b>submit</b>.</li>
         </ul>
     - title: Assign coordinator to area
-      image: skyconnect-discovered-04.png
+      image: connect-zbt-1-discovered-04.png
       content: |
         <ul>
           <li>Assign the coordinator to an area and select <b>Finish</b>.</li>
