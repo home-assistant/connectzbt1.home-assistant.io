@@ -51,67 +51,55 @@ menu:
     crossorigin="anonymous"
   ></script>
   <script>
-// Function to create and insert the banner element
+  // Function to handle link clicks with hash preservation
+    function handleClickEvent(event) {
+      // Find the closest link element in case we did not click directly on the link 
+      const link = event.target.closest("a");
+      // Check if it's a link and not clicked within the link itself (e.g., on an image)
+      if (link) {
+        // Create a new URL object from the link's href
+        const targetURL = new URL(link.href)
+
+        // Add the hash to the URL
+        targetURL.hash = "#from-skyconnect"
+
+        // Prevent default behavior and navigate with modified URL
+        event.preventDefault();
+
+        // Set the new URL with hash as the current location
+        window.location.href = targetURL.toString();
+      }
+    }
+
+  // Function to create and insert the banner element
     function insertBanner() {
       // Check if #from-skyconnect is present in the URL
       if (window.location.hash === "#from-skyconnect") {
         // Create the banner element (a `<div>`)
         const banner = document.createElement("div");
-        banner.id = "testBanner";  // Add an ID for potential styling
-        banner.textContent = "This is a banner triggered by #from-skyconnect";
+        banner.textContent = "We noticed you were looking for Home Assistant SkyConnect - it's now called Home Assistant Connect ZBT-1, and remains the best way to connect to Zigbee devices.";
 
-        // Style the banner (optional)
-        banner.style.backgroundColor = "gray";
-        banner.style.padding = "10px";
-        banner.style.fontSize = "16px";
+        // Apply styles
+        Object.assign(banner.style, {
+          backgroundColor: "var(--primary-color)",
+          color: "#fff",
+          padding: "10px",
+          fontSize: "16px",
+          textAlign: "center",
+        });
 
-        // Find a suitable location to insert the banner (replace with your preference)
-        const header = document.querySelector("header");
-        if (header) {
-          header.appendChild(banner);
-        } else {
-          console.warn("No header element found. Banner not inserted.");
-        }
-      }
-    }
-
-    // Function to handle link clicks with hash preservation
-    function handleLinkClick(event) {
-      const link = event.target;
-      // Check if it's a link and not clicked within the link itself (e.g., on an image)
-      if (link.tagName.toLowerCase() === "a" && !link.classList.contains("ignore-hash")) {
-        // Get the original target URL
-        let targetURL = link.href;
-
-        // Check if form submission
-        if (link.hasAttribute("form")) {
-          // Assuming a hidden input named "hash" exists in the form
-          const form = link.closest("form");
-          const hiddenInput = form.querySelector("input[name='hash']");
-          if (hiddenInput) {
-            hiddenInput.value = "#from-skyconnect";
-          } else {
-            console.warn("Form missing hidden input named 'hash'");
-          }
-          return;  // Allow form submission to handle hash
-        }
-
-        // Modify URL to include #test if not already present
-        if (!targetURL.includes("#from-skyconnect")) {
-          targetURL += "#from-skyconnect";
-        }
-
-        // Prevent default behavior and navigate with modified URL
-        event.preventDefault();
-        window.location.href = targetURL;
+        // Insert the banner content into the header element
+        document.querySelector("header").appendChild(banner);
       }
     }
 
     // Call the function on page load and handle hash changes
-    window.addEventListener("load", insertBanner);
     window.addEventListener("hashchange", insertBanner);
-
-    document.addEventListener("click", handleLinkClick);
+    if (window.location.hash === "#from-skyconnect") {
+      // Add event listeners for page load and click events to handle hash preservation
+      window.addEventListener("load", insertBanner);
+      document.addEventListener("click", handleClickEvent);
+    }
 </script>
   <body>
     <header></header>
