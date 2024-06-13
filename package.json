@@ -1,7 +1,7 @@
 {
-    "name": "skyconnect.home-assistant.io",
-    "license": "Apache-2.0",
-    "devDependencies": {
-      "@11ty/eleventy": "^2.0.1"
-    }
+  "name": "connectzbt1.home-assistant.io",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
   }
+}
