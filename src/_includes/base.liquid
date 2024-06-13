@@ -50,57 +50,6 @@ menu:
     src="https://kit.fontawesome.com/ee3aba475c.js"
     crossorigin="anonymous"
   ></script>
-  <script>
-  // Function to handle link clicks with hash preservation
-    function handleClickEvent(event) {
-      // Find the closest link element in case we did not click directly on the link 
-      const link = event.target.closest("a");
-      // Check if it's a link and not clicked within the link itself (e.g., on an image)
-      if (link) {
-        // Create a new URL object from the link's href
-        const targetURL = new URL(link.href)
-
-        // Add the hash to the URL
-        targetURL.hash = "#from-skyconnect"
-
-        // Prevent default behavior and navigate with modified URL
-        event.preventDefault();
-
-        // Set the new URL with hash as the current location
-        window.location.href = targetURL.toString();
-      }
-    }
-
-  // Function to create and insert the banner element
-    function insertBanner() {
-      // Check if #from-skyconnect is present in the URL
-      if (window.location.hash === "#from-skyconnect") {
-        // Create the banner element (a `<div>`)
-        const banner = document.createElement("div");
-        banner.textContent = "We noticed you were looking for Home Assistant SkyConnect - it's now called Home Assistant Connect ZBT-1, and remains the best way to connect to Zigbee devices.";
-
-        // Apply styles
-        Object.assign(banner.style, {
-          backgroundColor: "var(--primary-color)",
-          color: "#fff",
-          padding: "10px",
-          fontSize: "16px",
-          textAlign: "center",
-        });
-
-        // Insert the banner content into the header element
-        document.querySelector("header").appendChild(banner);
-      }
-    }
-
-    // Call the function on page load and handle hash changes
-    window.addEventListener("hashchange", insertBanner);
-    if (window.location.hash === "#from-skyconnect") {
-      // Add event listeners for page load and click events to handle hash preservation
-      window.addEventListener("load", insertBanner);
-      document.addEventListener("click", handleClickEvent);
-    }
-</script>
   <body>
     <header></header>
     <div class="container">
@@ -150,6 +99,57 @@ menu:
         </div>
       </div>
     </div>
+    <script>
+    // Function to handle link clicks with hash preservation
+    function handleClickEvent(event) {
+      // Find the closest link element in case we did not click directly on the link 
+      const link = event.target.closest("a");
+      // Check if it's a link and not clicked within the link itself (e.g., on an image)
+      if (link) {
+        // Create a new URL object from the link's href
+        const targetURL = new URL(link.href)
+
+        // Add the hash to the URL
+        targetURL.hash = "#from-skyconnect"
+
+        // Prevent default behavior and navigate with modified URL
+        event.preventDefault();
+
+        // Set the new URL with hash as the current location
+        window.location.href = targetURL.toString();
+      }
+    }
+
+  // Function to create and insert the banner element
+    function insertBanner() {
+      // Check if #from-skyconnect is present in the URL
+      if (window.location.hash === "#from-skyconnect") {
+        // Create the banner element (a `<div>`)
+        const banner = document.createElement("div");
+        banner.textContent = "We noticed you were looking for Home Assistant SkyConnect - it's now called Home Assistant Connect ZBT-1, and remains the best way to connect to Zigbee devices.";
+
+        // Apply styles
+        Object.assign(banner.style, {
+          backgroundColor: "var(--primary-color)",
+          color: "#fff",
+          padding: "10px",
+          fontSize: "16px",
+          textAlign: "center",
+        });
+
+        // Insert the banner content into the header element
+        document.querySelector("header").appendChild(banner);
+      }
+    }
+
+    // Call the function on page load and handle hash changes
+    window.addEventListener("hashchange", insertBanner);
+    if (window.location.hash === "#from-skyconnect") {
+      // Add event listeners for page load and click events to handle hash preservation
+      insertBanner();
+      document.addEventListener("click", handleClickEvent);
+    }
+  </script>
   </body>
 </html>
 
