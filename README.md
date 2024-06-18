@@ -1,6 +1,6 @@
 # Home Assistant Connect&nbsp;ZBT-1 website
 
-This is the source of the Connect&nbsp;ZBT-1 documentation website at [skyconnect.home-assistant.io](https://skyconnect.home-assistant.io). 
+This is the source of the Connect&nbsp;ZBT-1 documentation website at [connectzbt1.home-assistant.io](https://connectzbt1.home-assistant.io). 
 
 ## Setup
 
