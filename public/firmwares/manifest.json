@@ -15,9 +15,9 @@
   "firmwares": [
     {
       "name": "Zigbee (EZSP)",
-      "url": "/firmwares/skyconnect_ncp-uart-hw_7.4.3.0.gbl",
+      "url": "/firmwares/skyconnect_ncp-uart-hw_7.4.4.0.gbl",
       "type": "ncp-uart-hw",
-      "version": "7.4.3.0"
+      "version": "7.4.4.0"
     },
     {
       "name": "Multi-PAN (RCP)",
@@ -27,7 +27,7 @@
     },
     {
       "name": "OpenThread",
-      "url": "/firmwares/skyconnect_ot-rcp_2.4.0.0_GitHub-7074a43e4_gsdk_4.4.3.gbl",
+      "url": "/firmwares/skyconnect_ot-rcp_2.4.0.0_GitHub-7074a43e4_gsdk_4.4.4.gbl",
       "type": "ot-rcp",
       "version": "2.4.0.0"
     }
