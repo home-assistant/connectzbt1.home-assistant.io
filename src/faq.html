@@ -141,6 +141,12 @@ sections:
           <p>OTBR and ZHA on separate channels can cause an unreliable network connection. To resolve this issue, you can try resetting the Thread network or use two separate wireless chips, one for ZHA and one for Thread. See <a href="/about-multiprotocol/#resolve-channel-conflict" target="_blank">About
             multiprotocol support - resolve channel conflict</a>.</p>
           <p>Note: The OpenThread Border Router add-on used to setup a Thread-only network on a wireless chip is still experimental.</p>
+      - title: >
+            What do I do if my device is completely unresponsive?
+        content: >
+          <p>
+            Try to plug your device into a Windows, Mac, or Linux machine, and if there is no acknowledgment that even an unknown device was inserted, then check the device for a small deformation under the Home Assistant logo. If it has this deformation, this is symptomatic of a defective ZBT-1, which may require replacement, to learn more, read our FAQ on the Home Assistant Connect ZBT-1 replacement program. SkyConnect branded devices are unaffected by this issue and do not require replacement.
+          </p>
 ---
 <div class="container">
   {% for section in sections %}
