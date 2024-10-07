@@ -1,6 +1,6 @@
 {
 	"name": "connectzbt1.home-assistant.io",
-	"image": "mcr.microsoft.com/devcontainers/javascript-node:0-16-bullseye",
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:0-20-bullseye",
 	"forwardPorts": [
 		8080
 	],
