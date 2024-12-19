@@ -39,16 +39,28 @@ description: Zigbee and Thread USB stick by the creators of Home Assistant
         </li>
     </ul>
   </div>
-  <p>
-    If your Home Assistant installation has no add-ons available, you can use the web-flasher below to install the latest firmware version for Home Assistant Connect&nbsp;ZBT-1
-    directly from your browser over USB. Plug-in your Connect&nbsp;ZBT-1 to your computer and select the firmware version you want to install.
-  </p>
-  <p>To read more about the SL Web Tools, refer to this <a href="https://www.home-assistant.io/blog/2023/02/08/state-of-matter-and-thread/#silabs-multi-flasher--sl-web-tools" target="_blank">blog post</a>.</p>
-  <nabucasa-zigbee-flasher manifest="/firmwares/manifest.json"
-    ><span slot="button">Update Firmware</span></nabucasa-zigbee-flasher
-  >
+  <div>
+    <h3 class="text-left">Reflash using the Silicon Labs Web Flasher</h3>
+    <div style="border-left: .25em solid rgb(158, 106, 3); padding-left: 16px;">
+      <p style="color: rgb(158, 106, 3); fill: rgb(158, 106, 3)">
+        <svg class="octicon octicon-alert mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>
+        <b>Warning</b>
+      </p>
+      <p>
+        Firmware update through web flasher is only available for Home Assistant SkyConnect devices and Home Assistant ZBT-1 devices purchased after October 20, 2024.
+      </p>
+    </div>
+    <p>
+      If your Home Assistant installation has no add-ons available, you can use the web-flasher below to install the latest firmware version for Home Assistant Connect&nbsp;ZBT-1
+      directly from your browser over USB. Plug-in your Connect&nbsp;ZBT-1 to your computer and select the firmware version you want to install.
+    </p>
+    <p>To read more about the SL Web Tools, refer to this <a href="https://www.home-assistant.io/blog/2023/02/08/state-of-matter-and-thread/#silabs-multi-flasher--sl-web-tools" target="_blank">blog post</a>.</p>
+    <nabucasa-zigbee-flasher manifest="/firmwares/manifest.json"
+      ><span slot="button">Update Firmware</span></nabucasa-zigbee-flasher
+    >
+    <script
+      type="module"
+      src="https://unpkg.com/@nabucasa/sl-web-tools@0.10.1/dist/web/nabucasa-zigbee-flasher.js?module"
+    ></script>
+  </div>
 </div>
-<script
-  type="module"
-  src="https://unpkg.com/@nabucasa/sl-web-tools@0.10.1/dist/web/nabucasa-zigbee-flasher.js?module"
-></script>
