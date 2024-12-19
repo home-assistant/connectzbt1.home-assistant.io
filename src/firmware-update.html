@@ -3,32 +3,64 @@ layout: base
 description: Zigbee and Thread USB stick by the creators of Home Assistant
 ---
 <div class="banner">
-  <span class="secondary">Web-Flasher</span>
+  <span class="secondary">Documentation</span>
   <span>Firmware updates for Connect&nbsp;ZBT-1</span>
 </div>
 <div class="container">
   <div>
-    <h1>Firmware update</h1>
-    <p>A firmware upgrade is not required for the Home Assistant Connect&nbsp;ZBT-1 at this point. There are no known bugs with the firmware it ships with.</p>
-    <p>We're working on making firmware updates available via Home Assistant. You will receive updates automatically in the future.
+    <p>The Connect&nbsp;ZBT-1 ships with a full-fledged Zigbee firmware. <em>At this point, there are no known issues with the factory-flashed firmware.</em></p>
+    <p>
+      The Nabu Casa team works on integrating firmware updates for Connect&nbsp;ZBT-1 straight from Home Assistant. There will be update notifications for
+      Connect&nbsp;ZBT-1 just like any other updates supported Home Assistant. If you have a working Zigbee or Thread setup today, don't update right now. It is recommended to wait until the new
+      update system lands sometime early 2025.
     </p>
   </div>
-  <div><h3 class="text-left">SL Web Tools to flash firmware updates from the browser</h3></div>
-  <p>
-    This page is for troubleshooting. If you use Connect&nbsp;ZBT-1 in Home Assistant, the Home Assistant discovery flow will automatically install the correct firmware. You do not need to install firmware using this tool. Furthermore, on every start of the OpenThread Border router, the latest Thread firmware which is bundled with the add-on will be installed.
-  </p>
-  <p>
-    If for some reason you like to flash a firmware still: you can use the web-flasher below to install the latest firmware version for Home Assistant Connect&nbsp;ZBT-1 directly from your browser over USB.
-  </p>
-  <p>
-    The firmware is the same for both <a href="/faq/#what-is-the-difference-between-home-assistant-skyconnect-and-connect-zbt-1" target="_blank">Home Assistant SkyConnect</a> and Connect&nbsp;ZBT-1. You can still use the button below for both models.
-  </p>
-  <p>To read more about the SL Web Tools, refer to this <a href="https://www.home-assistant.io/blog/2023/02/08/state-of-matter-and-thread/#silabs-multi-flasher--sl-web-tools" target="_blank">blog post</a>.</p>
-  <!--<nabucasa-zigbee-flasher manifest="/firmwares/manifest.json"
-    ><span slot="button">Update Firmware</span></nabucasa-zigbee-flasher
-  >--><i>The firmware update is temporarily unavailable.</i>
+  <div>
+    <h3 class="text-left">Reflashing the Connect ZBT-1</h3>
+    <p>
+      Note: <a href="/faq/#what-is-the-difference-between-home-assistant-skyconnect-and-connect-zbt-1" target="_blank">Home Assistant SkyConnect</a> and Connect&nbsp;ZBT-1 use the same firmware. You can use the same firmware update process for both devices.
+    </p>
+    <p>If you must reflash your ZBT-1 today, the following options are available:</p>
+    <ul>
+      <li><b>For Thread:</b> The <a class="my"
+        href="https://my.home-assistant.io/redirect/supervisor_addon/?addon=core_openthread_border_router"
+        target="_blank"><b>OpenThread Border Router</b></a> add-on flashes the Thread firmware on startup. You can verify the add-on logs to see the output of the
+        firmware check or potential firmware update.</li>
+      <li><b>For Zigbee:</b> You can use the <a class="my"
+        href="https://my.home-assistant.io/redirect/supervisor_addon/?addon=core_silabs_flasher"
+        target="_blank"><b>Silicon Labs Flasher</b></a> add-on. The add-on will flash the Connect&nbsp;ZBT-1 and stop right after. Before starting the add-on:
+        <ul>
+          <li>Disable the <a class="my"
+            href="https://my.home-assistant.io/redirect/integration/?domain=zha"
+            target="_blank"><b>Zigbee Home Automation</b></a> integration or any add-on which might use the Connect&nbsp;ZBT-1 at point of flashing</li>
+          <li>Start the add-on</li>
+        </ul>
+        Verify the add-on logs to verify successful flashing.
+        </li>
+    </ul>
+  </div>
+  <div>
+    <h3 class="text-left">Reflash using the Silicon Labs Web Flasher</h3>
+    <div style="border-left: .25em solid rgb(158, 106, 3); padding-left: 16px;">
+      <p style="color: rgb(158, 106, 3); fill: rgb(158, 106, 3)">
+        <svg class="octicon octicon-alert mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>
+        <b>Warning</b>
+      </p>
+      <p>
+        Firmware update through web flasher is only available for Home Assistant SkyConnect devices and Home Assistant ZBT-1 devices purchased after October 20, 2024.
+      </p>
+    </div>
+    <p>
+      If your Home Assistant installation has no add-ons available, you can use the web-flasher below to install the latest firmware version for Home Assistant Connect&nbsp;ZBT-1
+      directly from your browser over USB. Plug-in your Connect&nbsp;ZBT-1 to your computer and select the firmware version you want to install.
+    </p>
+    <p>To read more about the SL Web Tools, refer to this <a href="https://www.home-assistant.io/blog/2023/02/08/state-of-matter-and-thread/#silabs-multi-flasher--sl-web-tools" target="_blank">blog post</a>.</p>
+    <nabucasa-zigbee-flasher manifest="/firmwares/manifest.json"
+      ><span slot="button">Update Firmware</span></nabucasa-zigbee-flasher
+    >
+    <script
+      type="module"
+      src="https://unpkg.com/@nabucasa/sl-web-tools@0.10.1/dist/web/nabucasa-zigbee-flasher.js?module"
+    ></script>
+  </div>
 </div>
-<script
-  type="module"
-  src="https://unpkg.com/@nabucasa/sl-web-tools@0.10.1/dist/web/nabucasa-zigbee-flasher.js?module"
-></script>
