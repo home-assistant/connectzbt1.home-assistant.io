@@ -1,5 +1,5 @@
 {
-  "product_name": "Home Assistant SkyConnect",
+  "product_name": "Home Assistant Connect ZBT-1",
   "baudrates": {
     "bootloader": [115200],
     "cpc": [460800, 115200, 230400],
