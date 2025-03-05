@@ -35,6 +35,12 @@
       "type": "ot-rcp",
       "version": "2.4.4.0"
     },
+    {
+      "name": "Multiprotocol (deprecated)",
+      "url": "https://raw.githubusercontent.com/NabuCasa/silabs-firmware/main/RCPMultiPAN/beta/NabuCasa_SkyConnect_RCP_v4.3.2_rcp-uart-hw-802154_460800.gbl",
+      "type": "rcp-uart-802154",
+      "version": "4.3.2"
+    }
   ],
   "allow_custom_firmware_upload": true
 }
