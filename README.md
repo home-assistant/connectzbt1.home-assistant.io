@@ -1,6 +1,9 @@
+
+The content of this website has been migrated to https://github.com/NabuCasa/support
+
 # Home Assistant Connect&nbsp;ZBT-1 website
 
-This is the source of the Connect&nbsp;ZBT-1 documentation website at [connectzbt1.home-assistant.io](https://connectzbt1.home-assistant.io). 
+This was the source of the Connect&nbsp;ZBT-1 documentation website at [connectzbt1.home-assistant.io](https://connectzbt1.home-assistant.io). 
 
 ## Setup
 
